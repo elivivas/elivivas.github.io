@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 702.5 644.5" style="enable-background:new 0 0 702.5 644.5;" xml:space="preserve">
 <style type="text/css">
@@ -99,7 +99,8 @@
 <path id="point-1-11" class="st7" d="M646.3,351.2c0-2.3,1.8-4.1,4.1-4.1s4.1,1.8,4.1,4.1c0,2.3-1.8,4.1-4.1,4.1l0,0l0,0
 	C648.1,355.3,646.3,353.5,646.3,351.2L646.3,351.2L646.3,351.2L646.3,351.2z"/>
 <line class="st8" x1="86.4" y1="286.5" x2="650.4" y2="286.5"/>
-<text transform="matrix(1 0 0 1 571.11 282.34)" class="st2 st9 st10">Mitjana 2019: 65,5%</text>
+<line class="st8" x1="86.4" y1="413.2" x2="650.4" y2="413.2"/>
+<text transform="matrix(1 0 0 1 89.1721 282.34)" class="st2 st9 st10">Mitjana 2019: 65,4%</text>
 <text transform="matrix(1 0 0 1 78.54 548.05)" class="st2 st3 st4">Gen.</text>
 <text transform="matrix(1 0 0 1 130.49 548.05)" class="st2 st3 st4">F</text>
 <text transform="matrix(1 0 0 1 135.11 548.05)" class="st2 st3 st4">e</text>
@@ -159,7 +160,7 @@
 <path class="st11" d="M341.6,472.5c17.6-12.5,35.1-38,52.7-41.5"/>
 <path id="point-0-7" class="st13" d="M646.5,469c0-2.4,1.8-4.3,4.2-4.3s4.3,1.8,4.3,4.2c0,2.4-1.8,4.3-4.2,4.3h-0.1
 	C648.5,473.3,646.5,471.4,646.5,469z"/>
-<text transform="matrix(1 0 0 1 439.33 418.63)" class="st2 st3 st12">28,2</text>
+<text transform="matrix(1 0 0 1 438.098 442.1733)" class="st2 st3 st12">28,2</text>
 <text transform="matrix(1 0 0 1 499.4097 454.6243)" class="st2 st3 st12">18,5</text>
 <text transform="matrix(1 0 0 1 551.6199 472.4896)" class="st2 st3 st12">15,1</text>
 <path class="st14" d="M600.3,488c-9.3-1-22.7-2.6-39-5.5c-5.5-1-9.3-1.8-13.2-2.6c-31.5-6.3-41.5-10.1-50.5-18.1
@@ -186,4 +187,7 @@
 <path id="point-0-5-2-2-2_2_" class="st2" d="M596.7,488c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
 	S596.7,489.5,596.7,488z"/>
 <text transform="matrix(1 0 0 1 635.0566 459.0002)" class="st2 st3 st12">16,6</text>
+<g>
+	<text transform="matrix(1 0 0 1 91.653 409.2552)" class="st2 st9 st10">Mitjana 2020: 31,0%</text>
+</g>
 </svg>
