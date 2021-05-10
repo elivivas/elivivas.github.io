@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 702.5 709.6" style="enable-background:new 0 0 702.5 709.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1C3761;}
+	.st1{font-family:'OpenSans-Bold';}
+	.st2{font-size:19.23px;}
+	.st3{fill:#79C8D1;}
+	.st4{font-family:'OpenSans-SemiBold';}
+	.st5{font-size:13.74px;}
+	.st6{fill:#878787;}
+	.st7{font-size:10.3px;}
+	.st8{fill:#1D1D1B;}
+	.st9{fill:#EEEEEE;}
+	.st10{fill:none;}
+	.st11{display:none;fill:none;stroke:#EEEEEE;stroke-width:0.7718;stroke-dasharray:0;}
+	.st12{fill:none;stroke:#EEEEEE;stroke-width:0.7718;stroke-dasharray:0;}
+	.st13{fill:#003366;}
+	.st14{font-family:'SourceSansPro-Regular';}
+	.st15{font-size:11.3592px;}
+	.st16{fill:none;stroke:#003366;stroke-width:0.7718;stroke-dasharray:0;}
+	.st17{font-family:'ArialMT';}
+	.st18{font-size:9.7365px;}
+	.st19{fill:none;stroke:#003366;stroke-width:0.7718;stroke-dasharray:0.7718,0.7718;}
+	.st20{clip-path:url(#SVGID_2_);fill:none;stroke:#003366;stroke-width:4.6311;}
+	.st21{fill:none;stroke:#CCD6E0;stroke-width:4.6311;}
+	.st22{fill:#66E0E0;}
+	.st23{fill:#CCD6E0;}
+	.st24{clip-path:url(#SVGID_4_);fill:none;stroke:#66E0E0;stroke-width:4.6311;}
+	.st25{font-size:11.68px;}
+</style>
+<g>
+	<text transform="matrix(1 0 0 1 302.6516 38.485)" class="st0 st1 st2">Càmpings</text>
+</g>
+<g>
+	<path class="st0" d="M274.2,81.9h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+		C272.2,82.8,273.1,81.9,274.2,81.9z"/>
+	<path class="st3" d="M329.9,81.9h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+		C327.9,82.8,328.8,81.9,329.9,81.9z"/>
+</g>
+<text transform="matrix(1 0 0 1 229.1105 62.3535)" class="st0 st4 st5">Ocupació en percentatge per parcel·les.</text>
+<g>
+	<text transform="matrix(1 0 0 1 55.1666 689.5124)" class="st6 st4 st7">Font: Elaboració pròpia del LABturisme en base a dades de l&apos;Enquesta d&apos;ocupació en allotjaments de l&apos;INE.        </text>
+</g>
+<text transform="matrix(1 0 0 1 55.4066 655.3624)" class="st6 st4 st7">* Les dades dels mesos de març i maig de 2020 no estan disponibles, degut al tancament d’establiments per la gestió de la crisi</text>
+<text transform="matrix(1 0 0 1 55.4066 667.7224)" class="st6 st4 st7">sanitària ocasionada per la Covid-19.</text>
+<text transform="matrix(1 0 0 1 349.6352 89.9109)" class="st8 st4 st7">2020</text>
+<text transform="matrix(1 0 0 1 294.3651 89.9109)" class="st8 st4 st7">2021</text>
+<g id="facets_1_">
+	<g transform="translate(45,10)">
+		<g>
+			<g>
+				<polyline class="st10" points="621.8,581.7 19,581.7 19,142.1 621.8,142.1 				"/>
+			</g>
+			<g>
+				<g>
+					<path class="st11" d="M19.3,582.1V142.5"/>
+					<g transform="translate(0,542.3645922851563)">
+						<line class="st12" x1="19" y1="39.8" x2="621.8" y2="39.8"/>
+						<text transform="matrix(0.9049 0 0 1 3.1948 43.5168)" class="st13 st14 st15">0%</text>
+					</g>
+					<g transform="translate(0,406.8984442138672)">
+						<line class="st12" x1="19" y1="65.3" x2="621.8" y2="65.3"/>
+						<text transform="matrix(0.9049 0 0 1 -1.9136 62.1578)" class="st13 st14 st15">20%</text>
+					</g>
+					<g transform="translate(0,271.43229614257814)">
+						<line class="st12" x1="19" y1="90.9" x2="621.8" y2="90.9"/>
+						<text transform="matrix(0.9049 0 0 1 -1.9136 94.6219)" class="st13 st14 st15">40%</text>
+					</g>
+					<g transform="translate(0,135.96614807128907)">
+						<line class="st12" x1="19" y1="116.4" x2="621.8" y2="116.4"/>
+						<text transform="matrix(0.9049 0 0 1 -1.9136 120.1745)" class="st13 st14 st15">60%</text>
+					</g>
+					<g transform="translate(0,0.5)">
+						<line class="st12" x1="19" y1="142" x2="621.8" y2="142"/>
+						<text transform="matrix(0.9049 0 0 1 -1.9136 145.727)" class="st13 st14 st15">80%</text>
+					</g>
+				</g>
+				<g transform="translate(0,541.8645922851563)">
+					<path class="st16" d="M19.3,40.3h602.8"/>
+					<g transform="translate(0.5,0)">
+						<line class="st16" x1="18.8" y1="39.9" x2="18.8" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 9.9066 61.7993)" class="st13 st14 st15">Gen.</text>
+					</g>
+					<g transform="translate(75.1369961825284,0)">
+						<line class="st16" x1="-1" y1="39.9" x2="-1" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -9.2035 61.7993)" class="st13 st14 st15">Feb.</text>
+					</g>
+					<g transform="translate(149.7739923650568,0)">
+						<line class="st16" x1="-20.8" y1="39.9" x2="-20.8" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -30.4875 61.7993)" class="st13 st14 st15">Mar.*</text>
+					</g>
+					<g transform="translate(224.41098854758522,0)">
+						<line class="st16" x1="-40.7" y1="39.9" x2="-40.7" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -48.1943 61.7993)" class="st13 st14 st15">Abr.</text>
+					</g>
+					<g transform="translate(299.0479847301136,0)">
+						<line class="st16" x1="-60.5" y1="39.9" x2="-60.5" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -69.9309 61.7993)" class="st13 st14 st15">Mai.*</text>
+					</g>
+					<g transform="translate(373.684980912642,0)">
+						<line class="st16" x1="-80.3" y1="39.9" x2="-80.3" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -88.8096 61.7993)" class="st13 st14 st15">Jun.</text>
+					</g>
+					<g transform="translate(448.32197709517044,0)">
+						<line class="st16" x1="-100.2" y1="39.9" x2="-100.2" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -107.1439 61.7993)" class="st13 st14 st15">Jul.</text>
+					</g>
+					<g transform="translate(522.9589732776989,0)">
+						<line class="st16" x1="-120" y1="39.9" x2="-120" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -128.4538 61.7993)" class="st13 st14 st15">Ago.</text>
+					</g>
+					<g transform="translate(597.5959694602273,0)">
+						<line class="st16" x1="-139.8" y1="39.9" x2="-139.8" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -147.2558 61.7993)" class="st13 st14 st15">Set.</text>
+					</g>
+					<g transform="translate(672.2329656427556,0)">
+						<line class="st16" x1="-159.7" y1="39.9" x2="-159.7" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -167.552 61.7993)" class="st13 st14 st15">Oct.</text>
+					</g>
+					<g transform="translate(746.869961825284,0)">
+						<line class="st16" x1="-179.5" y1="39.9" x2="-179.5" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -188.2202 61.7993)" class="st13 st14 st15">Nov.</text>
+					</g>
+					<g transform="translate(821.5069580078125,0)">
+						<line class="st16" x1="-199.3" y1="39.9" x2="-199.3" y2="44.7"/>
+						<text transform="matrix(0.9049 0 0 1 -207.6072 61.7993)" class="st13 st14 st15">Des.</text>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g transform="translate(45, 10)">
+		<g transform="translate(0, 230.29245172119144)">
+			<text transform="matrix(0.9049 0 0 1 537.0645 93.7652)" class="st13 st17 st18">Mitjana 2019: 46,5%</text>
+			<line class="st19" x1="19" y1="98.6" x2="621.8" y2="98.6"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<defs>
+			<polyline id="SVGID_1_" points="666.8,599.8 64,599.8 64,144 666.8,144 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<path pointer-events="none" class="st20" d="M64,486.8c18.3-4,36.5-8.1,54.8-21.4c18.3-13.4,36.5-36.1,54.8-58.8"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path pointer-events="none" class="st21" d="M64,438.9c18.3-0.5,36.5-0.9,54.8-2.7s36.5-39.8,54.8-53.9
+			c18.3-14.1,36.5-25.6,54.8-30.8s36.5-2.6,54.8-7.7c18.3-5.1,36.5-25.2,54.8-36.3s36.5-20.3,54.8-30.2
+			c18.3-9.9,36.5-29.1,54.8-29.1c18.3,0,36.5,55.2,54.8,72.5c18.3,17.3,36.5,20.2,54.8,31.3c18.3,11.1,36.5,24.5,54.8,35.2
+			c18.3,10.6,36.5,19.6,54.8,28.6"/>
+	</g>
+</g>
+<g transform="translate(45,10)">
+	<path id="point-0-0" class="st13" d="M18.2,476.8c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S18.2,477.2,18.2,476.8z"/>
+	<path id="point-0-1" class="st13" d="M73,455.3c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8S73,455.8,73,455.3z"
+		/>
+	<path id="point-0-2" class="st13" d="M123,396.5c0-2.7,2.2-4.9,5-4.9c2.8,0,5,2.2,5,4.9s-2.2,4.9-5,4.9
+		C125.2,401.4,123,399.2,123,396.5z"/>
+</g>
+<g transform="translate(45,10)">
+	<path id="point-1-0" class="st22" d="M18.2,433.3c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S18.2,433.8,18.2,433.3z"/>
+	<path id="point-1-1" class="st22" d="M73,374c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S73,374.4,73,374z"/>
+	<path id="point-1-2" class="st22" d="M127.8,353.7c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S127.8,354.1,127.8,353.7z"/>
+	<path id="point-1-3" class="st22" d="M182.6,581.7c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S182.6,582.2,182.6,581.7z"/>
+	<path id="point-1-5" class="st22" d="M292.3,349.8c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S292.3,350.3,292.3,349.8z"/>
+	<path id="point-1-6" class="st22" d="M347.1,331.7c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S347.1,332.1,347.1,331.7z"/>
+	<path id="point-1-7" class="st22" d="M401.9,327.3c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		C402.2,328.1,401.9,327.7,401.9,327.3z"/>
+	<path id="point-1-8" class="st22" d="M456.7,373.4c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		C457,374.3,456.7,373.9,456.7,373.4z"/>
+	<path id="point-1-9" class="st22" d="M511.5,360.3c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		C511.8,361.1,511.5,360.7,511.5,360.3z"/>
+	<path id="point-1-10" class="st22" d="M566.3,416.9c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S566.3,417.3,566.3,416.9z"/>
+	<path id="point-1-11" class="st22" d="M617.4,437.2c0-2.7,2-4.9,4.4-4.9c2.4,0,4.4,2.2,4.4,4.9s-2,4.9-4.4,4.9
+		C619.4,442.1,617.4,439.9,617.4,437.2z"/>
+</g>
+<g transform="translate(45,10)">
+	<path id="point-2-0" class="st23" d="M18.2,428.9c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S18.2,429.4,18.2,428.9z"/>
+	<path id="point-2-1" class="st23" d="M73,426.2c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8S73,426.6,73,426.2z"
+		/>
+	<path id="point-2-2" class="st23" d="M127.8,372.3c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S127.8,372.8,127.8,372.3z"/>
+	<path id="point-2-3" class="st23" d="M182.6,341.6c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S182.6,342,182.6,341.6z
+		"/>
+	<path id="point-2-4" class="st23" d="M237.5,333.9c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		C237.8,334.7,237.5,334.3,237.5,333.9z"/>
+	<path id="point-2-5" class="st23" d="M292.3,297.6c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S292.3,298,292.3,297.6z
+		"/>
+	<path id="point-2-6" class="st23" d="M347.1,267.4c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.7,0.8
+		S347.1,267.8,347.1,267.4z"/>
+	<path id="point-2-7" class="st23" d="M401.9,238.2c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		C402.2,239.1,401.9,238.7,401.9,238.2z"/>
+	<path id="point-2-8" class="st23" d="M456.7,310.8c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		C457,311.6,456.7,311.2,456.7,310.8z"/>
+	<path id="point-2-9" class="st23" d="M511.5,342.1c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		C511.8,342.9,511.5,342.6,511.5,342.1z"/>
+	<path id="point-2-10" class="st23" d="M566.3,377.3c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S566.3,377.7,566.3,377.3z"/>
+	<path id="point-2-11" class="st23" d="M617.4,405.9c0-2.7,2-4.9,4.4-4.9c2.4,0,4.4,2.2,4.4,4.9s-2,4.9-4.4,4.9
+		C619.4,410.7,617.4,408.6,617.4,405.9z"/>
+</g>
+<path id="point-0-2_1_" class="st13" d="M59.3,487.3c0-2.7,2.3-4.9,5.2-4.9c2.8,0,5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9
+	C61.6,492.2,59.3,490,59.3,487.3z"/>
+<path id="point-0-6-5_1_" class="st23" d="M116.4,436c0-2,1.6-3.6,3.6-3.6c2,0,3.6,1.6,3.6,3.6c0,2-1.6,3.6-3.6,3.6l0,0
+	C118,439.6,116.4,437.9,116.4,436z"/>
+<path id="point-0-2_3_" class="st23" d="M58.1,437c0-2.7,2.3-4.9,5.2-4.9s5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9S58.1,439.7,58.1,437z"/>
+<path id="point-0-2_2_" class="st22" d="M59,443.9c0-2.7,2.3-4.9,5.2-4.9c2.8,0,5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9
+	C61.3,448.7,59,446.6,59,443.9z"/>
+<g>
+	<defs>
+		<polyline id="SVGID_3_" points="666.8,599.8 64,599.8 64,144 666.8,144 		"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st24" d="M338.7,359.8c21.1-17,44.3-19.2,70.3-23.2c18,1,40-6,55,8c11,11,16,29,31,36c11,5,24,1,35-3c11-5,22-11,34-6
+		c5,2,10,4,13,9c14,21,24,43,46,55c14,7,29,9,43.8,11.6"/>
+	<path class="st24" d="M64,443.3c16-19.7,30-40.7,51-56.7c18-13,38-25,60.2-22.3"/>
+</g>
+<path id="point-0-6-5_2_" class="st13" d="M115.2,465c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C116.8,468.5,115.2,466.9,115.2,465z"/>
+<path id="point-0-6-5_3_" class="st22" d="M116.4,383.2c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C118,386.7,116.4,385.1,116.4,383.2z"/>
+<path id="point-0-6-5_4_" class="st23" d="M169.4,383.2c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C171,386.7,169.4,385.1,169.4,383.2z"/>
+<path id="point-0-6-5_5_" class="st22" d="M170.3,364.2c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C171.9,367.8,170.3,366.2,170.3,364.2z"/>
+<path id="point-0-6-5_7_" class="st22" d="M334.9,360.1c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C336.5,363.6,334.9,362,334.9,360.1z"/>
+<path id="point-0-6-5_8_" class="st22" d="M389.2,338.9c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C390.8,342.5,389.2,340.9,389.2,338.9z"/>
+<path id="point-0-6-5_9_" class="st22" d="M444.8,336.5c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C446.4,340,444.8,338.4,444.8,336.5z"/>
+<path id="point-0-6-5_10_" class="st22" d="M499.6,382.6c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C501.2,386.2,499.6,384.6,499.6,382.6z"/>
+<path id="point-0-6-5_11_" class="st22" d="M554.5,370.3c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C556.1,373.8,554.5,372.2,554.5,370.3z"/>
+<path id="point-0-6-5_12_" class="st22" d="M609.2,428.9c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C610.8,432.5,609.2,430.9,609.2,428.9z"/>
+<path id="point-0-6-5_13_" class="st23" d="M225.1,351.6c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C226.7,355.2,225.1,353.6,225.1,351.6z"/>
+<path id="point-0-6-5_14_" class="st23" d="M334.3,307.3c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C335.9,310.9,334.3,309.3,334.3,307.3z"/>
+<path id="point-0-6-5_15_" class="st23" d="M279.4,344.2c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C281,347.7,279.4,346.1,279.4,344.2z"/>
+<path id="point-0-6-5_16_" class="st23" d="M389.4,277.7c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C391,281.2,389.4,279.6,389.4,277.7z"/>
+<path id="point-0-6-5_17_" class="st23" d="M444.3,247.7c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C445.9,251.3,444.3,249.7,444.3,247.7z"/>
+<path id="point-0-6-5_18_" class="st23" d="M498.6,320.5c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C500.2,324,498.6,322.4,498.6,320.5z"/>
+<path id="point-0-6-5_19_" class="st23" d="M554.4,352.8c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C556,356.4,554.4,354.8,554.4,352.8z"/>
+<path id="point-0-6-5_20_" class="st23" d="M609.3,387.3c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5l0,0
+	C610.9,390.9,609.3,389.3,609.3,387.3z"/>
+<path id="point-0-6-5_21_" class="st22" d="M225.2,589c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
+	C226.8,592.5,225.2,590.9,225.2,589z"/>
+<text transform="matrix(1 0 0 1 58.0916 507.0001)" class="st0 st14 st25">19,1</text>
+<text transform="matrix(1 0 0 1 69.5846 458.1924)" class="st0 st14 st25">27,0</text>
+<text transform="matrix(1 0 0 1 48.1946 420.7338)" class="st0 st14 st25">27,8</text>
+<text transform="matrix(1 0 0 1 221.2165 576.5602)" class="st0 st14 st25">0,0</text>
+<text transform="matrix(1 0 0 1 436.0491 235.2803)" class="st0 st14 st25">62,5</text>
+<text transform="matrix(1 0 0 1 439.5052 326.4326)" class="st0 st14 st25">46,3</text>
+<text transform="matrix(1 0 0 1 658.8997 403.0406)" class="st0 st14 st25">32,0</text>
+<text transform="matrix(1 0 0 1 658.8997 435.8643)" class="st0 st14 st25">26,3</text>
+<path class="st23" d="M387.1,81.9h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+	C385.1,82.8,386,81.9,387.1,81.9z"/>
+<text transform="matrix(1 0 0 1 407.6109 89.9108)" class="st8 st4 st7">2019</text>
+</svg>

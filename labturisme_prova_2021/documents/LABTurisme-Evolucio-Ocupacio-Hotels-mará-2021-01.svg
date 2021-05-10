@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 697.3 732.5" style="enable-background:new 0 0 697.3 732.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#878787;}
+	.st1{font-family:'OpenSans-SemiBold';}
+	.st2{font-size:10.3px;}
+	.st3{fill:#1C3761;}
+	.st4{font-family:'OpenSans-Bold';}
+	.st5{font-size:19.23px;}
+	.st6{font-size:13.74px;}
+	.st7{fill:#66E0E0;}
+	.st8{fill:#1D1D1B;}
+	.st9{fill:#CCD6E0;}
+	.st10{fill:#EEEEEE;}
+	.st11{display:none;fill:none;stroke:#EFEFEF;stroke-width:0.6896;stroke-dasharray:0;}
+	.st12{fill:none;stroke:#EFEFEF;stroke-width:0.6896;stroke-dasharray:0;}
+	.st13{fill:#003366;}
+	.st14{font-family:'SourceSansPro-Regular';}
+	.st15{font-size:9.644px;}
+	.st16{fill:none;stroke:#003366;stroke-width:0.6896;stroke-dasharray:0;}
+	.st17{fill:none;stroke:#003366;stroke-width:2.7583;}
+	.st18{fill:none;stroke:#CCD6E0;stroke-width:2.7583;}
+	.st19{fill:none;stroke:#003366;stroke-width:0.6896;stroke-dasharray:0.6896,0.6896;}
+	.st20{font-family:'ArialMT';}
+	.st21{font-size:8.2663px;}
+	.st22{fill:none;stroke:#66E0E0;stroke-width:2.7583;}
+	.st23{font-size:11.68px;}
+</style>
+<g>
+	<text transform="matrix(1 0 0 1 63.5693 613.871)" class="st0 st1 st2">Font: Elaboració pròpia del LABturisme en base a dades de l&apos;Enquesta d&apos;ocupació en allotjaments de l&apos;INE.        </text>
+</g>
+<text transform="matrix(1 0 0 1 63.8093 579.7211)" class="st0 st1 st2">* Les dades dels mesos de març i maig de 2020 no estan disponibles, degut al tancament d’establiments per la gestió de la</text>
+<text transform="matrix(1 0 0 1 63.8093 592.0809)" class="st0 st1 st2">crisi sanitària ocasionada per la Covid-19.</text>
+<g>
+	<text transform="matrix(1 0 0 1 250.0913 51.2619)" class="st3 st4 st5">Establiments hotelers</text>
+	<text transform="matrix(1 0 0 1 234.5313 76.4918)" class="st3 st1 st6">Ocupació en percentatge per places.</text>
+	<path class="st3" d="M285,93.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2H285c-1.1,0-2-0.9-2-2v-4C283,94.4,283.9,93.5,285,93.5z"/>
+	<path class="st7" d="M340.7,93.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+		C338.7,94.4,339.6,93.5,340.7,93.5z"/>
+	<text transform="matrix(1 0 0 1 356.662 100.4019)" class="st8 st1 st2">2020</text>
+	<text transform="matrix(1 0 0 1 303.162 100.4019)" class="st8 st1 st2">2021</text>
+	<path class="st9" d="M396.1,93.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+		C394.1,94.4,395,93.5,396.1,93.5z"/>
+</g>
+<g id="facets_1_">
+	<g transform="translate(45,10)">
+		<g>
+			<g>
+				<g>
+					<path class="st11" d="M38.6,507.8V134.6"/>
+					<g transform="translate(0,542.3645922851563)">
+						<line class="st12" x1="38.2" y1="-34.5" x2="605" y2="-34.5"/>
+						<text transform="matrix(1.0021 0 0 1 23.373 -31.3416)" class="st13 st14 st15">0%</text>
+					</g>
+					<g transform="translate(0,406.8984442138672)">
+						<line class="st12" x1="38.2" y1="7.6" x2="605" y2="7.6"/>
+						<text transform="matrix(1.0021 0 0 1 18.5693 7.6282)" class="st13 st14 st15">20%</text>
+					</g>
+					<g transform="translate(0,271.43229614257814)">
+						<line class="st12" x1="38.2" y1="49.8" x2="605" y2="49.8"/>
+						<text transform="matrix(1.0021 0 0 1 18.5693 52.9574)" class="st13 st14 st15">40%</text>
+					</g>
+					<g transform="translate(0,135.96614807128907)">
+						<line class="st12" x1="38.2" y1="91.9" x2="605" y2="91.9"/>
+						<text transform="matrix(1.0021 0 0 1 18.5693 95.1066)" class="st13 st14 st15">60%</text>
+					</g>
+					<g transform="translate(0,0.5)">
+						<line class="st12" x1="38.2" y1="134.1" x2="605" y2="134.1"/>
+						<text transform="matrix(1.0021 0 0 1 18.5693 137.2563)" class="st13 st14 st15">80%</text>
+					</g>
+				</g>
+				<g transform="translate(0,541.8645922851563)">
+					<path class="st16" d="M38.6-34h566.7"/>
+					<g transform="translate(0.5,0)">
+						<line class="st16" x1="38.1" y1="-34.4" x2="38.1" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 28.8301 -16.0328)" class="st13 st14 st15">Gen.</text>
+					</g>
+					<g transform="translate(75.1369961825284,0)">
+						<line class="st16" x1="14.9" y1="-34.4" x2="14.9" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 6.3967 -16.0328)" class="st13 st14 st15">Feb.</text>
+					</g>
+					<g transform="translate(149.7739923650568,0)">
+						<line class="st16" x1="-8.2" y1="-34.4" x2="-8.2" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -18.0801 -16.0328)" class="st13 st14 st15">Mar.*</text>
+					</g>
+					<g transform="translate(224.41098854758522,0)">
+						<line class="st16" x1="-31.3" y1="-34.4" x2="-31.3" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -39.1932 -16.0328)" class="st13 st14 st15">Abr.</text>
+					</g>
+					<g transform="translate(299.0479847301136,0)">
+						<line class="st16" x1="-54.4" y1="-34.4" x2="-54.4" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -63.5597 -16.0328)" class="st13 st14 st15">Mai*</text>
+					</g>
+					<g transform="translate(373.684980912642,0)">
+						<line class="st16" x1="-77.5" y1="-34.4" x2="-77.5" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -86.3124 -16.0328)" class="st13 st14 st15">Jun.</text>
+					</g>
+					<g transform="translate(448.32197709517044,0)">
+						<line class="st16" x1="-100.6" y1="-34.4" x2="-100.6" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -108.0154 -16.0328)" class="st13 st14 st15">Jul.</text>
+					</g>
+					<g transform="translate(522.9589732776989,0)">
+						<line class="st16" x1="-123.7" y1="-34.4" x2="-123.7" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -132.5166 -16.0328)" class="st13 st14 st15">Ago.</text>
+					</g>
+					<g transform="translate(597.5959694602273,0)">
+						<line class="st16" x1="-146.9" y1="-34.4" x2="-146.9" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -154.6594 -16.0328)" class="st13 st14 st15">Set.</text>
+					</g>
+					<g transform="translate(672.2329656427556,0)">
+						<line class="st16" x1="-170" y1="-34.4" x2="-170" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -178.2095 -16.0328)" class="st13 st14 st15">Oct.</text>
+					</g>
+					<g transform="translate(746.869961825284,0)">
+						<line class="st16" x1="-193.1" y1="-34.4" x2="-193.1" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -202.1063 -16.0328)" class="st13 st14 st15">Nov.</text>
+					</g>
+					<g transform="translate(821.5069580078125,0)">
+						<line class="st16" x1="-216.2" y1="-34.4" x2="-216.2" y2="-30.2"/>
+						<text transform="matrix(1.0021 0 0 1 -224.7999 -16.0328)" class="st13 st14 st15">Des.</text>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path pointer-events="none" class="st17" d="M83.2,431.6c17.2-4.3,34.3-8.6,51.5-11.7s34.3-4.8,51.5-6.5"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path pointer-events="none" class="st18" d="M83.2,357.5c17.2-15.4,34.3-30.8,51.5-37.3c17.2-6.5,34.3-3.3,51.5-9.8
+			c17.2-6.5,34.3-57.9,51.5-57.9c17.2,0,34.3,6.5,51.5,6.5s34.3-56.6,51.5-66.3c17.2-9.6,34.3-7.2,51.5-14.5
+			c17.2-7.3,34.3-29.4,51.5-29.4s34.3,31.2,51.5,48.1c17.2,16.9,34.3,31.7,51.5,53.2c17.2,21.5,34.3,64.4,51.5,75.6
+			s34.3,14,51.5,16.8"/>
+	</g>
+</g>
+<g>
+	<g transform="translate(45, 10)">
+		<g transform="translate(0, 98.2129573516846)">
+			<line class="st19" x1="38.2" y1="103.7" x2="605" y2="103.7"/>
+			<text transform="matrix(1.0021 0 0 1 525.292 99.538)" class="st13 st20 st21">Mitjana 2019: 65,5%</text>
+		</g>
+	</g>
+</g>
+<path id="point-0-5-2-2-2_3_" class="st7" d="M132.1,335c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S132.1,336.5,132.1,335z"/>
+<path id="point-0-5-2-2-2_4_" class="st13" d="M132,420.1c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S132,421.6,132,420.1z"/>
+<g>
+	<g>
+		<path class="st22" d="M333.2,433.2c26.8-25.7,57.8-46.7,83.8-74.7c5-4,10-7,16-11c8-5,18-2,24,6c8,12,13,24,20,36s14,23,27,28
+			c29,9,58,18,89,19c19,0,39-2,57-9.1"/>
+		<path class="st22" d="M237,517.5c1.4,0.1,2.8,0.1,4.3,0"/>
+		<path class="st22" d="M83.2,355.1c15.6-9.3,32.9-20.7,51.7-20.5"/>
+	</g>
+</g>
+<path id="point-0-5-2-2-2_5_" class="st9" d="M132.1,320.7c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S132.1,322.2,132.1,320.7z"/>
+<g transform="translate(45,10)">
+	<path id="point-0-0_1_" class="st13" d="M37.5,421.6c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7c0,0.4-0.3,0.7-0.7,0.7
+		C37.8,422.3,37.5,422,37.5,421.6z"/>
+	<path id="point-0-1_1_" class="st13" d="M89,410c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7s-0.3,0.7-0.7,0.7
+		C89.4,410.7,89,410.4,89,410z"/>
+	<path id="point-0-2" class="st13" d="M137.1,403.5c0-2.3,1.9-4.1,4.1-4.1s4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1
+		S137.1,405.7,137.1,403.5z"/>
+	<path id="point-0-2_1_" class="st13" d="M33.9,421.9c0-2.3,1.9-4.1,4.1-4.1c2.3,0,4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1
+		C35.7,426.1,33.9,424.2,33.9,421.9z"/>
+	<path id="point-0-2_3_" class="st9" d="M36,346.8c0-2.3,1.9-4.1,4.1-4.1c2.3,0,4.1,1.9,4.1,4.1s-1.9,4.1-4.1,4.1
+		C37.9,350.9,36,349.1,36,346.8z"/>
+	<path id="point-0-2_2_" class="st7" d="M34.1,344.5c0-2.3,1.9-4.1,4.1-4.1c2.3,0,4.1,1.9,4.1,4.1s-1.9,4.1-4.1,4.1
+		C35.9,348.6,34.1,346.7,34.1,344.5z"/>
+	<path id="point-0-2_4_" class="st9" d="M600.8,332.3c0-2.3,1.9-4.1,4.1-4.1s4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1
+		S600.8,334.5,600.8,332.3z"/>
+</g>
+<path id="point-0-5-2-2-2_6_" class="st7" d="M330.4,432.3c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S330.4,433.8,330.4,432.3z"/>
+<path id="point-0-5-2-2-2_7_" class="st7" d="M389.9,381.6c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S389.9,383.1,389.9,381.6z"/>
+<path id="point-0-5-2-2-2_8_" class="st7" d="M441.4,345.1c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S441.4,346.6,441.4,345.1z"/>
+<path id="point-0-5-2-2-2_9_" class="st7" d="M492.9,413.1c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S492.9,414.6,492.9,413.1z"/>
+<path id="point-0-5-2-2-2_10_" class="st7" d="M544.5,429.5c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S544.5,431,544.5,429.5z"/>
+<path id="point-0-5-2-2-2_11_" class="st7" d="M596,437.2c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S596,438.7,596,437.2z"/>
+<path id="point-0-5-2-2-2_12_" class="st9" d="M183.3,310.9c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S183.3,312.4,183.3,310.9z"/>
+<path id="point-0-5-2-2-2_13_" class="st9" d="M236.3,253.2c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S236.3,254.7,236.3,253.2z"/>
+<path id="point-0-5-2-2-2_14_" class="st9" d="M289.1,258.8c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S289.1,260.3,289.1,258.8z"/>
+<path id="point-0-5-2-2-2_15_" class="st9" d="M329.6,200.1c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S329.6,201.6,329.6,200.1z"/>
+<path id="point-0-5-2-2-2_16_" class="st9" d="M390.1,178.1c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S390.1,179.6,390.1,178.1z"/>
+<path id="point-0-5-2-2-2_17_" class="st9" d="M440.9,148.7c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S440.9,150.2,440.9,148.7z"/>
+<path id="point-0-5-2-2-2_18_" class="st9" d="M492.7,197.4c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S492.7,198.9,492.7,197.4z"/>
+<path id="point-0-5-2-2-2_19_" class="st9" d="M544.3,250c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S544.3,251.5,544.3,250z"/>
+<path id="point-0-5-2-2-2_20_" class="st9" d="M596,326.4c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S596,327.9,596,326.4z"/>
+<path id="point-0-6-2_2_" class="st7" d="M646,427.6c0-2.3,1.8-4.1,4.1-4.1s4.1,1.8,4.1,4.1c0,2.3-1.8,4.1-4.1,4.1l0,0l0,0
+	C647.8,431.7,646,429.9,646,427.6L646,427.6L646,427.6L646,427.6z"/>
+<text transform="matrix(1 0 0 1 231.9392 508.9514)" class="st3 st14 st23">0,0</text>
+<path id="point-0-5-2-2-2_21_" class="st7" d="M236.3,516.4c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
+	S236.3,517.9,236.3,516.4z"/>
+<text transform="matrix(1 0 0 1 68.373 448.6004)" class="st3 st14 st23">18,4</text>
+<text transform="matrix(1 0 0 1 195.7325 410.3069)" class="st3 st14 st23">21,8</text>
+<text transform="matrix(1 0 0 1 52.3088 378.8194)" class="st3 st14 st23">34,3</text>
+<text transform="matrix(1 0 0 1 52.3087 358.584)" class="st3 st14 st23">34,8</text>
+<text transform="matrix(1 0 0 1 435.4424 136.9846)" class="st3 st14 st23">79,0</text>
+<text transform="matrix(1 0 0 1 435.4424 336.5083)" class="st3 st14 st23">36,9</text>
+<text transform="matrix(1 0 0 1 637.5246 358.5841)" class="st3 st14 st23">37,5</text>
+<text transform="matrix(1 0 0 1 637.5245 445.7206)" class="st3 st14 st23">19,3</text>
+<text transform="matrix(1 0 0 1 414.2694 100.4017)" class="st8 st1 st2">2019</text>
+</svg>
