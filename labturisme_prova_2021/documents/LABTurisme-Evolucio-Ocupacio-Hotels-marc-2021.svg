@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 697.3 667.1" style="enable-background:new 0 0 697.3 667.1;" xml:space="preserve">
 <style type="text/css">
@@ -51,74 +51,74 @@
 					<path class="st10" d="M38.6,507.8V134.6"/>
 					<g transform="translate(0,542.3645922851563)">
 						<line class="st11" x1="38.9" y1="-9.6" x2="605.7" y2="-9.6"/>
-						<text transform="matrix(1.0021 0 0 1 24.0342 -6.4066)" class="st12 st13 st14">0%</text>
+						<text transform="matrix(1.0021 0 0 1 24.0342 -6.4064)" class="st12 st13 st14">0%</text>
 					</g>
 					<g transform="translate(0,406.8984442138672)">
 						<line class="st11" x1="38.9" y1="32.5" x2="605.7" y2="32.5"/>
-						<text transform="matrix(1.0021 0 0 1 19.2305 32.5635)" class="st12 st13 st14">20%</text>
+						<text transform="matrix(1.0021 0 0 1 19.2305 32.5636)" class="st12 st13 st14">20%</text>
 					</g>
 					<g transform="translate(0,271.43229614257814)">
 						<line class="st11" x1="38.9" y1="74.7" x2="605.7" y2="74.7"/>
-						<text transform="matrix(1.0021 0 0 1 19.2305 77.8919)" class="st12 st13 st14">40%</text>
+						<text transform="matrix(1.0021 0 0 1 19.2305 77.8921)" class="st12 st13 st14">40%</text>
 					</g>
 					<g transform="translate(0,135.96614807128907)">
 						<line class="st11" x1="38.9" y1="116.8" x2="605.7" y2="116.8"/>
-						<text transform="matrix(1.0021 0 0 1 19.2305 120.0417)" class="st12 st13 st14">60%</text>
+						<text transform="matrix(1.0021 0 0 1 19.2305 120.0418)" class="st12 st13 st14">60%</text>
 					</g>
 					<g transform="translate(0,0.5)">
 						<line class="st11" x1="38.9" y1="159" x2="605.7" y2="159"/>
-						<text transform="matrix(1.0021 0 0 1 19.2305 162.1914)" class="st12 st13 st14">80%</text>
+						<text transform="matrix(1.0021 0 0 1 19.2305 162.1915)" class="st12 st13 st14">80%</text>
 					</g>
 				</g>
 				<g transform="translate(0,541.8645922851563)">
 					<path class="st15" d="M39.3-9.1H606"/>
 					<g transform="translate(0.5,0)">
 						<line class="st15" x1="38.8" y1="-9.5" x2="38.8" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 29.4912 8.902)" class="st12 st13 st14">Gen.</text>
+						<text transform="matrix(1.0021 0 0 1 29.4912 8.9022)" class="st12 st13 st14">Gen.</text>
 					</g>
 					<g transform="translate(75.1369961825284,0)">
 						<line class="st15" x1="15.6" y1="-9.5" x2="15.6" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 7.0578 8.902)" class="st12 st13 st14">Feb.</text>
+						<text transform="matrix(1.0021 0 0 1 7.0578 8.9022)" class="st12 st13 st14">Feb.</text>
 					</g>
 					<g transform="translate(149.7739923650568,0)">
 						<line class="st15" x1="-7.5" y1="-9.5" x2="-7.5" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -17.4195 8.902)" class="st12 st13 st14">Mar.*</text>
+						<text transform="matrix(1.0021 0 0 1 -17.4195 8.9022)" class="st12 st13 st14">Mar.*</text>
 					</g>
 					<g transform="translate(224.41098854758522,0)">
 						<line class="st15" x1="-30.6" y1="-9.5" x2="-30.6" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -38.5321 8.902)" class="st12 st13 st14">Abr.</text>
+						<text transform="matrix(1.0021 0 0 1 -38.5321 8.9022)" class="st12 st13 st14">Abr.</text>
 					</g>
 					<g transform="translate(299.0479847301136,0)">
 						<line class="st15" x1="-53.7" y1="-9.5" x2="-53.7" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -62.8986 8.902)" class="st12 st13 st14">Mai*</text>
+						<text transform="matrix(1.0021 0 0 1 -62.8986 8.9022)" class="st12 st13 st14">Mai*</text>
 					</g>
 					<g transform="translate(373.684980912642,0)">
 						<line class="st15" x1="-76.8" y1="-9.5" x2="-76.8" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -85.6518 8.902)" class="st12 st13 st14">Jun.</text>
+						<text transform="matrix(1.0021 0 0 1 -85.6518 8.9022)" class="st12 st13 st14">Jun.</text>
 					</g>
 					<g transform="translate(448.32197709517044,0)">
 						<line class="st15" x1="-99.9" y1="-9.5" x2="-99.9" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -107.3542 8.902)" class="st12 st13 st14">Jul.</text>
+						<text transform="matrix(1.0021 0 0 1 -107.3542 8.9022)" class="st12 st13 st14">Jul.</text>
 					</g>
 					<g transform="translate(522.9589732776989,0)">
 						<line class="st15" x1="-123" y1="-9.5" x2="-123" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -131.8555 8.902)" class="st12 st13 st14">Ago.</text>
+						<text transform="matrix(1.0021 0 0 1 -131.8555 8.9022)" class="st12 st13 st14">Ago.</text>
 					</g>
 					<g transform="translate(597.5959694602273,0)">
 						<line class="st15" x1="-146.2" y1="-9.5" x2="-146.2" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -153.9983 8.902)" class="st12 st13 st14">Set.</text>
+						<text transform="matrix(1.0021 0 0 1 -153.9983 8.9022)" class="st12 st13 st14">Set.</text>
 					</g>
 					<g transform="translate(672.2329656427556,0)">
 						<line class="st15" x1="-169.3" y1="-9.5" x2="-169.3" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -177.5484 8.902)" class="st12 st13 st14">Oct.</text>
+						<text transform="matrix(1.0021 0 0 1 -177.5484 8.9022)" class="st12 st13 st14">Oct.</text>
 					</g>
 					<g transform="translate(746.869961825284,0)">
 						<line class="st15" x1="-192.4" y1="-9.5" x2="-192.4" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -201.4451 8.902)" class="st12 st13 st14">Nov.</text>
+						<text transform="matrix(1.0021 0 0 1 -201.4451 8.9022)" class="st12 st13 st14">Nov.</text>
 					</g>
 					<g transform="translate(821.5069580078125,0)">
 						<line class="st15" x1="-215.5" y1="-9.5" x2="-215.5" y2="-5.3"/>
-						<text transform="matrix(1.0021 0 0 1 -224.1388 8.902)" class="st12 st13 st14">Des.</text>
+						<text transform="matrix(1.0021 0 0 1 -224.1388 8.9022)" class="st12 st13 st14">Des.</text>
 					</g>
 				</g>
 			</g>
@@ -136,7 +136,7 @@
 	<g transform="translate(45, 10)">
 		<g transform="translate(0, 98.2129573516846)">
 			<line class="st17" x1="38.9" y1="128.6" x2="605.7" y2="128.6"/>
-			<text transform="matrix(1.0021 0 0 1 525.9531 124.4726)" class="st12 st18 st19">Mitjana 2019: 65,5%</text>
+			<text transform="matrix(1.0021 0 0 1 525.9531 124.4727)" class="st12 st18 st19">Mitjana 2019: 65,5%</text>
 		</g>
 	</g>
 </g>
@@ -207,7 +207,7 @@
 <path id="point-0-5-2-2-2_21_" class="st0" d="M237,541.3c0-1.5,1.2-2.8,2.8-2.8s2.8,1.2,2.8,2.8s-1.2,2.8-2.8,2.8
 	S237,542.8,237,541.3z"/>
 <text transform="matrix(1 0 0 1 69.0342 473.5355)" class="st1 st13 st21">18,4</text>
-<text transform="matrix(1 0 0 1 173.0655 454.4)" class="st1 st13 st21">22,3</text>
+<text transform="matrix(1 0 0 1 190.5448 432.1426)" class="st1 st13 st21">22,3</text>
 <text transform="matrix(1 0 0 1 52.97 403.7545)" class="st1 st13 st21">34,3</text>
 <text transform="matrix(1 0 0 1 52.9699 383.5191)" class="st1 st13 st21">34,8</text>
 <text transform="matrix(1 0 0 1 436.1036 161.9197)" class="st1 st13 st21">79,0</text>
@@ -224,4 +224,7 @@
 	<text transform="matrix(1 0 0 1 58.9917 625.0543)" class="st23 st7 st8">Font: Elaboració pròpia del LABturisme en base a dades de l&apos;Enquesta d&apos;ocupació en allotjaments de l&apos;INE.        </text>
 </g>
 <text transform="matrix(1 0 0 1 56.3066 603.8644)" class="st23 st7 st8">*Les dades d’abril i maig de 2020 no estan disponibles, degut al tancament d’establiments per la crisi de la COVID-19.</text>
+<g>
+	<text transform="matrix(1 0 0 1 186.7607 456.3785)" class="st1 st13 st21">21,8</text>
+</g>
 </svg>
