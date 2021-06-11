@@ -13,16 +13,15 @@
 	.st7{fill:#CBF4F4;}
 	.st8{font-family:'OpenSans-SemiBold';}
 	.st9{font-size:8px;}
-	.st10{enable-background:new    ;}
-	.st11{fill:#6685A3;}
-	.st12{font-family:'OpenSans-Light';}
-	.st13{font-size:9px;}
-	.st14{font-size:14px;}
-	.st15{font-size:7px;}
-	.st16{fill:#3185A0;stroke:#FFFFFF;stroke-width:0.3983;}
-	.st17{fill:#60D5D8;stroke:#FFFFFF;stroke-width:0.3983;}
-	.st18{fill:#66E0E0;stroke:#FFFFFF;stroke-width:0.3983;}
-	.st19{fill:#003366;stroke:#FFFFFF;stroke-width:0.3983;}
+	.st10{fill:#6685A3;}
+	.st11{font-family:'OpenSans-Light';}
+	.st12{font-size:9px;}
+	.st13{font-size:14px;}
+	.st14{font-size:7px;}
+	.st15{fill:#3185A0;stroke:#FFFFFF;stroke-width:0.3983;}
+	.st16{fill:#60D5D8;stroke:#FFFFFF;stroke-width:0.3983;}
+	.st17{fill:#66E0E0;stroke:#FFFFFF;stroke-width:0.3983;}
+	.st18{fill:#003366;stroke:#FFFFFF;stroke-width:0.3983;}
 </style>
 <title>LABTurisme-provincies-turisme-rural-marc-2021</title>
 <text transform="matrix(1 0 0 1 353.29 135.862)" class="st0 st1 st2">GIRONA</text>
@@ -36,8 +35,10 @@
 <text transform="matrix(1 0 0 1 42.6338 201.3556)" class="st0 st8 st9">Ocupació:  </text>
 <text transform="matrix(1 0 0 1 42.6338 210.9557)" class="st0 st8 st9">7,1% (-4,6 pp)</text>
 <g>
-	<text transform="matrix(1 0 0 1 86.4717 53.7431)" class="st10"><tspan x="0" y="0" class="st11 st12 st13">Amb un 50% d’activitat a totes les províncies, Tarragona i Lleida -per aquest ordre- són les dues  </tspan><tspan x="-2.5" y="10.8" class="st11 st12 st13">províncies amb uns millors resultats pel que fa a ocupació (-3,9 pp i -4,6 pp) respecte a les dades  </tspan><tspan x="91.9" y="21.6" class="st11 st12 st13">del 2019, seguit de l’entorn de Barcelona (-6,4 pp).</tspan></text>
-	<text transform="matrix(1 0 0 1 163.5923 91.4712)" class="st11 st12 st13">Entre parèntesis, variació interanual respecte l’any 2019</text>
+	<text transform="matrix(1 0 0 1 86.4717 53.7431)" class="st10 st11 st12">Amb un 50% d’activitat a totes les províncies, Tarragona i Lleida -per aquest ordre- són les dues  </text>
+	<text transform="matrix(1 0 0 1 83.9717 64.5431)" class="st10 st11 st12">províncies amb uns millors resultats pel que fa a ocupació (-3,9 pp i -4,6 pp) respecte a les dades  </text>
+	<text transform="matrix(1 0 0 1 178.3717 75.3431)" class="st10 st11 st12">del 2019, seguit de l’Entorn de Barcelona (-6,4 pp).</text>
+	<text transform="matrix(1 0 0 1 163.5923 91.4712)" class="st10 st11 st12">Entre parèntesis, variació interanual respecte l’any 2019</text>
 </g>
 <image style="overflow:visible;enable-background:new    ;" width="564" height="62" xlink:href="32476878.jpg"  transform="matrix(0.2243 0 0 0.2243 212.5873 101.0004)">
 </image>
@@ -56,11 +57,11 @@
 <text transform="matrix(1 0 0 1 176.8401 535.2955)" class="st0 st8 st9">Ocupació: 7,5% (-3,9 pp)</text>
 <text transform="matrix(1 0 0 1 176.8401 548.9547)" class="st0 st8 st9">Viatgers: 1.641 (-67,8%)</text>
 <text transform="matrix(1 0 0 1 176.8403 563.138)" class="st0 st8 st9">Pernoctacions: 4.677 (-62,3%)</text>
-<text transform="matrix(1 0 0 1 224.7424 32.6689)" class="st0 st8 st14">Turisme rural</text>
-<text transform="matrix(1 0 0 1 25.3048 632.721)" class="st11 st8 st15">Nota: Les variacions 21/20 no són calculables (nc) degut a que les dades de 2020 són “0” pel tancament forçós arrel de la crisi sanitària de la COVID-19.</text>
-<text transform="matrix(1 0 0 1 25.3052 623.0624)" class="st11 st8 st15">Font: Elaboració pròpia del LABTurisme en base a dades de l’Enquesta d’ocupació en allotjaments de l’INE</text>
+<text transform="matrix(1 0 0 1 224.7424 32.6689)" class="st0 st8 st13">Turisme rural</text>
+<text transform="matrix(1 0 0 1 25.3048 632.721)" class="st10 st8 st14">Nota: Les variacions 21/20 no són calculables (nc) degut a que les dades de 2020 són “0” pel tancament forçós arrel de la crisi sanitària de la COVID-19.</text>
+<text transform="matrix(1 0 0 1 25.3052 623.0624)" class="st10 st8 st14">Font: Elaboració pròpia del LABTurisme en base a dades de l’Enquesta d’ocupació en allotjaments de l’INE</text>
 <g id="regions-layer">
-	<path class="st16" d="M321.8,268.9v-0.3l0.3-1l2.7-1.3l1.4,1.6l-1.7,0.6l-0.3,2.2l-1.7,0.3L321.8,268.9z M317,197.7l1-2.5h2l1,1.6
+	<path class="st15" d="M321.8,268.9v-0.3l0.3-1l2.7-1.3l1.4,1.6l-1.7,0.6l-0.3,2.2l-1.7,0.3L321.8,268.9z M317,197.7l1-2.5h2l1,1.6
 		l-1.7,3.2l4.1,4.1l-8.1-1l0.3-5.1L317,197.7z M516.5,235.2l-0.3-0.3l0.3-0.3h0.3v0.6H516.5z M506.1,283.5l-0.3-0.3l-0.3-0.3v-0.3
 		l1-0.3L506.1,283.5z M371.5,320.5l-0.7-4.8l1.7-1.6l4.8,1l1,2.2l1.4-0.3l3.4-4.1l3.7,0.6v0.3l2-0.3l5.4-4.8l-0.4-2.9l-2.4-1.6
 		l-0.3-0.3l-3.1-0.3l0.3-2.5l-2-1.9l0.7-1.6l6.1,0.6l2-2.9l-3.1-1.9l4.7-1.6L396,288l1.3-1.9l-3.4-4.1l2.4-1.3l-1.4-1.9h-0.3v0.3
@@ -89,7 +90,7 @@
 		H464l-0.3,1l-4.1,2.6l-2.4,1h-0.3l-1.4,0.3l-2.4,0.3v0.3h-0.7h-0.7l-2.4,0.6l-0.3,0.3h-0.3l-0.3,0.3l-1.7,0.3h-0.3l-0.3,0.3h-0.3
 		l-0.7,1.3h-0.3l-1,1v0.3l-0.7,0.3l-1.7,0.6l-2,3.8l-3.1-5.4l2.4-4.2l-0.7-5.1V344l1-1.6l-12.2-1.3l-2-0.6v1.3l-3.7-1.6l-2.4,0.6
 		l-1.7,2.6l-13.9,1.9l-3.1-7.7l-7.1-3.5l0.3-2.2l-2.4,1l-2-1l-1-2.9l-12.6-0.6L371.5,320.5z"/>
-	<path class="st17" d="M96.4,585.7l-11.9-5.2l-0.7-3.6l1.7-2.6l-5.8-2.9l-0.3-1.9l-9.9-1l-8.5-3.9l-2.4-3.9l0.4-2.6l3.8-5.2
+	<path class="st16" d="M96.4,585.7l-11.9-5.2l-0.7-3.6l1.7-2.6l-5.8-2.9l-0.3-1.9l-9.9-1l-8.5-3.9l-2.4-3.9l0.4-2.6l3.8-5.2
 		l-4.8-4.2l-3.8,1l-1.7-6.1l-4.1,1.6l-4.1-1.6l-1-1.9l-0.7-1.3L45,542v-2.9l2,1l3.4-3.5l2.4,0.3l1.4-4.5l6.2-6.8l-2.7-3.9l-0.3-1
 		l-0.3-5.5l-2.4-1.9l8.3-17.7h-1.7v-2.9l-2-2.6l1-1l-2.4-1.3l0.3-1.6l2.7-0.3l-2.7-1l-2-2.9l-2.4,1.3v-2.6l-2.4,0.3l2.1-1.3
 		l-1.7-1.6l0.4-2.3l-0.7-2.6h-2.4l1.4-6.4l-1.4-1.3l3.1-1.9l-1-0.6l5.1,1.3l0.7-4.2l3.4,0.3l4.4-2.9l2.1-10.9l3.4-2.6l2.7,1.3
@@ -104,7 +105,7 @@
 		v-1.3l-7.5-2.3l0.7-1.3l3.8-0.3l3.1,1.9l8.2,10.6l3.8-1l3.1,1.9l-1.4,6.1l-6.5,5.2l-9.9,4.8l-12.4,16.1l-9.9,2.3l-3.1-2.9L108,574
 		l3.1,0.3h0.3h-0.3l0.3-1.6l2.4,0.6v0.3v0.3l0.3,0.3l1,0.3l0.7,0.3h0.3l0.3-0.3v-0.3v-0.6h0.7v-0.3V573l0.7-1.6l8.2-0.3l4.1-6.5
 		l0.7-2.3h-1l-0.3-0.3h-0.3l-20.2,3.2l-9.6,11L96.4,585.7z"/>
-	<path class="st18" d="M277.5,314.1v-1.6l2.7,1l-0.7,1.3L277.5,314.1z M177.5,403.6l-2.7,5.4l-4.1,1l-1.4,3.2l-1.7-0.6l-2.7,4.8
+	<path class="st17" d="M277.5,314.1v-1.6l2.7,1l-0.7,1.3L277.5,314.1z M177.5,403.6l-2.7,5.4l-4.1,1l-1.4,3.2l-1.7-0.6l-2.7,4.8
 		l0.3,2.2l-2,0.6l-13.3,2.9l-3.7-4.8l-1.7,1l-0.7,3.8l-0.3,1l-0.7,1.3l-3.7-0.6v-0.3h-1h-1l-2.4-0.6l-1.7,3.5l-11.6,1.6h-0.7h-0.3
 		l-0.7,0.6l-5.8,2.9l-3.4-0.3l-3.4-5.5l-4.1-1.3l-4.1,7.4h-3.4l-6.4-9l-4.1,2.9l-0.4,9l-7.2-0.6l-3-5.1l0.7-2.9l-3.1-1.6l3.8-5.1
 		l-1.7-3.2l-6.4-5.1l2.4-2.6l3.1-9l-1.7-1.6l-0.3-4.5l6.5-0.3l2.7-1.9l6.5-10.6l-2.4-3.2l-0.3-7.4l-3.7,1.6l-8.2-1.3l-0.3-4.5
@@ -125,7 +126,7 @@
 		l3.7,5.1v0.3h1.7v1.3l-3.1,2.2l-5.4-1.3l-5.1,4.2l7.1,2.9l-2.4,4.8l1.7,3.5l-15.3-2.6l-8.5,0.3l-4.8,0.3l-0.3,3.5l-6.8,1.9l0.7,1.6
 		l-1.4-0.6l1.7,1l-1.7,3.5l2.4,5.1l-10.9,3.8v-1.3l-10.2-5.4l1,3.5l-1.4,0.6l3.7,2.9l2,1.3l-0.7,1l-2,1.9l-0.3,0.3L177.5,403.6z
 		 M275.1,270.1l-3.1-0.6l-4.1,0.3l4.1,1.9h3.1V270.1z"/>
-	<path class="st19" d="M272,269.5l3.1,0.6v1.6H272l-4.1-1.9L272,269.5z M268,451.4l0.3-3.2l-1-4.5l-2.4,2.2l-7.2-3.9l-1-3.5l7.8,1.3
+	<path class="st18" d="M272,269.5l3.1,0.6v1.6H272l-4.1-1.9L272,269.5z M268,451.4l0.3-3.2l-1-4.5l-2.4,2.2l-7.2-3.9l-1-3.5l7.8,1.3
 		l1-8l1.4-0.3l-3.4,0.6l-0.3,1.6l-3.4-1.9l0.7-3.2l-3.4-1.3l-2-5.5l3.1-2.6h-0.3l-1-2.2h-2.7l-2-3.2l-4.8-1.9l-5.1,2.6l2.4-3.5
 		l-1-4.2l-1-1.6l2.4-1.3l-2.7-0.3l-0.7-1.6l2.7-5.1h-0.3l-1.7-3.2H239l-0.7-1.6l-7.5-3.5l1.7-4.5l6.1-0.3l-0.3-3.2l-2,0.6l-0.3-1.3
 		l3.4-2.6l-4.8-2.6l-4.4,1.3l2.4-4.8l-7.1-2.9l5.1-4.2l5.4,1.3l3.1-2.2v-1.3h-1.7v-0.3l-3.7-5.1l1.4-1.9l-3.1-0.3l-1.4-1.9l0.7-1.9
