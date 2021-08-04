@@ -17,15 +17,14 @@
 	.st11{font-size:9px;}
 	.st12{font-size:14px;}
 	.st13{fill:#FFFFFF;stroke:#82B0D9;stroke-width:2;stroke-dasharray:2,2,2,2,2,2;}
-	.st14{enable-background:new    ;}
-	.st15{font-family:'OpenSans-Light';}
-	.st16{font-size:7px;}
-	.st17{fill:#3D849F;stroke:#FFFFFF;stroke-width:0.2589;}
-	.st18{fill:#003366;stroke:#FFFFFF;stroke-width:0.2589;}
-	.st19{fill:#83E2E2;stroke:#FFFFFF;stroke-width:0.2589;}
-	.st20{fill:#58A9BA;stroke:#FFFFFF;stroke-width:0.2589;}
-	.st21{fill:#3F88A2;stroke:#FFFFFF;stroke-width:0.2589;}
-	.st22{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.2147;}
+	.st14{font-family:'OpenSans-Light';}
+	.st15{font-size:7px;}
+	.st16{fill:#3D849F;stroke:#FFFFFF;stroke-width:0.2589;}
+	.st17{fill:#003366;stroke:#FFFFFF;stroke-width:0.2589;}
+	.st18{fill:#83E2E2;stroke:#FFFFFF;stroke-width:0.2589;}
+	.st19{fill:#58A9BA;stroke:#FFFFFF;stroke-width:0.2589;}
+	.st20{fill:#3F88A2;stroke:#FFFFFF;stroke-width:0.2589;}
+	.st21{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.2147;}
 </style>
 <g>
 	<text transform="matrix(1 0 0 1 345.2759 161.0653)" class="st0 st1 st2">GIRONA</text>
@@ -73,11 +72,14 @@
 <text transform="matrix(1 0 0 1 394.4006 546.5694)" class="st0 st8 st9">Viatgers: 242.508 (-70,6%) </text>
 <text transform="matrix(1 0 0 1 394.4006 560.7527)" class="st0 st8 st9">Pernoctacions: 576.488 (-71,7%) </text>
 <polyline class="st13" points="352.8,441 352.8,522.5 385,522.5 "/>
-<text transform="matrix(1 0 0 1 58.1856 49.2039)" class="st14"><tspan x="0" y="0" class="st10 st15 st11">Girona és la província que rep una major numero de turistes en hotels, seguida de la comarca del Barcelonès.  </tspan><tspan x="-10.3" y="10.8" class="st10 st15 st11">Tot i que totes les províncies catalanes presenten resultats negatius respecte al juny de 2019, la província de Lleida  </tspan><tspan x="-11.1" y="21.6" class="st10 st15 st11">és qui obté resultats menys negatius en els tres indicadors, sobretot en ocupació, tal i com passava al mes anterior.  </tspan><tspan x="38.3" y="32.4" class="st10 st15 st11">L’Entorn de Barcelona junt amb el Barcelonès registren els decreixements més significatius.</tspan></text>
-<text transform="matrix(1 0 0 1 20.5957 640.1839)" class="st10 st8 st16">Font: Elaboració pròpia del LABTurisme en base a dades de l’Enquesta d’ocupació en allotjaments de l’INE</text>
-<text transform="matrix(1 0 0 1 20.5959 649.8676)" class="st10 st8 st16">Nota: Les variacions 21/20 no s’han calculat (nc) per la manca de dades representatives de 2020 arrel de la crisi sanitària de la COVID-19.</text>
+<text transform="matrix(1 0 0 1 58.1856 49.2039)" class="st10 st14 st11">Girona és la província que rep un major numero de turistes en hotels, seguida de la comarca del Barcelonès.  </text>
+<text transform="matrix(1 0 0 1 47.8856 60.0039)" class="st10 st14 st11">Tot i que totes les províncies catalanes presenten resultats negatius respecte al juny de 2019, la província de Lleida  </text>
+<text transform="matrix(1 0 0 1 47.0856 70.8039)" class="st10 st14 st11">és qui obté resultats menys negatius en els tres indicadors, sobretot en ocupació, tal i com passava al mes anterior.  </text>
+<text transform="matrix(1 0 0 1 96.4856 81.6039)" class="st10 st14 st11">L’Entorn de Barcelona junt amb el Barcelonès registren els decreixements més significatius.</text>
+<text transform="matrix(1 0 0 1 20.5957 640.1839)" class="st10 st8 st15">Font: Elaboració pròpia del LABTurisme en base a dades de l’Enquesta d’ocupació en allotjaments de l’INE</text>
+<text transform="matrix(1 0 0 1 20.5959 649.8676)" class="st10 st8 st15">Nota: Les variacions 21/20 no s’han calculat (nc) per la manca de dades representatives de 2020 arrel de la crisi sanitària de la COVID-19.</text>
 <g id="regions-layer">
-	<path class="st17" d="M323.5,286.5v-0.3l0.3-1l2.8-1.3l1.4,1.6l-1.7,0.6l-0.3,2.4l-1.7,0.3L323.5,286.5z M318.6,212.2l1-2.7h2.1
+	<path class="st16" d="M323.5,286.5v-0.3l0.3-1l2.8-1.3l1.4,1.6l-1.7,0.6l-0.3,2.4l-1.7,0.3L323.5,286.5z M318.6,212.2l1-2.7h2.1
 		l1,1.6l-1.7,3.3l4.1,4.3l-8.3-1l0.3-5.3L318.6,212.2z M520.9,251.3l-0.3-0.3l0.3-0.3h0.3v0.6H520.9z M510.3,301.8l-0.3-0.3
 		l-0.3-0.3v-0.3l1-0.3L510.3,301.8z M373.9,340.4l-0.6-7.5l1.7-1.6l4.8,1l1,2.3l1.4-0.3l3.4-4.2l3.8,0.9l0.4-0.1l1.4-0.2l5.4-4.6
 		l-0.1-1.1l-2.4-1.6l-0.3-0.3l-3.1-0.3l0.3-2.7l-2.1-2l0.8-3.5l6.2,0.6l2.1-2.9l-2.8-1.7l4.5-1.8l-0.9-2.3l0.2-1.6l-2.3-4.7l0.2-1.4
@@ -106,7 +108,7 @@
 		l-1.4,0.3l-2.4,0.3v0.3h-0.7h-0.7l-2.4,0.6l-0.3,0.3h-0.3l-0.3,0.3l-1.7,0.3h-1.4l-0.3,0.3h-0.3l-0.7,1.3h-0.3l-1,1v0.3l-0.7,0.3
 		l-1.7,0.6l-2.1,4l-3.1-5.7l2.4-4.3l-0.7-5.3v1.2l0.6-1.3l-12.3-1.3l-2.1-0.6v1.3l-3.8-1.6l-2.4,0.6l-1.7,2.6l-14.1,1.9l-3.1-7.8
 		l-7.3-3.6l0.3-2.3l-2.4,1l-2.2-1.2l-0.9-2.6l-12.3-0.7L373.9,340.4z"/>
-	<path class="st18" d="M94.4,606.7l-12.1-5.3l-0.7-3.6l1.7-2.6l-5.9-3l-0.3-2l-10.1-1l-8.7-3.9l-2.4-3.9l0.4-2.6l3.8-5.2l-4.8-4.3
+	<path class="st17" d="M94.4,606.7l-12.1-5.3l-0.7-3.6l1.7-2.6l-5.9-3l-0.3-2l-10.1-1l-8.7-3.9l-2.4-3.9l0.4-2.6l3.8-5.2l-4.8-4.3
 		l-3.8,1l-1.7-6.2l-4.2,1.6l-4.2-1.6l-1-2l-0.7-1.3l2.4,1.6v-2.9l2.1,1l3.5-3.6l2.4,0.3l1.4-4.6l6.3-6.9l-2.8-3.9l-0.3-1l-0.3-5.6
 		l-2.4-2l8.4-18h-1.7v-2.9l-2.1-2.6l1-1l-2.4-1.3l0.4-1.6l2.8-0.3l-2.8-1l-2.1-2.9l-2.4,1.3v-2.6l-2.4,0.3l2.1-1.3l-1.7-1.6l0.4-2.3
 		l-0.7-2.6h-2.4l1.4-6.5l-1.4-1.3l3.1-2l-1-0.7l5.2,1.3l0.7-4.2l3.5,0.3l4.5-2.9l2.1-11.1l3.5-2.6l2.8,1.3l0.7-2.3h2.8l-1-2.6
@@ -121,7 +123,7 @@
 		l-7.6-2.3l0.7-1.3l3.8-0.3l3.1,2l8.3,10.8l3.8-1l3.1,2l-1.4,6.2l-6.6,5.2l-10.1,4.9L120,598.1l-10.1,2.3l-3.1-3l-0.3-2.3l3.1,0.3
 		h0.3h-0.3l0.4-1.6l2.4,0.7v0.3v0.3l0.3,0.3l1,0.3l0.7,0.3h0.3l0.3-0.3v-0.3v-0.7h0.7v-0.3v-0.3l0.7-1.6l8.3-0.3l4.2-6.6l0.7-2.3h-1
 		l-0.3-0.3H128l-20.5,3.3l-9.8,11.2L94.4,606.7z"/>
-	<path class="st19" d="M278.4,330.9v-1.6l2.8,1l-0.7,1.3L278.4,330.9z M176.8,421.8l-2.8,5.5l-4.2,1l-1.4,3.3l-1.7-0.7l-2.8,4.9
+	<path class="st18" d="M278.4,330.9v-1.6l2.8,1l-0.7,1.3L278.4,330.9z M176.8,421.8l-2.8,5.5l-4.2,1l-1.4,3.3l-1.7-0.7l-2.8,4.9
 		l0.3,2.3l-2.1,0.7l-13.5,2.9l-3.8-4.9l-1.7,1l-0.7,3.9l-0.3,1l-0.7,1.3l-3.8-0.7V443h-1h-1l-2.4-0.7l-1.7,3.6l-11.8,1.6H119h-0.3
 		l-0.7,0.7l-5.9,2.9l-3.5-0.3l-3.4-5.5l-4.1-1.3l-4.2,7.5h-3.5l-6.5-9.1l-4.2,2.9l-0.4,9.1l-7.3-0.7l-3.1-5.2l0.7-2.9l-3.1-1.6
 		l3.8-5.2l-1.7-3.3l-6.5-5.2l2.4-2.6l3.2-9.1L69,417l-0.3-4.6l6.6-0.3l2.8-2l6.6-10.7l-2.4-3.2l-0.3-7.5l-3.8,1.6l-8.3-1.3l-0.3-4.5
@@ -142,7 +144,7 @@
 		l-6.2,5.2l2.4,0.3l-0.7,1.9l1.4,1.9l3.1,0.3l-1.4,1.9l3.8,5.2v0.3h1.7v1.3l-3.1,2.3l-5.5-1.3l-5.2,4.2l7.3,2.9l-2.4,4.9l1.7,3.6
 		l-15.5-2.6l-8.6,0.3l-4.8,0.3l-0.4,3.6l-6.9,2l0.7,1.6l-1.4-0.7l1.7,1l-1.7,3.6l2.4,5.2l-11.1,3.9v-1.3l-10.4-5.5l1,3.6l-1.4,0.7
 		l3.8,2.9l2.1,1.3l-0.7,1l-2.1,2l-0.3,0.3L176.8,421.8z M275.9,286.2l-3.1-0.6l-4.1,0.3l4.1,1.9h3.1V286.2z"/>
-	<path class="st20" d="M272.8,286.2l3.1,0.6v1.6h-3.1l-4.1-1.9L272.8,286.2z M268.8,470.3l0.3-3.3l-1-4.6l-2.4,2.3l-7.3-3.9l-1-3.6
+	<path class="st19" d="M272.8,286.2l3.1,0.6v1.6h-3.1l-4.1-1.9L272.8,286.2z M268.8,470.3l0.3-3.3l-1-4.6l-2.4,2.3l-7.3-3.9l-1-3.6
 		l8,1.3l1-8.1l1.4-0.3l-3.5,0.7l-0.3,1.6l-3.5-2l0.7-3.3l-3.5-1.3l-2.1-5.5l3.1-2.6h-0.3l-1-2.3h-2.8l-2.1-3.3l-4.8-2l-5.2,2.6
 		l2.4-3.6l-1-4.2l-1-1.6l2.4-1.3l-2.8-0.3l-0.7-1.6l2.8-5.2h-0.3l-1.7-3.3H239l-0.7-1.6l-7.6-3.6l1.7-4.6l6.2-0.3l-0.3-3.3l-2.1,0.6
 		l-0.3-1.3l3.5-2.6l-4.8-2.6l-4.5,1.3l2.4-4.9l-7.3-2.9l5.2-4.2l5.5,1.3l3.1-2.3v-1.3h-1.7V379l-3.8-5.2l1.4-1.9l-3.1-0.3l-1.4-1.9
@@ -162,7 +164,7 @@
 		l-26.2,11.7L380,411.2l-15.9,6.2l-12.7,20.1l-1,1.3l1.7-5.5l-2.4,5.5l-3.1,1.3l-0.7,3.3l2.1-2.6l-1,4.2l-5.5,6.5l-14.2,4.9
 		l-13.2,0.3l-12.8,5.9l-6.6-0.3l-3.8,2.6L268.8,470.3z M278.4,331.4l2.1,0.6l0.7-1.3l-2.8-1L278.4,331.4z M326.2,285.2l1.7-0.6
 		l-1.4-1.6l-2.8,1.3l-0.3,1v0.3l0.7,2.3l1.7-0.3L326.2,285.2z"/>
-	<path class="st21" d="M355.8,414.9L355.8,414.9L355.8,414.9L355.8,414.9L355.8,414.9l0.1-0.1l0,0l0,0l0,0v-0.1v-0.1l0,0l0,0l0,0
+	<path class="st20" d="M355.8,414.9L355.8,414.9L355.8,414.9L355.8,414.9L355.8,414.9l0.1-0.1l0,0l0,0l0,0v-0.1v-0.1l0,0l0,0l0,0
 		h0.1h0.1h0.1l0,0l0,0l0,0v-0.1l0.1-0.1l0.1-0.1l0,0v-0.1l0,0l0,0v-0.1V414v-0.1v-0.1l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0h-0.1
 		h-0.1l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0h-0.1l0,0l0,0l0,0H356l-0.1-0.1l0,0l0,0l0,0l0,0l-0.1-0.4l0,0l0.1-0.1l0.2-0.2
 		l0.2-0.2l0.2-0.3v-0.1v-0.1l-0.1-0.3v-0.1v-0.1l0,0l0,0h0.2h0.1l0.5-0.3l0.1-0.1l0.1-0.1v-0.1v-0.1l0.1-0.2h0.1h0.1l0.2,0.1
@@ -275,13 +277,14 @@
 		l0,0l0,0l0,0v-0.1v-0.1v-0.1v-0.1v-0.1L349.7,441.6L349.7,441.6L349.7,441.6L349.7,441.6z M347.1,441.5L347.1,441.5L347.1,441.5
 		L347.1,441.5L347.1,441.5z"/>
 </g>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="275.27" y1="118.7121" x2="353.9" y2="118.7121">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="275.3" y1="549.3" x2="353.9" y2="549.3" gradientTransform="matrix(1 0 0 -1 0 668)">
 	<stop  offset="0" style="stop-color:#83E2E2"/>
 	<stop  offset="0.9637" style="stop-color:#003366"/>
 	<stop  offset="1" style="stop-color:#000000"/>
 </linearGradient>
-<rect x="275.3" y="114.5" class="st22" width="78.6" height="8.4"/>
-<text transform="matrix(1 0 0 1 219.7497 121.2025)" class="st14"><tspan x="0" y="0" class="st0 st15 st16">% d’ocupació:</tspan><tspan x="42.8" y="0" class="st0 st15 st9">  </tspan></text>
-<text transform="matrix(1 0 0 1 271.6351 131.1438)" class="st0 st15 st16">20</text>
-<text transform="matrix(1 0 0 1 349.7503 131.1437)" class="st0 st15 st16">40</text>
+<rect x="275.3" y="114.5" class="st21" width="78.6" height="8.4"/>
+<text transform="matrix(1 0 0 1 219.7497 121.2025)" class="st0 st14 st15">% d’ocupació:</text>
+<text transform="matrix(1 0 0 1 262.5497 121.2025)" class="st0 st14 st9">  </text>
+<text transform="matrix(1 0 0 1 271.6351 131.1438)" class="st0 st14 st15">20</text>
+<text transform="matrix(1 0 0 1 349.7503 131.1437)" class="st0 st14 st15">40</text>
 </svg>

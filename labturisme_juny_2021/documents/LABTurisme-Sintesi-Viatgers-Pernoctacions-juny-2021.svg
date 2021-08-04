@@ -24,12 +24,11 @@
 	.st18{font-size:25px;}
 	.st19{font-size:83px;}
 	.st20{font-family:'OpenSans-Light';}
-	.st21{fill:#898989;}
-	.st22{font-family:'OpenSans-Bold';}
-	.st23{font-size:16px;}
-	.st24{font-family:'ArialMT';}
-	.st25{font-size:29.9151px;}
-	.st26{font-size:29.9677px;}
+	.st21{font-family:'OpenSans-Bold';}
+	.st22{font-size:16px;}
+	.st23{font-family:'ArialMT';}
+	.st24{font-size:29.9151px;}
+	.st25{font-size:29.9677px;}
 </style>
 <title>LABTurisme-Sintesi-Viatgers-Pernoctacions-desembre-2020</title>
 <rect x="37.8" y="401.4" class="st0" width="1220" height="426.6"/>
@@ -43,15 +42,17 @@
 			<g>
 				<g>
 					<g>
-						<defs>
-							<rect id="SVGID_1_" x="99.3" y="526.3" width="460.6" height="303.9"/>
-						</defs>
-						<clipPath id="SVGID_2_">
-							<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-						</clipPath>
-						<g class="st1">
-							<text transform="matrix(1 0 0 1 285.0466 600.1179)" class="st2 st3 st4">V</text>
-							<text transform="matrix(1 0 0 1 300.9572 600.1179)" class="st2 st3 st4">iatgers</text>
+						<g>
+							<defs>
+								<rect id="SVGID_1_" x="99.3" y="526.3" width="460.6" height="303.9"/>
+							</defs>
+							<clipPath id="SVGID_2_">
+								<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st1">
+								<text transform="matrix(1 0 0 1 285.0466 600.1179)" class="st2 st3 st4">V</text>
+								<text transform="matrix(1 0 0 1 300.9572 600.1179)" class="st2 st3 st4">iatgers</text>
+							</g>
 						</g>
 					</g>
 				</g>
@@ -65,14 +66,16 @@
 			<g>
 				<g>
 					<g>
-						<defs>
-							<rect id="SVGID_3_" x="764.5" y="526.3" width="447.1" height="294.9"/>
-						</defs>
-						<clipPath id="SVGID_4_">
-							<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-						</clipPath>
-						<g class="st5">
-							<rect x="907.2" y="571.6" class="st6" width="0" height="35.7"/>
+						<g>
+							<defs>
+								<rect id="SVGID_3_" x="764.5" y="526.3" width="447.1" height="294.9"/>
+							</defs>
+							<clipPath id="SVGID_4_">
+								<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st5">
+								<rect x="907.2" y="571.6" class="st6" width="0" height="35.7"/>
+							</g>
 						</g>
 					</g>
 				</g>
@@ -86,14 +89,16 @@
 			<g>
 				<g>
 					<g>
-						<defs>
-							<rect id="SVGID_5_" x="816.2" y="530.8" width="447.1" height="294.9"/>
-						</defs>
-						<clipPath id="SVGID_6_">
-							<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
-						</clipPath>
-						<g class="st7">
-							<text transform="matrix(1 0 0 1 964.8737 602.4823)" class="st2 st3 st8">Pernoctacions</text>
+						<g>
+							<defs>
+								<rect id="SVGID_5_" x="816.2" y="530.8" width="447.1" height="294.9"/>
+							</defs>
+							<clipPath id="SVGID_6_">
+								<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st7">
+								<text transform="matrix(1 0 0 1 964.8737 602.4823)" class="st2 st3 st8">Pernoctacions</text>
+							</g>
 						</g>
 					</g>
 				</g>
@@ -350,7 +355,7 @@
 <image style="overflow:visible;enable-background:new    ;" width="170" height="139" xlink:href="305CA651.png"  transform="matrix(1.2752 0 0 1.2752 1039.8074 181.2534)">
 </image>
 <rect x="14.7" y="1031.1" class="st0" width="1225.2" height="17.3"/>
-<text transform="matrix(1 0 0 1 14.7119 1043.2827)" class="st21 st22 st23">Nota: Les variacions 21/20 no són calculables (nc) degut a que les dades de 2020 són “0” pel tancament forçós arrel de la crisi sanitària de la COVID-19.</text>
+<text transform="matrix(1 0 0 1 14.7119 1043.2827)" class="st9 st21 st22">Nota:  Les variacions 21/20 no s’han calculat (nc) per la manca de dades representatives de 2020 arrel de la crisi sanitària de la COVID-19.</text>
 <g transform="translate(10,45.7)">
 	<path id="point-0-0_1_" class="st13" d="M321.5,588.8c94.6,0,171.2,76.6,171.2,171.2s-76.6,171.2-171.2,171.2
 		S150.3,854.6,150.3,760c0-16.2,2.3-32.2,6.8-47.8l106.9,31c-9.2,31.8,9,65,40.8,74.3c31.8,9.2,65-9,74.3-40.8
@@ -359,12 +364,12 @@
 		L157.1,712.2z"/>
 	<g transform="translate(121.54234557957983,97.45152787509568)" pointer-events="none">
 		<g>
-			<text transform="matrix(1 0 0 1 220.9578 758.5596)" class="st14 st24 st25">79,5%</text>
+			<text transform="matrix(1 0 0 1 220.9578 758.5596)" class="st14 st23 st24">79,5%</text>
 		</g>
 	</g>
 	<g transform="translate(70.24238342432642,29.126393267482456)" pointer-events="none">
 		<g>
-			<text transform="matrix(1 0 0 1 138.1577 645.3739)" class="st14 st24 st25">20,5%</text>
+			<text transform="matrix(1 0 0 1 138.1577 645.3739)" class="st14 st23 st24">20,5%</text>
 		</g>
 	</g>
 </g>
@@ -376,12 +381,12 @@
 		L447.2,732.1z"/>
 	<g transform="translate(122.49788861837825,96.71273385558544)" pointer-events="none">
 		<g>
-			<text transform="matrix(1 0 0 1 510.1969 775.7206)" class="st14 st24 st26">78,6%</text>
+			<text transform="matrix(1 0 0 1 510.1969 775.7206)" class="st14 st23 st25">78,6%</text>
 		</g>
 	</g>
 	<g transform="translate(69.286840385528,29.865187286992672)" pointer-events="none">
 		<g>
-			<text transform="matrix(1 0 0 1 434.4445 659.4379)" class="st14 st24 st26">21,4%</text>
+			<text transform="matrix(1 0 0 1 434.4445 659.4379)" class="st14 st23 st25">21,4%</text>
 		</g>
 	</g>
 </g>
