@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 697.3 667.1" style="enable-background:new 0 0 697.3 667.1;" xml:space="preserve">
+	 viewBox="0 0 697.3 682.7" style="enable-background:new 0 0 697.3 682.7;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#1C3761;}
-	.st1{font-family:'OpenSans-Bold';}
-	.st2{font-size:19.23px;}
-	.st3{fill:#79C8D1;}
-	.st4{enable-background:new    ;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#1C3761;}
+	.st2{font-family:'OpenSans-Bold';}
+	.st3{font-size:19.23px;}
+	.st4{fill:#79C8D1;}
 	.st5{font-family:'OpenSans-Light';}
 	.st6{font-size:13.74px;}
 	.st7{fill:#878787;}
@@ -32,16 +32,18 @@
 	.st26{clip-path:url(#SVGID_6_);fill:none;stroke:#66E0E0;stroke-width:4.6311;}
 	.st27{font-size:11.68px;}
 </style>
+<rect y="0" class="st0" width="697.3" height="682.7"/>
 <g>
-	<text transform="matrix(1 0 0 1 300.0984 52.477)" class="st0 st1 st2">Càmpings</text>
+	<text transform="matrix(1 0 0 1 300.0984 52.477)" class="st1 st2 st3">Càmpings</text>
 </g>
 <g>
-	<path class="st0" d="M271.6,123.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+	<path class="st1" d="M271.6,123.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
 		C269.6,124.4,270.5,123.5,271.6,123.5z"/>
-	<path class="st3" d="M327.3,123.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
+	<path class="st4" d="M327.3,123.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
 		C325.3,124.4,326.2,123.5,327.3,123.5z"/>
 </g>
-<text transform="matrix(1 0 0 1 110.0283 78.4896)" class="st4"><tspan x="0" y="0" class="st0 st5 st6">L’ocupació en càmpings es manté per sobre dels valors del 2020 i se situa en  </tspan><tspan x="58.3" y="16.5" class="st0 st5 st6">un 49% (8 punts per sota dels valors pre-pandèmia (2019).</tspan></text>
+<text transform="matrix(1 0 0 1 110.0283 78.4896)" class="st1 st5 st6">L’ocupació en càmpings es manté per sobre dels valors del 2020 i se situa en  </text>
+<text transform="matrix(1 0 0 1 168.3283 94.9896)" class="st1 st5 st6">un 49% (8 punts per sota dels valors pre-pandèmia (2019).</text>
 <g>
 	<text transform="matrix(1 0 0 1 45.5947 648.0063)" class="st7 st8 st9">Font: Elaboració pròpia del LABturisme en base a dades de l&apos;Enquesta d&apos;ocupació en allotjaments de l&apos;INE.        </text>
 </g>
@@ -59,74 +61,74 @@
 					<path class="st12" d="M16.7,585.6V146"/>
 					<g transform="translate(0,542.3645922851563)">
 						<line class="st13" x1="16.4" y1="43.3" x2="619.2" y2="43.3"/>
-						<text transform="matrix(0.9049 0 0 1 0.5948 46.9936)" class="st14 st15 st16">0%</text>
+						<text transform="matrix(0.9049 0 0 1 0.5947 46.9932)" class="st14 st15 st16">0%</text>
 					</g>
 					<g transform="translate(0,406.8984442138672)">
 						<line class="st13" x1="16.4" y1="68.8" x2="619.2" y2="68.8"/>
-						<text transform="matrix(0.9049 0 0 1 -4.5136 65.6335)" class="st14 st15 st16">20%</text>
+						<text transform="matrix(0.9049 0 0 1 -4.5137 65.6332)" class="st14 st15 st16">20%</text>
 					</g>
 					<g transform="translate(0,271.43229614257814)">
 						<line class="st13" x1="16.4" y1="94.4" x2="619.2" y2="94.4"/>
-						<text transform="matrix(0.9049 0 0 1 -4.5136 98.0982)" class="st14 st15 st16">40%</text>
+						<text transform="matrix(0.9049 0 0 1 -4.5137 98.0983)" class="st14 st15 st16">40%</text>
 					</g>
 					<g transform="translate(0,135.96614807128907)">
 						<line class="st13" x1="16.4" y1="119.9" x2="619.2" y2="119.9"/>
-						<text transform="matrix(0.9049 0 0 1 -4.5136 123.6508)" class="st14 st15 st16">60%</text>
+						<text transform="matrix(0.9049 0 0 1 -4.5137 123.6509)" class="st14 st15 st16">60%</text>
 					</g>
 					<g transform="translate(0,0.5)">
 						<line class="st13" x1="16.4" y1="145.5" x2="619.2" y2="145.5"/>
-						<text transform="matrix(0.9049 0 0 1 -4.5136 149.2029)" class="st14 st15 st16">80%</text>
+						<text transform="matrix(0.9049 0 0 1 -4.5137 149.203)" class="st14 st15 st16">80%</text>
 					</g>
 				</g>
 				<g transform="translate(0,541.8645922851563)">
 					<path class="st17" d="M16.7,43.8h602.8"/>
 					<g transform="translate(0.5,0)">
 						<line class="st17" x1="16.2" y1="43.4" x2="16.2" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 7.3063 65.2748)" class="st14 st15 st16">Gen.</text>
+						<text transform="matrix(0.9049 0 0 1 7.3062 65.2745)" class="st14 st15 st16">Gen.</text>
 					</g>
 					<g transform="translate(75.1369961825284,0)">
 						<line class="st17" x1="-3.6" y1="43.4" x2="-3.6" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -11.8034 65.2748)" class="st14 st15 st16">Feb.</text>
+						<text transform="matrix(0.9049 0 0 1 -11.8035 65.2745)" class="st14 st15 st16">Feb.</text>
 					</g>
 					<g transform="translate(149.7739923650568,0)">
 						<line class="st17" x1="-23.4" y1="43.4" x2="-23.4" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -33.0879 65.2748)" class="st14 st15 st16">Mar.*</text>
+						<text transform="matrix(0.9049 0 0 1 -33.088 65.2745)" class="st14 st15 st16">Mar.*</text>
 					</g>
 					<g transform="translate(224.41098854758522,0)">
 						<line class="st17" x1="-43.3" y1="43.4" x2="-43.3" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -50.7942 65.2748)" class="st14 st15 st16">Abr.</text>
+						<text transform="matrix(0.9049 0 0 1 -50.7943 65.2745)" class="st14 st15 st16">Abr.</text>
 					</g>
 					<g transform="translate(299.0479847301136,0)">
 						<line class="st17" x1="-63.1" y1="43.4" x2="-63.1" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -72.5308 65.2748)" class="st14 st15 st16">Mai.*</text>
+						<text transform="matrix(0.9049 0 0 1 -72.5309 65.2745)" class="st14 st15 st16">Mai.*</text>
 					</g>
 					<g transform="translate(373.684980912642,0)">
 						<line class="st17" x1="-82.9" y1="43.4" x2="-82.9" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -91.41 65.2748)" class="st14 st15 st16">Jun.</text>
+						<text transform="matrix(0.9049 0 0 1 -91.4096 65.2745)" class="st14 st15 st16">Jun.</text>
 					</g>
 					<g transform="translate(448.32197709517044,0)">
 						<line class="st17" x1="-102.8" y1="43.4" x2="-102.8" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -109.7443 65.2748)" class="st14 st15 st16">Jul.</text>
+						<text transform="matrix(0.9049 0 0 1 -109.7439 65.2745)" class="st14 st15 st16">Jul.</text>
 					</g>
 					<g transform="translate(522.9589732776989,0)">
 						<line class="st17" x1="-122.6" y1="43.4" x2="-122.6" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -131.0541 65.2748)" class="st14 st15 st16">Ago.</text>
+						<text transform="matrix(0.9049 0 0 1 -131.0537 65.2745)" class="st14 st15 st16">Ago.</text>
 					</g>
 					<g transform="translate(597.5959694602273,0)">
 						<line class="st17" x1="-142.4" y1="43.4" x2="-142.4" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -149.8561 65.2748)" class="st14 st15 st16">Set.</text>
+						<text transform="matrix(0.9049 0 0 1 -149.8557 65.2745)" class="st14 st15 st16">Set.</text>
 					</g>
 					<g transform="translate(672.2329656427556,0)">
 						<line class="st17" x1="-162.3" y1="43.4" x2="-162.3" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -170.1523 65.2748)" class="st14 st15 st16">Oct.</text>
+						<text transform="matrix(0.9049 0 0 1 -170.1519 65.2745)" class="st14 st15 st16">Oct.</text>
 					</g>
 					<g transform="translate(746.869961825284,0)">
 						<line class="st17" x1="-182.1" y1="43.4" x2="-182.1" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -190.8205 65.2748)" class="st14 st15 st16">Nov.</text>
+						<text transform="matrix(0.9049 0 0 1 -190.8201 65.2745)" class="st14 st15 st16">Nov.</text>
 					</g>
 					<g transform="translate(821.5069580078125,0)">
 						<line class="st17" x1="-201.9" y1="43.4" x2="-201.9" y2="48.2"/>
-						<text transform="matrix(0.9049 0 0 1 -210.2076 65.2748)" class="st14 st15 st16">Des.</text>
+						<text transform="matrix(0.9049 0 0 1 -210.2072 65.2745)" class="st14 st15 st16">Des.</text>
 					</g>
 				</g>
 			</g>
@@ -136,7 +138,7 @@
 <g>
 	<g transform="translate(45, 10)">
 		<g transform="translate(0, 230.29245172119144)">
-			<text transform="matrix(0.9049 0 0 1 534.4645 97.241)" class="st14 st18 st19">Mitjana 2019: 46,5%</text>
+			<text transform="matrix(0.9049 0 0 1 534.4648 97.2411)" class="st14 st18 st19">Mitjana 2019: 46,5%</text>
 			<line class="st20" x1="16.4" y1="102.1" x2="619.2" y2="102.1"/>
 		</g>
 	</g>
@@ -154,15 +156,19 @@
 										<g>
 											<g>
 												<g>
-													<defs>
-														<polyline id="SVGID_1_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 														"/>
-													</defs>
-													<clipPath id="SVGID_2_">
-														<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-													</clipPath>
-													<path pointer-events="none" class="st21" d="M61.4,490.3c18.3-4,36.5-8.1,54.8-21.4c18.3-13.4,36.5-36.1,54.8-58.8
-														c5.7-5.3,12.7-7.9,21.3-9.7c11.9-2.5,21.9-5.1,29.7-5.5c19.4-4.3,38.8-8.6,58.2-12.9c17.6-2.7,35.3-5.4,52.9-8.1
-														c12.8-6,31.4-17.1,46.6-37.1c4.1-5.4,7.4-10.8,10.1-15.8"/>
+													<g>
+														<g>
+															<defs>
+																<polyline id="SVGID_1_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 																"/>
+															</defs>
+															<clipPath id="SVGID_2_">
+																<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+															</clipPath>
+															<path pointer-events="none" class="st21" d="M61.4,490.3c18.3-4,36.5-8.1,54.8-21.4c18.3-13.4,36.5-36.1,54.8-58.8
+																c5.7-5.3,12.7-7.9,21.3-9.7c11.9-2.5,21.9-5.1,29.7-5.5c19.4-4.3,38.8-8.6,58.2-12.9c17.6-2.7,35.3-5.4,52.9-8.1
+																c12.8-6,31.4-17.1,46.6-37.1c4.1-5.4,7.4-10.8,10.1-15.8"/>
+														</g>
+													</g>
 												</g>
 											</g>
 										</g>
@@ -185,8 +191,8 @@
 </g>
 <path id="point-0-2" class="st14" d="M385.2,319.2c0-2.7,2.2-4.9,5-4.9s5,2.2,5,4.9s-2.2,4.9-5,4.9S385.2,321.9,385.2,319.2z"/>
 <g transform="translate(45,10)">
-	<path id="point-1-0" class="st23" d="M15.6,436.8c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S15.6,437.3,15.6,436.8z"
-		/>
+	<path id="point-1-0" class="st23" d="M15.6,436.8c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S15.6,437.3,15.6,436.8z"/>
 	<path id="point-1-1" class="st23" d="M70.4,377.5c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S70.4,377.9,70.4,377.5z"
 		/>
 	<path id="point-1-2" class="st23" d="M125.2,357.2c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
@@ -208,8 +214,8 @@
 		/>
 </g>
 <g transform="translate(45,10)">
-	<path id="point-2-0" class="st24" d="M15.6,432.4c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S15.6,432.9,15.6,432.4z"
-		/>
+	<path id="point-2-0" class="st24" d="M15.6,432.4c0-0.4,0.3-0.8,0.7-0.8c0.4,0,0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
+		S15.6,432.9,15.6,432.4z"/>
 	<path id="point-2-1" class="st24" d="M70.4,429.7c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8S70.4,430.1,70.4,429.7z"
 		/>
 	<path id="point-2-2" class="st24" d="M125.2,375.8c0-0.4,0.3-0.8,0.7-0.8s0.7,0.4,0.7,0.8s-0.3,0.8-0.7,0.8
@@ -236,8 +242,8 @@
 	C59,495.7,56.7,493.5,56.7,490.8z"/>
 <path id="point-0-6-5_1_" class="st24" d="M113.8,439.5c0-2,1.6-3.6,3.6-3.6s3.6,1.6,3.6,3.6s-1.6,3.6-3.6,3.6l0,0
 	C115.4,443.1,113.8,441.4,113.8,439.5z"/>
-<path id="point-0-2_3_" class="st24" d="M55.5,440.5c0-2.7,2.3-4.9,5.2-4.9c2.9,0,5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9
-	S55.5,443.2,55.5,440.5z"/>
+<path id="point-0-2_3_" class="st24" d="M55.5,440.5c0-2.7,2.3-4.9,5.2-4.9s5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9S55.5,443.2,55.5,440.5
+	z"/>
 <path id="point-0-2_2_" class="st23" d="M56.4,447.4c0-2.7,2.3-4.9,5.2-4.9c2.8,0,5.2,2.2,5.2,4.9s-2.3,4.9-5.2,4.9
 	C58.7,452.2,56.4,450.1,56.4,447.4z"/>
 <g>
@@ -252,14 +258,18 @@
 									<g>
 										<g>
 											<g>
-												<defs>
-													<polyline id="SVGID_3_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 													"/>
-												</defs>
-												<clipPath id="SVGID_4_">
-													<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-												</clipPath>
-												<path class="st25" d="M336.1,363.3c21.1-17,44.3-19.2,70.3-23.2c18,1,40-6,55,8c11,11,16,29,31,36c11,5,24,1,35-3
-													c11-5,22-11,34-6c5,2,10,4,13,9c14,21,24,43,46,55c14,7,29,9,43.8,11.6"/>
+												<g>
+													<g>
+														<defs>
+															<polyline id="SVGID_3_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 															"/>
+														</defs>
+														<clipPath id="SVGID_4_">
+															<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+														</clipPath>
+														<path class="st25" d="M336.1,363.3c21.1-17,44.3-19.2,70.3-23.2c18,1,40-6,55,8c11,11,16,29,31,36c11,5,24,1,35-3
+															c11-5,22-11,34-6c5,2,10,4,13,9c14,21,24,43,46,55c14,7,29,9,43.8,11.6"/>
+													</g>
+												</g>
 											</g>
 										</g>
 									</g>
@@ -282,13 +292,17 @@
 									<g>
 										<g>
 											<g>
-												<defs>
-													<polyline id="SVGID_5_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 													"/>
-												</defs>
-												<clipPath id="SVGID_6_">
-													<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
-												</clipPath>
-												<path class="st26" d="M61.4,446.8c16-19.7,30-40.7,51-56.7c18-13,38-25,60.2-22.3"/>
+												<g>
+													<g>
+														<defs>
+															<polyline id="SVGID_5_" points="664.2,603.3 61.4,603.3 61.4,147.5 664.2,147.5 															"/>
+														</defs>
+														<clipPath id="SVGID_6_">
+															<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+														</clipPath>
+														<path class="st26" d="M61.4,446.8c16-19.7,30-40.7,51-56.7c18-13,38-25,60.2-22.3"/>
+													</g>
+												</g>
 											</g>
 										</g>
 									</g>
@@ -339,18 +353,18 @@
 	C608.3,394.4,606.7,392.8,606.7,390.8z"/>
 <path id="point-0-6-5_21_" class="st23" d="M222.6,592.5c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
 	C224.2,596,222.6,594.4,222.6,592.5z"/>
-<text transform="matrix(1 0 0 1 55.4916 510.476)" class="st0 st15 st27">19,1</text>
-<text transform="matrix(1 0 0 1 66.9846 461.6683)" class="st0 st15 st27">27,0</text>
-<text transform="matrix(1 0 0 1 45.5946 424.2097)" class="st0 st15 st27">27,8</text>
-<text transform="matrix(1 0 0 1 218.6165 580.0361)" class="st0 st15 st27">0,0</text>
-<text transform="matrix(1 0 0 1 433.4491 238.7562)" class="st0 st15 st27">62,5</text>
-<text transform="matrix(1 0 0 1 436.9052 329.9085)" class="st0 st15 st27">46,3</text>
-<text transform="matrix(1 0 0 1 656.2997 406.5165)" class="st0 st15 st27">32,0</text>
-<text transform="matrix(1 0 0 1 656.2997 439.3402)" class="st0 st15 st27">26,3</text>
+<text transform="matrix(1 0 0 1 55.4916 510.476)" class="st1 st15 st27">19,1</text>
+<text transform="matrix(1 0 0 1 66.9846 461.6683)" class="st1 st15 st27">27,0</text>
+<text transform="matrix(1 0 0 1 45.5946 424.2097)" class="st1 st15 st27">27,8</text>
+<text transform="matrix(1 0 0 1 218.6165 580.0361)" class="st1 st15 st27">0,0</text>
+<text transform="matrix(1 0 0 1 433.4491 238.7562)" class="st1 st15 st27">62,5</text>
+<text transform="matrix(1 0 0 1 436.9052 329.9085)" class="st1 st15 st27">46,3</text>
+<text transform="matrix(1 0 0 1 656.2997 406.5165)" class="st1 st15 st27">32,0</text>
+<text transform="matrix(1 0 0 1 656.2997 439.3402)" class="st1 st15 st27">26,3</text>
 <path class="st24" d="M384.5,123.5h11.2c1.1,0,2,0.9,2,2v4c0,1.1-0.9,2-2,2h-11.2c-1.1,0-2-0.9-2-2v-4
 	C382.5,124.4,383.4,123.5,384.5,123.5z"/>
 <text transform="matrix(1 0 0 1 405.0578 131.5507)" class="st10 st8 st9">2019</text>
-<text transform="matrix(1 0 0 1 381.644 308.4568)" class="st0 st15 st27">48,9</text>
+<text transform="matrix(1 0 0 1 381.644 308.4568)" class="st1 st15 st27">48,9</text>
 <path id="point-0-6-5_6_" class="st14" d="M167.1,410.8c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
 	C168.7,414.3,167.1,412.7,167.1,410.8z"/>
 <path id="point-0-6-5_22_" class="st14" d="M222.9,393.7c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5l0,0
