@@ -78,6 +78,11 @@ img {
     vertical-align: middle;
     -ms-interpolation-mode: bicubic;
 }
+.ico.social_peu img{
+	width: 24px;
+	height: 24px;
+	margin-top: -40px;
+}
 .page-container {
     position: relative;
     display: table;
@@ -190,6 +195,14 @@ h2 .subtitol{
 	position: relative;
     text-align: right;
 	margin-top: 25px;
+	
+}
+.page-footer .xs-diputacio img{
+	position: relative;
+    text-align: right;
+	margin-top: 25px;
+	width: 25px;
+	margin-left: 10px;
 	
 }
 
@@ -434,6 +447,14 @@ h2 .subtitol{
 	
 	
 }
+.ico.social_peu img{
+
+			margin-top: -580px;
+}
+		.col-text {
+			margin-top: -3000px;
+			margin-left: 15px;
+		}
 @media (min-width: 1px){
 	.col {
 	    -ms-flex-preferred-size: 0;
@@ -527,9 +548,24 @@ h2 .subtitol{
 	}
 	
 	@media (max-width: 576px){
-		.logo2 {
-	    display: none;
-	}
+		.ico.social_peu img{
+	width: 20px;
+	height: 20px;
+			margin-top: 20px;
+			
+}
+		.col img {
+			width: 250px;
+			
+			
+				
+		}
+		.col-text {
+			font-size: 14px;
+			margin-left: 15px;
+			margin-top: 100px;
+		}
+
 		.page-header .titol {
 	text-align: center;
 	font-size: 35px;
