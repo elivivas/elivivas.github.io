@@ -126,12 +126,13 @@ img {
 }
 .page-header .titol{
 	
-	font-size: 52px;
+	font-size: 50px;
 	line-height: 51px;
 	text-align: left;
 	font-weight: 500;
 	font-family: DINNextLTPro-Light;
 	margin-left: 200px;
+	margin-top: -25px;
 	
 }
 .page-header .subtitol{
