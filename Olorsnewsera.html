@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>NEWSERA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+<div id='map'></div>
+<style>
+    
+body {
+    margin: 0;
+    padding: 0;
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  /* Popups */
+  .mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    width: 180px;
+  }
+  .mapboxgl-popup-content h3 {
+    background: #91C949;
+    color: #fff;
+    margin: 0;
+    padding: 5px;
+    font-weight: 700;
+  }
+  .mapboxgl-popup-content p {
+margin: 0;
+padding: 10px;
+font-weight: 400;
+}
+/*EDITAR POPUPS*/
+/* AGRICULTURA */
+.agricultura .mapboxgl-popup-content h3{
+    background-color: #9FB234;
+}
+/*AIGUES RESIDUALES*/
+.aigues_residuals .mapboxgl-popup-content h3{
+    background-color: #3B4378;
+}
+/*URBA*/
+.urba .mapboxgl-popup-content h3{
+    background-color: #E7A136;
+}
+/*INDUSTRIAL*/
+.industrial .mapboxgl-popup-content h3{
+    background-color: #949494;
+}
+/*RESIDUS*/
+.residus .mapboxgl-popup-content h3{
+    background-color: #832F2F;
+}
+/*AGRADABLE*/
+.agradable .mapboxgl-popup-content h3{
+    background-color: #77D624;
+}
+/*INDUSTRIA ALIMENTARIA*/
+.industria_alimentaria .mapboxgl-popup-content h3{
+    background-color: #EF48B5;
+}
+/*fins aqui */
+  .mapboxgl-popup-content div {
+    padding: 0px;
+  }
+  .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+    margin-top: 0px;
+  }
+  .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+    border-bottom-color: #91C949;
+  }
+  </style>
+  <script>
+
+  mapboxgl.accessToken =
+  "pk.eyJ1IjoidXJpeW91IiwiYSI6ImNrdm02eTRyYTBzaXAyeG81ZW9wNGtwZmwifQ.X2M74wdXCP0VBUMJRAgizg";
+const bounds = [
+[1.7015675080300467, 41.2507485911375], // Southwest coordinates
+[2.486911486681255, 41.53715215728662] // Northeast coordinates
+];
+var map = new mapboxgl.Map({
+  container: "map", // container id
+  style: "mapbox://styles/uriyou/clatm42qt000l14qn455xx5yu", // stylesheet location
+  center: [2.19, 41.42], // starting position [lng, lat]
+  zoom: 12,// starting zoom
+  maxZoom: 17,
+  minZoom: 10,
+  pitch: 30,
+  bearing: -30,
+  antialias: true,
+  maxBounds: bounds
+});
+    // 3D BUILDINGS
+    map.on('load', () => {
+// Insert the layer beneath any symbol layer.
+const layers = map.getStyle().layers;
+const labelLayerId = layers.find(
+(layer) => layer.type === 'symbol' && layer.layout['text-field']
+).id;
+ 
+// The 'building' layer in the Mapbox Streets
+// vector tileset contains building height data
+// from OpenStreetMap.
+map.addLayer(
+{
+'id': 'add-3d-buildings',
+'source': 'composite',
+'source-layer': 'building',
+'filter': ['==', 'extrude', 'true'],
+'type': 'fill-extrusion',
+'minzoom': 10,
+'paint': {
+'fill-extrusion-color': '#aaa',
+ 
+// Use an 'interpolate' expression to
+// add a smooth transition effect to
+// the buildings as the user zooms in.
+'fill-extrusion-height': [
+'interpolate',
+['linear'],
+['zoom'],
+10,
+0,
+10.05,
+['get', 'height']
+],
+'fill-extrusion-base': [
+'interpolate',
+['linear'],
+['zoom'],
+10,
+0,
+10.05,
+['get', 'min_height']
+],
+'fill-extrusion-opacity': 0.6
+}
+},
+labelLayerId
+);
+});
+    
+// Create a popup, but don't add it to the map yet.
+const popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+map.on('mouseenter', 'oc-zoneforum-3-3ymck8', (e) => {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+// Copy coordinates array.
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(
+ `<h3>${Tipus}</h3>
+ <b>Subtipus</b>: ${Subtipus} <br><b>Durada</b>: ${Durada} <hr> <b>Molèstia</b>: ${Molèstia}<br>
+<b>Dia</b>: ${Dia}`).addTo(map);
+});
+map.on('mouseleave', 'oc-zoneforum-3-3ymck8', () => {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+// AGRICULTURA.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'agricultura'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+
+// AGUAS RESIDUALES.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+new mapboxgl.Popup({className: 'aigues_residuals'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+// URBANO.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'urba'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+// INDUSTRIAL.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'industrial'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+// RESIDUO.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'residus'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+// AGRADABLE.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'agradable'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+// INDUSTRIA ALIMENTARIA.
+map.on('click', 'oc-zoneforum-3-3ymck8', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+              new mapboxgl.Popup({className: 'industria_alimentaria'})
+    .setLngLat(coordinates)
+    .setHTML('<h3>' + e.features[0].properties.Tipus + '</h3>' +
+        '<p>' + '<b>' + 'Subtipus: '+ '</b>' + e.features[0].properties.Subtipus
+         + '<br>' + '<b>' + 'Molèstia: '+' </b>' + e.features[0].properties.Molèstia
+         + '<br>' + '<b>' + 'Durada: '+' </b>' + e.features[0].properties.Durada
+         + '<b>' + '<br>'+ 'Dia: '+' </b>' + e.features[0].properties.Dia + '</p>')
+    .addTo(map);
+});
+
+//  CURSORES
+            // AGRICULTURA
+            // Change the cursor to a pointer when the mouse is over the places layer.
+
+            map.on('mouseenter', 'agricultura', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'agricultura', function () {
+              map.getCanvas().style.cursor = '';
+            });
+            // AGUAS RESIDUALES
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'aigues_residuals', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'aigues_residuals', function () {
+              map.getCanvas().style.cursor = '';
+            });
+              // URBANO
+              // Change the cursor to a pointer when the mouse is over the places layer.
+              map.on('mouseenter', 'urba', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'urba', function () {
+              map.getCanvas().style.cursor = '';
+            });
+            // INDUSTRIAL
+            // Change the cursor to a pointer when the mouse is over the places layer.
+              map.on('mouseenter', 'industrial', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'industrial', function () {
+              map.getCanvas().style.cursor = '';
+            });
+
+// RESIDUO
+            // Change the cursor to a pointer when the mouse is over the places layer.
+              map.on('mouseenter', 'residus', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'residus', function () {
+              map.getCanvas().style.cursor = '';
+            });
+
+// AGRADABLE
+            // Change the cursor to a pointer when the mouse is over the places layer.
+              map.on('mouseenter', 'agradable', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'agradable', function () {
+              map.getCanvas().style.cursor = '';
+            });
+
+// INDUSTRIA ALIMENTARIA 
+            // Change the cursor to a pointer when the mouse is over the places layer.
+              map.on('mouseenter', 'industria_alimentaria', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'industria_alimentaria', function () {
+              map.getCanvas().style.cursor = '';
+            });
+        
+</script>
+  </head>
+</html>
+
+
+
+
+
+
+
+
+
