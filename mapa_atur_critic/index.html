@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="mapbox/mapbox-gl.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="mapbox/mapbox-gl-generic-geocoder.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Mapa de Catalunya amb les dades d'atur per seccions censals</title>
+    </head>
+    <body>
+        <div id="map">
+            <nav id="menu"></nav>
+              <div id="distance" class="distance-container"></div>
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="./mapbox/mapbox-gl.js"></script>
+        <script src="mapbox/mapbox-gl-generic-geocoder.min.js"></script>
+        <script src="data/bseccenv10sh1f1_20210101_2_0.js"></script>
+<script src="./mapbox/style.js"></script>
+<script src="./js/Autolinker.min.js"></script>
+<script>
+var map = new mapboxgl.Map({
+ container: 'map',
+ style: styleJSON,
+ center: [1.8442557679459515,41.607695253158106],
+ zoom: 8,
+ bearing: 360.0,
+ attributionControl: false
+});
+map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+map.addControl(new mapboxgl.AttributionControl({
+    customAttribution: '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://github.com/mapbox/mapbox-gl-js" target="_blank">Mapbox GL JS</a> &middot; <a href="https://qgis.org" target="_blank">QGIS</a>',
+    compact: false
+}));
+var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+
+map.on('click', 'lyr_bseccenv10sh1f1_20210101_2_0_0', function (e) {
+    var description = '<table>\
+    <tr>\
+        <td><H2><strong>' + (e.features[0].properties['NOMMUN'] !== null ? autolinker.link(e.features[0].properties['NOMMUN'].toLocaleString()) : '') + '</H2></strong></td>\
+    </tr>\
+    <tr>\
+        <td><HR>Districte: ' + (e.features[0].properties['DISTRICTE'] !== null ? autolinker.link(e.features[0].properties['DISTRICTE'].toLocaleString()) : '') + '</td>\
+    </tr>\
+    <tr>\
+        <td>Secció: ' + (e.features[0].properties['SECCIO'] !== null ? autolinker.link(e.features[0].properties['SECCIO'].toLocaleString()) : '') + '</td>\
+    </tr>\
+    <tr>\
+        <td>(' + (e.features[0].properties['Total Personas'] !== null ? autolinker.link(e.features[0].properties['Total Personas'].toLocaleString() + ' habitants') : '') + ')</td>\
+    </tr>\
+    <tr>\
+        <td><hr><li>Percentatge de població entre 16 i 64 anys: ' + (e.features[0].properties['<strong> Porcentaje de personas entre 16 (incluido) y 64 (incluido) años </strong>'] !== null ? autolinker.link(e.features[0].properties['Porcentaje de personas entre 16 (incluido) y 64 (incluido) años'].toLocaleString()) : '') + '</td>\
+    </tr>\
+    <tr>\
+        <td><li>Percentatge de població aturada: ' + (e.features[0].properties['Porcentaje de población parada sobre población activa= Parados /Activos'] !== null ? autolinker.link(e.features[0].properties['Porcentaje de población parada sobre población activa= Parados /Activos'].toLocaleString()) : '') + '</td>\
+    </tr>\
+</table>';
+
+
+
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(description)
+        .addTo(map);
+});
+
+
+
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'lyr_bseccenv10sh1f1_20210101_2_0_0', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'lyr_bseccenv10sh1f1_20210101_2_0_0', function () {
+    map.getCanvas().style.cursor = '';
+});
+        var geocodeNominatimRequest = function(query, mapBounds, options) {
+        var params = { format: "json", q: query, limit: options.limit };
+        var urlParams = new URLSearchParams(Object.entries(params));
+
+        return fetch("http://nominatim.openstreetmap.org/search?" + urlParams)
+            .then(function(response) {
+                if(response.ok) {
+                    return response.json();
+                } else {
+                    return [];
+                }
+            }).then(function(json) {
+                return json.map(function(result) {
+                    return {
+                        name: result.display_name,
+                        lat: result.lat,
+                        lon: result.lon,
+                        bbox: [result.boundingbox[2], result.boundingbox[0],
+                               result.boundingbox[3], result.boundingbox[1]]
+                    };
+                });
+            });
+        };
+
+        map.addControl(new MapboxGenericGeocoder({}, geocodeNominatimRequest));
+</script>
+    </body>
+</html>
