@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.8 79.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #a52030;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 12.9px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="5" y1="26.13" x2="66" y2="26.13"/>
+  <line class="cls-1" x1="5" y1="53.13" x2="66" y2="53.13"/>
+</svg>
