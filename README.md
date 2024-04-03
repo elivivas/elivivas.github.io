@@ -1,2 +1,2 @@
 # elivivas.github.io
-Empezamos a poner los datos obtenidos de los portales de Dades Obertes Gencat y recursos que vamos a ir encontrando para hacer el seguimiento del Covid-19 en Catalunya. 
+Indicadores de Turisme mensuales en el entorno de Barcelona para el Labturisme de la Diputació de Barcelona y diferentes recursos que necesitemos para nuestros proyectos. 
