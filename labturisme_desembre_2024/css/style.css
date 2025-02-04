@@ -1,0 +1,707 @@
+@font-face {
+  font-family: din_alternate_bold-webfont ;
+  src:url("../fonts/din_alternate_bold-webfont.woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: DINPro-Medium ;
+  src:url("../fonts/DINPro-Medium.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src:url("../fonts/Roboto-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src:url("../fonts/Roboto-Light.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src:url("../fonts/Roboto-Medium.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: DINPRO-Regular;
+  src:url("../fonts/DINPro-Regular.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: DINNextLTPro-Light;
+  src:url("../fonts/DINNextLTPro-Light.woff");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: HelveticaNeue-Light;
+  src:url("../fonts/HelveticaNeue-Light.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: HelveticaNeue-Medium;
+  src:url("../fonts/HelveticaNeue-Medium.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: DINNextLTPro-Medium;
+  src:url("../fonts/DINNextLTPro-Medium.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: DINNextLTPro-Regular;
+  src:url("../fonts/DINNextLTPro-Regular.woff");
+  font-weight: normal;
+}
+
+
+body {
+    height: 100%;
+    min-height: 100%;
+}
+body { margin: 0; }
+a { background-color: transparent; }
+a:active,
+a:hover { outline: 0; }
+a {
+    color: #003366;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #003366;
+}
+img {
+    box-sizing: border-box;
+    border: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+.ico.social_peu img{
+	width: 24px;
+	height: 24px;
+	margin-top: -40px;
+}
+.page-container {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+.page-header-wrapper,
+.page-content-wrapper,
+.page-footer-wrapper {
+    box-sizing: border-box;
+}
+
+.page-footer-wrapper{
+	color: #FFFFFF;
+    background: #A52030;
+	
+}
+.page-header {
+}
+.page-header:before,
+.page-header:after {
+    display: table;
+    content: "";
+}
+.page-header:after { clear: both; }
+.page-header .logo{
+	width: 180px;
+	position: relative;
+	left: 40%;
+	top: 40px;
+	margin: 20px;
+}
+
+
+.page-header .periode{
+	font-weight: 600;
+	padding: 15px 0;
+	font-size: 25px;
+}
+.page-header .titol{
+	
+	font-size: 52px;
+	line-height: 51px;
+	text-align: left;
+	font-weight: 500;
+	font-family: DINNextLTPro-Light;
+	margin-left: 25%;
+	
+}
+.page-header .subtitol{
+	font-size: 30px;
+	text-align: left;
+	font-family: DINNextLTPro-Light;
+	margin-left: 25% ;
+  margin-top: -25px;
+	font-weight: 500;
+
+}
+.page-header .mes{
+	font-size: 29px;
+	top: 15px;
+	text-align: left;
+	font-family: DINNextLTPro-Light;
+	margin-left: 25% ;
+	margin-top: 80px;
+	margin-bottom: -15px;
+	font-weight: 800;
+
+}
+.page-header{
+    margin: auto;
+
+    max-width: 75%;
+}
+
+.page-content,
+.page-footer {
+    margin: auto;
+    padding: 20px 10px;
+    max-width: 75%;
+}
+
+.page-content {
+text-align: center;
+}
+h2{
+	
+	font-size: 42px;
+	padding: 5px 0 0 0;
+	margin: 0;
+	line-height: 1;
+	font-family: HelveticaNeue-Medium;
+	font-weight: 500;
+}
+h2 .subtitol{
+	clear: left;
+	font-size: 22px;
+	font-family: HelveticaNeue-Light;
+	font-weight: 200;
+}
+.page-footer a,
+.page-footer a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.page-footer .xs-diputacio{
+	position: relative;
+    text-align: right;
+	margin-top: 25px;
+	
+}
+.page-footer .xs-diputacio img{
+	position: relative;
+    text-align: right;
+	margin-top: 25px;
+	width: 25px;
+	margin-left: 10px;
+	
+}
+
+.page-footer .logo-diputacio{
+	position: relative;
+	text-align: left;
+	margin-top: -70px;
+	
+}
+.page-footer .text-diputacio{
+	position: relative;
+    color: #FFFFFF;
+	text-align: left;
+	font-family: DINNextLTPro-Regular;
+	margin-bottom: 50px;
+}
+.page-footer .logo-diputacio img{
+	width: 250px;
+	
+}
+
+.page-info-wrapper { margin-bottom: 15px; }
+.page-info {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+}
+.page-info-heading {
+    margin: 0 0 15px;
+    font-size: 20px;
+    line-height: 24px;
+}
+.page-info p,
+.page-info ul { margin: 15px 0; }
+.page-info ul { padding-left: 20px; }
+.product-info-wrapper p {
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+
+.flourish-credit{
+	display: none;
+}
+.columnes{
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+	}
+.columnes .col.footer{
+	position: relative;
+	top: 400px;
+	right: 0px;
+
+	}
+
+
+.seccio {
+	padding: 25px;
+  font-family: HelveticaNeue-Light;
+	font-weight: 500;
+	
+	
+}
+.seccio .grafic2{
+	margin-top: 50px;
+	
+	
+}
+
+
+.icona img{
+	width: 120px;
+	height: 120px;
+}
+.icona-fletxa img{
+	width: 115px;
+	height: 115px;
+	padding: 50 50 50 50;
+	margin-top: 20px;
+}
+.tendencia{
+	font-weight: 500;
+	font-size: 30px;
+	font-family: HelveticaNeue-Medium;
+	color: #A52030;
+	margin-top: 20px;
+	
+	
+}
+
+.tendencia_2{
+	font-weight: 200;
+	font-size: 20px;
+	font-family: HelveticaNeue-Light;
+	color: #A52030;
+	margin-top: 5px;
+	
+}
+
+.indicacio{
+	font-weight: 300;
+	font-size: 25px;
+	
+}
+.total{
+	font-weight: 500;
+	font-size: 30px;
+	padding: 50;
+	font-family: HelveticaNeue-Medium;
+	color: #A52030;
+	
+}
+.total-titol{
+	font-weight: 500;
+	font-size: 20px;
+	padding: 50;
+	font-family: HelveticaNeue-Medium;
+	color: #A52030;
+	
+}
+.total-titol-2{
+	font-weight: 500;
+	font-size: 20px;
+	padding: 50;
+	font-family: HelveticaNeue-Medium;
+	color: #A52030;
+	
+}
+.descarregues{
+	border-bottom: 1px solid #000000;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 3px;
+}
+
+.descarregues .titular{
+	text-align: left;
+	font-weight: 600;
+}
+.descarregues .botonera{
+	text-align: right;
+	padding-bottom: 5px;
+}
+.ico{
+	margin-left:3px;
+}
+.ico.down:before{
+	display: inline-block;
+	content: ' ';
+	background-image: url(images/descarrega.svg);
+	background-size: 14px 12px;
+	height: 12px;
+	width: 14px;
+	background-repeat: no-repeat;
+}
+.ico.link{
+	padding-left: 10px;
+}
+.ico.link{
+	display: inline-block;
+	content: ' ';
+	background-image: url(images/ico_link.svg);
+	background-size: 12px 12px;
+    padding-left: 14px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: 10px;
+}
+.ico.social img{
+	width: 18px;
+	height: 18px;
+}
+.ico.social_peu img{
+	width: 24px;
+	height: 24px;
+	margin-left: 5px;
+}
+
+.text-right{
+	text-align: right;
+}
+.codi_embed{
+	text-align: right;
+}
+.btn_insert{
+	border: 0;
+	background: transparent;
+	font: normal 15px/1.2 "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+    color: #003366;
+}
+.codi_embed .codis{
+	display: none;
+	text-align:left;
+}
+.codi_embed .codis.mostra{
+	display: block;
+}
+.codi_embed .codis label,
+.codi_embed .codis textarea{
+	display: block;
+	width: 90%;
+	font: normal 15px/1.2 "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+.codi_embed .codis label{
+	padding-bottom: 5px;
+}
+.codi_embed .codis textarea{
+	height: 100px;
+	color:#666;
+	font-size: 13px;
+	resize: none;
+}
+.compartir_xarxes{
+	text-align: right;
+}
+.seccio .navegacio{
+	text-align: right;
+	font-size: 0.9rem;
+	color: #1FAB4B;
+}
+
+.page-header .logo2{
+	position: absolute;
+	left: 0px;
+	width: 50%;
+	margin-top: -30px;
+	max-width: 50%;	
+}
+.ico.social_peu img{
+
+			margin-top: -580px;
+}
+		.col-text {
+			margin-top: -3000px;
+			margin-left: 15px;
+		}
+@media (min-width: 2000px){
+	
+	.page-header .titol{
+	
+	font-size: 52px;
+	line-height: 51px;
+	text-align: left;
+	font-weight: 500;
+	font-family: DINNextLTPro-Light;
+	margin-left: 25%;
+	
+}
+	.page-header .mes{
+	font-size: 29px;
+	top: 15px;
+	text-align: left;
+	font-family: DINNextLTPro-Light;
+	margin-left: 30% ;
+	margin-top: 80px;
+	margin-bottom: -15px;
+	font-weight: 800;
+
+}
+	.page-header .titol{
+	
+	font-size: 52px;
+	line-height: 51px;
+	text-align: left;
+	font-weight: 500;
+	font-family: DINNextLTPro-Light;
+	margin-left: 30%;
+	
+}
+.page-header .subtitol{
+	font-size: 30px;
+	text-align: left;
+	font-family: DINNextLTPro-Light;
+	margin-left: 30% ;
+  margin-top: -25px;
+	font-weight: 500;
+
+}
+	.page-header .logo2{
+	position: absolute;
+	top: 0px;
+    left: 0px;
+	width: 45%;
+	margin-top: -30px;
+	max-width: 50%;	
+	z-index: -2;
+	margin-bottom: 100px;
+} }
+	@media (min-width: 2600px){
+	.page-header .logo2{
+	position: absolute;
+	top: 0px;
+    left: 0px;
+	width: 45%;
+	margin-top: -30px;
+	max-width: 50%;	
+	z-index: -2;
+	margin-bottom: 100px;
+}
+		.page-header .mes{
+	font-size: 29px;
+	top: 15px;
+	text-align: left;
+	font-family: DINNextLTPro-Light;
+	margin-left: 30% ;
+	margin-top: 5%;
+	margin-bottom: -15px;
+	font-weight: 800;
+	
+
+}
+	}
+@media (min-width: 1px){
+	.col {
+	    -ms-flex-preferred-size: 0;
+	    flex-basis: 0;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    max-width: 100%;
+	}
+	.descarregues .titular,
+	.descarregues .botonera{
+		 -ms-flex-preferred-size: 0;
+		    flex-basis: 0;
+		    -ms-flex-positive: 1;
+		    flex-grow: 1;
+		    max-width: 100%;
+	}
+
+
+@media (max-width: 1200px){
+	.col {
+	    position: relative;
+	    width: 100%;
+	    padding-right: 15px;
+	    padding-left: 15px;
+	}
+	
+	.page-header .logo2{
+	position: absolute;
+	left: 0px;
+	width: 60%;
+	margin-top: 0px;
+	
+}
+	.page-header .logo {
+	    position: relative; 
+        left: 48%;
+        transform: translateX(-50%);
+		
+		text-align: center;
+	}
+	.descarregues .titular,
+	.descarregues .botonera{
+		position: relative;
+	    width: 100%;
+	    padding-right: 15px;
+	    padding-left: 15px;
+	    text-align: center;
+	}
+	.total-titol-2{
+	font-weight: 600;
+	font-size: 15px;
+	font-family: Roboto-Medium;
+
+}
+	.page-footer .logo-diputacio img{
+	width: 260px;
+	
+	}
+		
+	.page-header .titol {
+	text-align: center;
+	font-size: 45px;
+	line-height: 46px;
+	font-family: DINNextLTPro-Light;
+	margin-inline: 0px;
+		}
+	.page-header .subtitol{
+	font-size: 25px;
+	text-align: center;
+	font-family: DINNextLTPro-Light;
+	margin-left: 0px ;
+  margin-top: -15px;
+
+}
+	.page-header .mes{
+	font-size: 25px;
+	top: 15px;
+    position: relative;
+	text-align: center;
+	font-family: DINNextLTPro-Light;
+	margin-left: 0px ;
+	margin-top: 40px;
+	margin-bottom: 0px;
+
+}
+
+	.page-content,
+.page-footer {
+    margin: auto;
+    padding: 20px 10px;
+    max-width: 100%;
+}
+
+	}
+	
+	@media (max-width: 576px){
+		.page-header .logo{
+	width: 150px;
+	position: relative;
+	left: 45%;
+	top: 30px;
+	margin: 20px;
+			
+}
+		.page-header .logo2 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    margin-top: 0px;
+	
+}
+		
+		.page-content,
+.page-footer {
+    margin: auto;
+    padding: 20px 10px;
+    max-width: 100%;
+}
+
+		.ico.social_peu img{
+	width: 20px;
+	height: 20px;
+			margin-top: 20px;
+			
+}
+		.col img {
+			width: 250px;
+			
+			
+				
+		}
+		.col-text {
+			font-size: 14px;
+			margin-left: 15px;
+			margin-top: 100px;
+		}
+
+		.page-header .titol {
+	text-align: center;
+	font-size: 35px;
+	line-height: 34px;
+	font-family: DINNextLTPro-Light;
+	margin-inline: 0px;
+		}
+		.page-header .subtitol{
+	font-size: 20px;
+	text-align: center;
+	font-family: DINNextLTPro-Light;
+	margin-left: 0px ;
+  margin-top: 0px;
+
+}
+		.page-footer .logo-diputacio img{
+	width: 200px;
+	
+	}
+		.page-footer .text-diputacio{
+	position: relative;
+    color: #FFFFFF;
+	text-align: left;
+	top: 0px;
+	font-family: DINNextLTPro-Regular;
+			font-size: 13px;
+}
+		
+		.page-header .mes{
+	font-size: 22px;
+	top: 15px;
+	text-align: center;
+	font-family: DINNextLTPro-Light;
+	margin-left: 0px ;
+	margin-top: 40px;
+	margin-bottom: 0px;
+
+} 
+	
+	
+    
+}}
+		
+
