@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<!-- script TO MAKE IT COMPATIBLE WITH BROWSERS-->
+	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+
+		<title>Ladies' Residence</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">	
+		<!-- scripts SECTION-2. WOMEN DATA GRAPHICS -->
+		<link rel="stylesheet" href="style_d3.css">
+		<link rel="stylesheet" href="styles.css" media="screen,print">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		<script src = 'd3.js'></script>
+		<script src = 'https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+		<!-- Load d3.js -->
+		<script src="https://d3js.org/d3.v4.js"></script>
+	</head>
+	<body>
+		<div class="bgimg-1" style="width: 100%; height: 100%;">
+		  <div style="width: 100%; margin-top: -45px;" class="caption">
+				<span class="fadeInUp-animation" style="padding-left:5%; ">WomenResID</span> 
+				<div class="fadeInUp-animation"><p  class="parrafointro"  style="padding-left:5%; padding-bottom: 1%;width:56%;  ">
+					The Ladies' Residence, the female group of the Students' Residence founded in 1915 in Madrid under the direction of María de Maeztu, 
+					was the first official institution in Spain dedicated to <mark class="mark">higher education for women.</mark> Promoted by the Board for 
+					Extension of Studies (JAE), and inspired by the ideals of the Free Institution of Education (ILE), its main objective was to provide 
+					women with access to quality education and to promote their intellectual and personal development. At WomenResID, we have extracted and analyzed data 
+					from the student registration books with the <mark class="mark">nearly 3,000 women who resided in or visited the Residence</mark> 
+					combined with those from various related sources with the aim of making them visible. <mark class="mark">Pioneer</mark> women, 
+					many anonymous, who paved the way for equal higher education, an initiative that was cut short in 1936 by the outbreak of the civil war.
+					</p> 
+
+				
+				  <span class="bajar" style=" width: 40%; padding-left: 15%;" >SCROLL DOWN TO SEE MORE</span>
+				</div>
+			
+			  
+	<div class="bgimg-1">
+		<div class="caption">
+					</div>
+				</div>
+			
+				<div class="fadeInUp-animation" style="width:25%; margin-left:60%; padding-top: -32%;">
+					<p class="titchat"  style="width: 100%;">Test the VictorIA chatbot</p>
+					<p class="textochat" >
+				Fed with data from the Ladies' Residence and academic articles. 
+					We are committed to transparency with sources. You can consult them in the methodology or you can also ask VictorIA for them.
+					 <br>Open and close the bot by pressing the chatbot icon</p>
+				</div>
+			</div>	   
+		</div>
+		
+		<!-- SECTION-1. CHRONOLOGY -->
+		<div style="color: #777;background-color:white; width:auto; margin-top: 50px; margin-bottom:50px">  
+		<div id="g-Crono-box">
+		<!-- Artboard: Mesa_de_trabajo_1 -->
+		
+			  <div id="g-Crono" class="g-artboard" style="max-width: 100%; max-height: 100%" data-aspect-ratio="0.969" data-min-width="0">
+			  <div style="padding: 0 0 103.1951% 0;"></div>
+			  <img id="g-Crono-img" class="g-Crono-img g-aiImg" alt="" src="IMAGE/fondo-crono.jpg"/>
+			  <div id="g-ai0-1" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:6.6608%;margin-top:-59px;left:5%;width:516px;">
+				<p class="g-pstyle0">The winding path to</p>
+				<p class="g-pstyle0">higher education</p>
+			  </div>
+				<div id="g-ai0-2" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:15.0094%;margin-top:-19.6px;left:5%;width:286px;">
+					  <p class="g-pstyle1">Background</p>
+			    </div>
+				  <div id="g-ai0-3" class="g-Capa_1 g-aiAbs" style="top:15.2%;left:44%;width:15.0037%;">
+					  <p class="g-pstyle2">Fernando de Castro creates the Association for Women's Education</p>
+				  </div>
+
+				<div id="g-ai0-5" class="g-Capa_1 g-aiAbs" style="top:16.8%;left:5%;width:22.5%;">
+					  <p class="g-pstyle4">In the late 19th and early 20th centuries, Spain experienced changes in education and women's rights, 
+						driven by feminist associations and reform movements that challenged the <mark class="mark">exclusion of women from higher education.</mark><br>
+						The <mark class="mark">Free Institution of Education (ILE)</mark>, founded in 1876 by Francisco Giner de los Ríos, was key to promoting 
+						a modern and secular education that included women. Although initially few women managed to enter university, 
+						facing strong resistance, these advances prepared the ground for the creation of the Ladies' Residence.</p>
+					  </div>
+				  <div id="g-ai0-6" class="g-Capa_1 g-aiAbs" style="top:22%;left:44%;width:17%;">
+					  <p class="g-pstyle2">National Pedagogical Congress in Madrid. Among its proposals, measures related to women's education were presented, with moderate success</p>
+				  </div>
+		
+				  <div id="g-ai0-8" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:30.2541%;margin-top:-8.4px;left:64%;width:283px;">
+					  <p class="g-pstyle6">Students of the Association for Women's Education</p>
+				  </div>
+				  <div id="g-ai0-9" class="g-Capa_1 g-aiAbs" style="top:32.5%;left:41.5%;width:24.5%;">
+					  <p class="g-pstyle2">Hispanic-Portuguese-American Pedagogical Congress. The section on education and professional aptitude of women was the most debated. Berta Wilhelmi, Emilia Pardo Bazán, and Concepción Arenal stood out.</p>
+				  </div>
+		
+				  <div id="g-ai0-11" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:42.98%;margin-top:-16.1px;left:68.5%;width:93px;">
+					  <p class="g-pstyle6">Emilia </p>
+					  <p class="g-pstyle6">Pardo Bazán</p>
+				  </div>
+				  <div id="g-ai0-12" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:42.98%;margin-top:-16.1px;left:78.5%;width:96px;">
+					  <p class="g-pstyle6"> Concepción </p>
+					  <p class="g-pstyle6">Arenal</p>
+				  </div>
+				  <div id="g-ai0-13" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:43.0516%;margin-top:-16.1px;left:88%;width:69px;">
+					  <p class="g-pstyle6">Berta<br>Wilhelmi </p>
+				  </div>
+				  <div id="g-ai0-14" class="g-Capa_1 g-aiAbs" style="top:43%;left:39%;width:25%;">
+					  <p class="g-pstyle2">Alice Gordon Gulick creates the Corporation of the International Institute for Girls in Spain in Boston</p>
+					  
+				  </div>
+				  <div id="g-ai0-15" class="g-Capa_1 g-aiAbs" style="top:49%;left:35.5%;width:25%;">
+					  <p class="g-pstyle2">The International Institute created by the Gulick couple is established in Madrid, on Fortuny Street</p>
+				  </div>
+			
+				  <div id="g-ai0-17" class="g-Capa_1 g-aiAbs" style="top:55.7%;left:37%;width:20%;">
+					  <p class="g-pstyle2">Creation of the School of Higher Studies of Teaching in Madrid</p>
+				  </div>
+		
+				  <div id="g-ai0-19" class="g-Capa_1 g-aiAbs" style="top:60.8%;left:46.5%;width:15%;">
+					  <p class="g-pstyle2">The International Institute for Girls inaugurates its new building on Miguel Ángel Street</p>
+			  
+				  </div>
+				<div id="g-ai0-20" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:64%;margin-top:-36.4px;left:5%;width:224px;">
+					  <p class="g-pstyle11">Students'<br>Residence</p>
+			  
+				  </div>
+				  <div id="g-ai0-21" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:63.2716%;margin-top:-6px;left:64.5%;width:322px;">
+					  <p class="g-pstyle6">Headquarters of the International Institute on Miguel Ángel Street in Madrid</p>
+				  </div>
+			
+			
+				  <div id="g-ai0-30" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:82%;margin-top:-17.4px;left:12%;width:32%">
+					  <p class="g-pstyle8">1915<br>Birth of <br>the Ladies' <br>Residence</p>
+				  
+				  </div>
+				  <div id="g-ai0-23" class="g-Capa_1 g-aiAbs" style="top:67%;left:49%;width:26%;">
+					  <p class="g-pstyle9">The Students' Residence is created, housed at 14 Fortuny Street</p>
+				  
+				  </div>
+				<div id="g-ai0-24" class="g-Capa_1 g-aiAbs" style="top:67%;left:5%;width:23%;">
+					  <p class="g-pstyle4">The Students' Residence was founded in 1910. Five years later, its female group,
+						the Ladies' Residence, was born. It was an initiative of the Board for Extension of Studies and Scientific Research 
+						(JAE) and became an <mark class="mark">important cultural and educational center.</mark></p>
+					</div>
+				  <div id="g-ai0-25" class="g-Capa_1 g-aiAbs" style="top:72%;left:50.7%;width:24%;">
+					  <p class="g-pstyle2">Repeal of the Royal Order of 1888 that required women to have special permission to access the University. <mark class="mark">FREE ACCESS OF WOMEN TO THE UNIVERSITY.</mark></p>
+					  
+				  </div>
+				  <div id="g-ai0-26" class="g-Capa_1 g-aiAbs" style="top:79.2134%;left:52%;width:22%;">
+					  <p class="g-pstyle2">The university group of the Students' Residence moves to its permanent headquarters on Pinar Street</p>
+				  </div>
+				  <div id="g-ai0-27" class="g-Capa_1 g-aiAbs g-aiPointText" style="top:86%;margin-top:-28px;left:78.8%; width:10%">
+					  <p class="g-pstyle6">Maria de Maeztu completed<br>Philosophy and Letters at the<br>Central University of Madrid in 1915<br>with extraordinary distinction</p>
+				  </div>
+				  <div id="g-ai0-28" class="g-Capa_1 g-aiAbs" style="top:85%;left:50.5%;width:24.9815%;">
+					  <p class="g-pstyle12">The female group, the Ladies' Residence, directed by María de Maeztu, opens its doors.</p>
+				  </div>
+				  <div id="g-ai0-29" class="g-Capa_1 g-aiAbs" style="top:91%;left:50.5%;width:21%;">
+					  <p class="g-pstyle13">They are installed in two of the buildings previously occupied by the male group, at 28-30 Fortuny Street</p>
+				  </div>
+			  </div>
+		  </div> 
+		</div>
+		  
+	
+<div class="bgimg-2">
+  <div class="caption" style="padding-left: 5.4%" >
+			<span class="Titul" >Women at the Residence</span>
+		  </div>
+		  <div class="fadeInUp-animation" style=" width:32%; padding-top: 490px; padding-left: 5.4%"><p class="piedefotobg">
+			Residents in the library of the Ladies' Residence at Miguel Ángel, 8, around 1930. International Institute in Spain</p>
+		  </div> 
+		</div>
+		  <!-- SECTION-2. WOMEN DATA GRAPHICS AT THE RESIDENCE -->
+		
+		  
+	 <section style="position:relative; background-color:white; padding-left:5.4%; padding-top:4% ; height: 850px;">
+		  <article  class="left_article" >
+						<span class="tituloseccion" > Women who passed <br>through the Residence</span>
+	
+				<div class="fadeInUp-animation" style="width: 100%" ><p class="parrafoseccion" style="padding-top:5%" >
+					The Ladies' Residence experienced remarkable growth from its foundation in 1915 until 1936. 
+					During these years, it became an important training center and home for residents enrolled 
+					in different educational institutions in Madrid. <mark class="mark">Women from middle and upper-middle class</mark>, 
+					and even some helped with <mark class="mark">scholarships and "honor loans"</mark> in the later years, 
+					came to take courses or study middle and higher education. The number of residents grew significantly, 
+					directly correlating with the number of women accessing university education. 
+					According to researcher Raquel Vázquel Ramil (2012), in the 1914-1915 academic year there were 90 female university students 
+					enrolled throughout Spain, while in 1932-1933 the number rose to 2,047, <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=5708808">with the Central University 
+					of Madrid having the highest percentage of enrolled female students, representing 34.4% of the total in 1915.</a>
+					Even so, in the 1930s, <mark class="mark">only 6% of those enrolled in university were women.</mark>
+
+				</p></div>
+			</article>
+	
+				
+				<!-- FLOURISH-1 --> 
+			<aside class="right_article"><iframe src='https://flo.uri.sh/visualisation/18672033/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%; height:600px' 
+				sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox 
+				allow-top-navigation-by-user-activation'></iframe> </aside>
+			  
+		</section>
+		
+		
+			<!-- SECTION-2-1. ANIMATED GRAPHICS OF WOMEN DATA AT THE RESIDENCE -->
+
+
+			<div class="burbujas" style="margin-left: 5%; margin-top: 8%">
+				<span class="tituloseccion" style="padding-bottom: 5%;">What did women do at the Residence?</span>
+				<iframe src='https://flo.uri.sh/story/2483031/embed' title='Interactive or visual content' class='flourish-embed-iframe' 
+					frameborder='0' scrolling='no' style='width:95%;height:650px; margin-top: 1%;' 
+					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'>
+					</iframe>
+			</div>
+
+
+          <!--STACKED BAR CHART-->
+		<div style="background-color:white; width:100%; height:865px; margin-bottom: 1px; padding-top: 50px; padding-left: 5%;">
+			<span class="tituloseccion">Evolution of female university students by discipline</span>
+			<div>
+					<iframe src='https://flo.uri.sh/visualisation/18671881/embed' title='Interactive or visual content' class='flourish-embed-iframe' 
+					frameborder='0' scrolling='no' style='width:100%;height:650px; padding-right: 5%; margin-top: 1%' 
+					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'>
+					</iframe>
+			</div>
+		
+		</div>
+		  <!-- SECTION-3. ORIGIN MAPS -->
+		  
+		  <div class="bgimg-3">
+			<div class="caption" style="padding-left: 5.4%" >
+			  <span class="Titul">The magnetism of the Residence</span>
+			</div>
+			<div class="fadeInUp-animation" style="width:500px; padding-top: 450px; padding-left: 5%"><span class="piedefotobg" >
+				Two former companions from the Ladies' Residence, the Instituto-Escuela teacher Carmen 
+				Castilla (first on the right) and María Díez de Oñate (second from the left), with other teachers at 
+				the Middlebury College summer school, 1922</span>
+			</div> 
+		  </div>
+		  
+
+				<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:4%; height: 800px">
+
+					<article  class="left_article" >
+				<span class="tituloseccion" style="margin-bottom: 5%">It attracted women from almost<br>all areas of the country</span>
+				
+				<div class="fadeInUp-animation1" style=" width:350px; margin-top: 5%; margin-bottom: 10%;">
+					<p  class="parrafoseccion">
+						The residents came from all parts of Spain, although <mark class="mark">the largest group came from León</mark>. The management of the Residence 
+						took advantage of the strong imprint and values of the Free Institution of Education (ILE) in León,
+						 <a href="https://revpubli.unileon.es/index.php/anada/article/view/7008">promoted by the Sierra Pambley Foundation</a>.
+						 The Krausist and institutionalist influence, through, among others, Gumersindo de Azcárate, encouraged many 
+						 progressive families in the region to send their daughters to the Residence, resulting in a considerable number of students from León at the institution.
+					</p></div>
+					</article>
+
+				
+				
+				<!--FLOURISH-2 Spain map-->
+				<aside class="right_article">
+					<iframe src='https://flo.uri.sh/visualisation/18671971/embed' title='Interactive or visual content' class='flourish-embed-iframe' 
+					frameborder='0' scrolling='no' style="width: 100%; height: 675px;margin-bottom: 100px" sandbox='allow-same-origin allow-forms allow-scripts 
+					allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				</aside>
+			</section>
+
+			<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:5%;  margin-bottom: 8% ; height:100%">	
+
+				<!-- COLORED IMAGE-1 -->
+				<article  class="left_article1" >
+					<div class="contenedor" >
+						 <img src="IMAGE/Adrados_Herminia.jpg" />
+					  <img class="top" src="IMAGE/Adrados_HerminiaC.jpg" />
+					</div>
+					<div style="float: left; margin-top:92%; padding-bottom: 2%;"><span class="piefoto" style=" width:10%; ">
+						The residents Herminia Adrados and Pilar Rosado de la Iglesia, both Medical students, <br> in front of one of the buildings of the Ladies' Residence, <br>1930-1931 academic year. Bonet Rosado Family Archive, Valencia</span>
+					</div>
+				  </article>
+								  
+				<!-- IMAGENIA-1 TEXT -->
+				  <aside class="right_article1">
+								<div class="fadeInUp-animation1" > 
+								<span style=" font-size:1.5rem; text-align:left;  width:20%; line-height:1.7rem; font-family:AugusteSansPro-Bold; color:#bfa8cc"> 
+									Remembering the past in full color</span>
+									<p  class="parrafoseccion" style="margin-top: 5%">We have brought the women of the Residence to life  
+										<mark class="mark">by colorizing the archive photographs.</mark>
+										You can see them in their original format by hovering 
+										the cursor over them or with the recreation <mark class="mark">created with AI.
+									</p>
+								</div>
+					</aside>
+			</section>
+		
+	
+			  <!--WORLD MAP -->
+			  <section style="position:relative; background-color:white; ">
+				<div style="background-color:white; width:auto; margin:auto !important; text-align: center;">
+					<span class="tituloseccioncentro" style="width:100%;" >The international focus</span>
+				</div>
+					
+					<div class="fadeInUp-animation1" style=" width:65%; margin:auto !important; text-align: center; padding-bottom:10%"><span  class="parrafoseccioncentro">
+						<br>Foreign residents represented 13% of the total number of women (more than 400 residents between 1915 and 1936). The relationship between the Ladies' Residence of Madrid and American women's <i>colleges</i> between 1919 and 1936 was very fruitful. 
+						<a href="https://dialnet.unirioja.es/servlet/articulo?codigo=5097307">Student exchange policies</a> were established that promoted the cultural and academic enrichment of both parties, based on 
+						solidarity and mutual support, with a focus on modernizing women's education and offering them <mark class="mark">international opportunities.</mark>
+						Founded by women and for women, they provided a model of advanced and autonomous education.
+						 <br>The female professors actively promoted scholarships and exchanges, which allowed many Spanish women to study in the United States and vice versa. 
+						In addition, these policies helped introduce modern educational methods in Spain, such as the emphasis on <mark class="mark">experimental sciences, 
+						languages, and physical education.</mark> 
+						</span></div>
+	
+				   <!-- flourish. WORLD MAP -->
+				   <div style=" width: 100%; height: 700px; margin-top: -6%; padding-left:4%; padding-right: 4%;">
+						<iframe src='https://flo.uri.sh/visualisation/18767335/embed' title='Interactive or visual content' 
+						class='flourish-embed-iframe' frameborder='0' scrolling='no' style="width:100%; height: 100%;" 
+						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox 
+						allow-top-navigation-by-user-activation'></iframe></div>
+		</section>
+				   
+		<!--COLORED IMAGE-2-->
+		<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:8%; height:100%">
+			  <article  class="left_article1" >
+				<div class="contenedor" >
+					 <img src="IMAGE/HuntingtonSusanBN.jpg" />
+				  <img class="top" src="IMAGE/HuntingtonSusanC.jpg" />
+				</div>
+				<div style="float: left; margin-top:72%"><span class="piefoto" style=" width:10%; ">
+					Susan Huntington, professor at the International Institute</span></div>
+				</article>
+			
+			<!-- IMAGENIA-2 TEXT -->
+			  <aside class="right_article1">
+					<div class="fadeInUp-animation1" > 
+						<span style=" font-size:1.5rem; text-align:left;  width:20%; line-height:1.7rem; font-family:AugusteSansPro-Bold; color:#bfa8cc;"> 
+								The importance of the presence <br>of foreign women</span>
+							<p class="parrafoseccion1" style="margin-top: 5%">An example of this involvement
+								was that of Susan Huntington, <a href="https://www.iie.es/2017/05/15/mujeres-serie-susan-huntington-vernon/"> 
+								who promoted educational exchange between Spain and the United States</a> in its 
+								earliest phase. From 1917 onwards, she decisively supported the collaboration of the International Institute with the JAE in the Instituto-Escuela 
+								and the Ladies' Residence. In 1932, she received a tribute from the Spanish government for her "material and moral" support for the 
+								foundation of the Ladies' Residence. In this ceremony, held at Fortuny 53 —at that time the headquarters of the Ladies' Residence 
+								and previously of the International Institute (1903-1927)—, the building was baptized with the name of <i>Casa Susana Huntington</i>.</p>
+
+					</div>
+			  </aside>
+		</section>
+		
+
+
+		
+		
+		
+		<!-- SECTION-3. EUROPE AND USA MAP -->
+				<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:1%; height: 600px">
+
+					<article  class="left_article" >
+				<span class="tituloseccion" style="margin-bottom: 5%; width: 35%">Most were European <br>and American</span>
+				
+				<div class="fadeInUp-animation1" style=" width:350px; margin-top: 5%; margin-bottom: 10%;">
+					<p  class="parrafoseccion">Foreign women came to the Ladies' Residence mainly to study Spanish and came primarily from <strong>the United States</strong>, but there were 
+						also students from other European countries such as <strong>France, Germany, and the United Kingdom</strong>. This exchange not only enriched 
+						the academic environment but also fostered an international network of professional and academic women.</p></div>
+					</article>
+				
+				<!--FLOURISH-2 Europe USA map-->
+				<aside class="right_article">
+					<iframe src='https://flo.uri.sh/visualisation/18672022/embed' title="Interactive or visual content" 
+					class="flourish-embed-iframe" frameborder='0' scrolling='no' style='width:100%;height:530px;' 
+					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups 
+					allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				</aside>
+			</section>
+		
+			<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:8%; height:100%">	
+
+				<!--COLORED IMAGE-3-->
+			<article  class="left_article1" >
+			
+				<div class="contenedor1" style="margin-top:1%">
+					 <img src="IMAGE/BarnesDoroteaBN.jpg" />
+				  <img class="top"  src="IMAGE/BarnesDoroteaC.png" />
+				</div>
+				<div style="float: left; margin-top:50%"><span class="piefoto" style=" width:15%; ">
+					Dorotea Barnés González working in the Laboratory</span></div>
+			</article>
+	
+			<!--IMAGENIA 3 TEXT -->
+			  <aside class="right_article1" >
+							<div class="fadeInUp-animation1"> 
+							<span style=" font-size:1.5rem; text-align:left;  width:20%; line-height:1.7rem; font-family:AugusteSansPro-Bold; color:#bfa8cc;"> A pioneer in the study of Chemistry</span>
+								<p  class="parrafoseccion1" style="margin-top: 2%">Dorotea Barnés González, born in 1904 in Pamplona, was one of the Spanish pioneers 
+									in Chemistry, both in research and teaching, during the Silver Age. A doctor and high school teacher, her 
+									research work was key in the incorporation of techniques such as Raman spectroscopy to chemistry departments in Spain. 
+									She was one of the women who benefited from the educational opportunities provided by the Ladies' Residence. Although not a resident, she trained
+									at the Foster Laboratory and <mark class="mark">was awarded a scholarship by the JAE in 1929, at Smith College in Northampton, Massachusetts,</mark> where she specialized in research in the field 
+									of spectral analysis techniques, under the direction of Gladys Anslow, Physics PhD from Yale University and professor at the Chemistry Department of Smith College.
+									</p>
+							</div>
+						</aside>
+		</section>
+		
+
+		<div style="background-color: white; height: 100px;"></div>
+		
+		
+			 
+	
+		
+		  <!-- SECTION-4. PEDAGOGICAL SYSTEM -->
+		  
+		  <div class="bgimg-4">
+			  <div class="caption" style="padding-left: 5.4%" >
+			    <span class="Titul">Pedagogical innovation</span>
+			  </div>
+			   <div class="fadeInUp-animation" style="padding-top: 550px; padding-left: 5.6%;width: 30%;"><p  class="piedefotobg" >
+				Hockey team of the Ladies' Residence, thirties. International Institute in Spain</p>
+			  </div>
+		  </div>
+		
+		
+				<section style="position:relative; background-color:white; padding-left:5.4%; padding-top:4%; height: 900px">
+
+					<article  class="left_article" >
+				<span class="tituloseccion" style="z-index:1050">The hub: from <br>international <i>colleges</i> to <br>pedagogical vanguard</span>
+			   <br>
+		       <p  style="font-size:1rem; text-align: left; font-family:'Inter-light'"><br>The pedagogical system of the Ladies' Residence, inspired by international colleges, 
+				especially British and American models, was based on promoting a comprehensive education that combined academic development with personal and social training.
+				The Ladies' Residence became <mark class="mark">what today would be called a hub,</mark> a nucleus of interdisciplinary exchange that drove the development of its residents. 
+				They not only attended university classes but also participated in a variety of extracurricular activities that included conferences, workshops, sports, 
+				and cultural activities. The idea was to foster an environment of continuous and multidisciplinary learning, where students could develop critical and social skills, 
+				in addition to their academic knowledge.
+				<br>
+				The Residence also promoted coexistence and the exchange of ideas between students and teachers, creating an environment of community and mutual support. This holistic approach sought to empower women, 
+				preparing them to be competent professionals and active citizens in society.
+				<br>
+				In summary, the pedagogical system of the Ladies' Residence was innovative, secular, and progressive, seeking to form independent women prepared to face the challenges of their time.</p>	
+					</article>
+				
+				<!--gif pedagogical system-->
+				<aside class="right_article" >		
+				 	 <img src="IMAGE/SistemaPedagogico.gif" width="1000" height="1032" alt=""/> 
+				</aside>
+		</section>
+		
+    <div style="background-color: white; height: 100px;"></div>
+		  
+		  <!-- SECTION-5. REFERENCES-->
+		  <div class="bgimg-5">
+			 <div class="caption" style="padding-left: 5.4%" >
+			   <span class="Titul" >Great references</span>
+		     </div>
+		
+			  <div class="fadeInUp-animation1" style="width:500px; padding-top: 450px; padding-left: 5%"><span class="piedefotobg" >
+				Victoria Ocampo with a group of residents on the day of her conference 
+			   "Supremacy of the soul and blood" at the Ladies' Residence, Madrid, January 9, 1935. Regional Archive of the Community of 
+			    Madrid, Santos Yubero Photographic Collection</span>
+			 </div> 
+			 </div>
+			  
+			 <section style="position:relative; background-color:white; padding-top:5%">
+				<div style="width:auto; margin:auto !important; text-align: center;">
+					<span class="tituloseccioncentro">Reference women who passed through the Residence</span>
+					<br>
+		      		 <div class="fadeInUp-animation"><p class="parrafoseccioncentro" style="width:60%; margin:auto !important; text-align: center; padding-top: 2%; padding-bottom:3.5%" >
+					Did you know that there is a significant <b>bias</b> 
+					against women on <b>Wikipedia</b>? Only 20% of the biographies published in 2024 belong to women due to a lack of bibliographic references. 
+					Would you like to contribute to completing their <b>biographies</b> or creating <b>new ones</b>? Use our <b>VictorIA bot</b> to incorporate <b>reliable</b> sources and references. 
+					To add more information, click <a href ="https://es.wikipedia.org/wiki/Ayuda:Tu_primer_art%C3%ADculo">here.</a>
+					</p>
+					</div>
+			   </div>
+
+			 <!-- SECTION-4. FLOURISH-4 -->
+
+			 <iframe src='https://flo.uri.sh/visualisation/18672052/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' 
+			 scrolling='no' style='width:100%; height:800px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'>
+		     </iframe>
+		
+			</section>
+		  
+	<!--COMMENT: BOT CODE-->
+	<div data-airops-widget="c4f555b8-017c-4a6c-b1af-6578113b9ffa" data-airops-init="true"></div>
+	<link rel="stylesheet" href="https://assets.airops.com/widget/index.css">
+	<script src="https://assets.airops.com/widget/index.js"></script>
+	<!--END BOT CODE-->
+			  
+			<script src="main.js"></script>
+
+	</body>
+	
+	<footer>
+	
+		<div class="row" style="margin-left:3%">
+			<div class="columns"> 
+				
+				<span class="footer-sectiontitulo" >PRODUCTION</span>
+				<p class="footer-texto" style=" margin-left: -20%"><br>A project of the Students' 
+					<br>Residence produced <br>by <a href="https://www.storydata.es">Storydata</a></span>  
+					  </p>  
+					<br>
+			</div>
+			<div class="columns">
+			 
+			   <span class="footer-sectiontitulo" >METHODOLOGY</span>
+			  <p class="footer-texto" style=" margin-left: -20%"><br>Check the description<br> of the <a href="https://docs.google.com/document/d/1UESUooN_ilJ1ZtngC-ZNKAJmPbHgJjAnTZb_9i1U7og/edit?usp=sharing">methodology and sources</a> <br>used in the project.</p>
+			</div>
+			<div class="columns">
+		  
+			  <span class="footer-sectiontitulo" style=" margin-left: -20%">CREDITS</span>
+					<ul class="footer-texto" style=" margin-left: -20%">
+					<li><br>Cristina Claverol - Design and web development</li>
+					  <li>Karel de Pourcq - Data and visualization programming</li>
+					  <li>Carlos Albaladejo - AI, profiles and web development</li>
+					  <li>Eli Vivas - Coordination and writing</li>
+					  <li>Almudena de la Cueva - Documentation</li>
+					  <!-- Add more people and roles as needed -->
+					</ul>
+			</div>
+	
+		</div>	
+		<div style="width:95%; height:2px; background-color:white; margin-left: 2.5%; margin-top: 2%;"></div>
+		<div >
+			<p class="footer-subtitulo"  style="width:100%;" ><br>SEE OTHER RELATED CONTENT AT THE STUDENTS' RESIDENCE</p>
+	
+			<div class="row" style="margin-left:3%">
+				<div class="columns">
+					<ul class="footer-texto" style=" margin-left: 20%">
+						<li><a href="https://devresidenciadeestudiantes.com/residencia-de-senoritas"> • History page of the Ladies' Residence</a></li>
+						<li><a href="https://devresidenciadeestudiantes.com/api/tienda/producto/mujeres-en-vanguardia/"> • Women in the Vanguard Catalog</a></li>
+					</ul>
+			</div>
+			<div class="columns">
+				<ul class="footer-texto" >
+					<li><a href="https://devresidenciadeestudiantes.com/podcast/la-voz-de-los-chopos/mujeres-en-vanguardia"> • Podcast</a></li>
+				</ul>
+			</div>
+			<div class="columns">
+					<ul class="footer-texto" >
+						<li><a href="https://devresidenciadeestudiantes.com/actividades/modernas-por-asociacionel-lyceum-club-femenino-de-madrid-y-sus-legados-1926-1960
+							"> • Media library: Lyceum Club Femenino of Madrid</a></li>
+						<li><a href="https://devresidenciadeestudiantes.com/actividades/educacion-y-feminismo-la-residencia-de-senoritas-1915-1936"> • Media library: Ladies' Residence</a></li>
+					</ul>
+			</div>	
+		</div>
+		</div>
+				 <div class="logo-container">
+					<a href="http://wwww.storydata.es"> <img src="https://www.storydata.es/wp-content/uploads/2018/03/storydata-retina.png" alt="Logo 1"></a> 
+					  <img style="width: 10%" src="IMAGE/LOGO.resi.png" alt="Logo 2">
+					  <!-- Add more logos as needed -->
+			
+						
+					</div>	
+					
+		
+	</footer>
+</html>
