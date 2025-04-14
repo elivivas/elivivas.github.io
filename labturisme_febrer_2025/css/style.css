@@ -44,6 +44,7 @@
   src:url("../fonts/HelveticaNeue-Medium.woff");
   font-weight: normal;
 }
+
 @font-face {
   font-family: DINNextLTPro-Medium;
   src:url("../fonts/DINNextLTPro-Medium.woff");
@@ -179,17 +180,28 @@ h2{
 	font-family: HelveticaNeue-Medium;
 	font-weight: 500;
 }
+
+
 h2 .subtitol{
 	clear: left;
 	font-size: 22px;
 	font-family: HelveticaNeue-Light;
 	font-weight: 200;
 }
+
+h3 {
+    font-family: HelveticaNeue-Medium, sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;  
+    color: #333;
+    margin-bottom: 10px;
+}
 .page-footer a,
 .page-footer a:hover {
     text-decoration: none;
     color: #FFFFFF;
 }
+
 
 .page-footer .xs-diputacio{
 	position: relative;
@@ -692,16 +704,4 @@ h2 .subtitol{
 		.page-header .mes{
 	font-size: 22px;
 	top: 15px;
-	text-align: center;
-	font-family: DINNextLTPro-Light;
-	margin-left: 0px ;
-	margin-top: 40px;
-	margin-bottom: 0px;
-
-} 
-	
-	
-    
-}}
-		
-
+	te
