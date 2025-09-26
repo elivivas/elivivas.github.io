@@ -1,0 +1,166 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 30px;
+  background: white;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  margin-right: 2px;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.tab.active {
+  background: white;
+  color: #2b6cb0;
+  font-weight: bold;
+  border-color: #2b6cb0;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
+  z-index: 10;
+  position: relative;
+}
+
+#filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.2);
+}
+
+.person {
+  cursor: pointer;
+}
+
+.person.transitioning {
+  transition: transform 5s cubic-bezier(0.23, 1, 0.32, 1), opacity 1s ease;
+}
+
+.person:hover {
+  transform: scale(1.1);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.stats {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom:5px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  /* order: -1; Esto lo mueve antes del SVG */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.stats {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stats-item {
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.stats-yes {
+  color: #2b6cb0;
+}
+
+.stats-no {
+  color: #fd7e14;
+}
+
