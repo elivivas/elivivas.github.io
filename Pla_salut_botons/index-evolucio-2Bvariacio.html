@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histograma - Malestar Emocional</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <link rel="stylesheet" href="styles2B.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Evolució del Malestar Emocional per Anys</h2>
+
+  <!-- Botons de selecció de vista -->
+  <div class="view-selector">
+    <button class="view-btn active" id="eixos-btn">Per eixos de desigualtat</button>
+    <button class="view-btn" id="perfils-btn">Comparar perfils</button>
+  </div>
+
+  <!-- Filtres principals - TOTS EN UNA FILA -->
+  <div id="filters" class="filters-all-inline">
+    <div class="filter-group">
+      <label for="Sexe">Sexe:</label>
+      <select id="Sexe">
+        <option value="Tots">Carregant...</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="Edat">Edat:</label>
+      <select id="Edat">
+        <option value="Tots">Carregant...</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="Classe_social">Classe Social:</label>
+      <select id="Classe_social">
+        <option value="Tots">Carregant...</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="Estudis">Estudis:</label>
+      <select id="Estudis">
+        <option value="Tots">Carregant...</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="Territoris">Territori:</label>
+      <select id="Territoris">
+        <option value="Tots">Carregant...</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Secció perfils -->
+  <div id="add-profile-section" style="display: none;">
+    <div class="profile-controls-container">
+      <!-- Botó afegir perfil -->
+      <div class="add-profile-area">
+        <button id="add-profile-btn" class="add-profile-btn">Afegir al gràfic</button>
+        <span id="profile-counter" class="profile-counter">0/3 perfils afegits</span>
+      </div>
+      
+      <!-- Botó variació (apareix quan hi ha perfils) -->
+      <div class="variation-area" id="variation-area" style="display: none;">
+        <button id="variation-btn" class="variation-btn">Veure variació</button>
+        <span class="variation-help">Mostra canvis entre anys en punts percentuals</span>
+      </div>
+      
+      <!-- Llista de perfils -->
+      <div id="profile-list" class="profile-pills-container"></div>
+    </div>
+  </div>
+
+  <!-- Pestanyes per eixos de desigualtat -->
+  <div id="inequality-tabs" class="inequality-tabs">
+    <button class="inequality-tab active" data-variable="Edat">Edat</button>
+    <button class="inequality-tab" data-variable="Classe_social">Classe Social</button>
+    <button class="inequality-tab" data-variable="Estudis">Estudis</button>
+    <button class="inequality-tab" data-variable="Territoris">Territori</button>
+  </div>
+
+  <div class="histogram-legend" id="histogram-legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: #6b6664;"></div>
+      <span>Dades Generals</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: #20484c;"></div>
+      <span>Homes</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: #4b1d03;"></div>
+      <span>Dones</span>
+    </div>
+  </div>
+
+  <div class="histogram-container">
+    <div class="loading">📊 Processant dades de l'histograma...</div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+</div>
+
+<script src="script2B.js"></script>
+
+</body>
+</html>
