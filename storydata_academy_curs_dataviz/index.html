@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Storydata Academy — Pilot: Creació de Memòries i Informes amb Visualització de Dades</title>
+  <meta name="description" content="Curs pilot per aprendre a crear memòries i informes professionals amb visualitzacions de dades. Aprèn a dissenyar, automatitzar i comunicar informes amb dades obertes i IA.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand:#0071bc; --brand2:#6610f2;
+      --bg:#ffffff; --text:#1c1c1c;
+      --muted:#5a5a5a; --card:#f5f8fb;
+      --radius:12px; --shadow:0 4px 14px rgba(0,0,0,.08);
+    }
+    body {margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text); line-height:1.6;}
+    a {color:var(--brand); text-decoration:none;}
+    .wrap {max-width:1100px; margin:0 auto; padding:24px;}
+    nav {display:flex; justify-content:space-between; align-items:center; margin-bottom:32px;}
+    nav .brand {font-weight:700; font-size:18px; color:var(--brand);}
+    nav .brand img {height:60px; width:auto;}
+    nav a {margin-left:16px; font-weight:500;}
+    .cta {background:var(--brand); color:#fff; padding:10px 16px; border-radius:var(--radius);}
+    header.hero {display:grid; gap:28px; grid-template-columns:1fr 1fr; align-items:center;}
+    @media(max-width:900px){header.hero{grid-template-columns:1fr}}
+    h1 {font-size:clamp(28px,5vw,44px); line-height:1.2; margin-bottom:12px; color:var(--brand);}
+    h2 {font-size:28px; margin-bottom:8px;}
+    .subtitle {color:var(--muted); font-size:18px;}
+    .tagline {
+      font-size:20px; 
+      font-weight:600; 
+      color:var(--brand2); 
+      margin-bottom:16px; 
+      padding:12px 20px; 
+      background:linear-gradient(135deg, rgba(102,16,242,0.1), rgba(0,113,188,0.1));
+      border-left:4px solid var(--brand2);
+      border-radius:8px;
+      display:inline-block;
+    }
+    section {margin:60px 0;}
+    .card {background:var(--card); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow);}
+    .grid {display:grid; gap:20px;}
+    .cols-2 {grid-template-columns:1fr 1fr;}
+    .cols-3 {grid-template-columns:repeat(3,1fr);}
+    @media(max-width:900px){.cols-2,.cols-3{grid-template-columns:1fr}}
+    ul.check {list-style:none; padding:0;}
+    ul.check li {padding-left:24px; position:relative; margin:8px 0;}
+    ul.check li::before {content:"✔"; color:var(--brand); position:absolute; left:0;}
+    footer {margin-top:60px; padding-top:30px; border-top:1px solid #e5e5e5; color:var(--muted); font-size:14px;}
+    .footer-section {margin-bottom:40px; padding:20px; background:var(--card); border-radius:var(--radius);}
+    .footer-section h4 {color:var(--text); margin-top:0; margin-bottom:16px; font-size:16px;}
+    .footer-section p {margin:8px 0; line-height:1.7;}
+    .logo-container {display:flex; align-items:center; gap:20px; margin-top:16px; flex-wrap:wrap;}
+    .logo-container img {height:50px; width:auto; object-fit:contain;}
+    .startup-logo {height:60px !important;}
+    .footer-bottom {text-align:center; padding-top:20px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">
+        <a href="https://www.storydata.es/">
+          <img src="storydata-logo.png" alt="Storydata Academy">
+        </a>
+      </div>
+      <div>
+        <a href="#programa">Programa</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#inscripcio" class="cta">Apunta't</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1>Pilot: Creació de Memòries i Informes amb Visualització de Dades</h1>
+        <p class="tagline">✨ Converteix-te en storydater amb l'Storydata Academy</p>
+        <p class="subtitle">Aprèn a transformar dades en <b>memòries i informes</b> clars, visuals i accionables. Des del disseny fins a la publicació: narrativa, visualització, automatització i dades obertes.</p>
+        <p><a class="cta" href="#inscripcio">Reserva la teva plaça</a></p>
+      </div>
+      <div class="card">
+        <h3>Detalls clau</h3>
+        <ul class="check">
+          <li>Durada: 4 setmanes (25h)</li>
+          <li>Format híbrid: Barcelona + online</li>
+          <li>Projecte final amb feedback personalitzat</li>
+          <li>Cohort reduït</li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="perfil">
+      <h2>A qui s'adreça?</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Administracions públiques</h3><p>Per a transparència i rendició de comptes amb informes interactius i dades obertes.</p></div>
+        <div class="card"><h3>Empreses i fundacions</h3><p>Per a memòries ESG, informes d'impacte i reportings interns amb visualitzacions clares.</p></div>
+        <div class="card"><h3>Mitjans i comunicació</h3><p>Per a enriquir històries amb dades i combatre la desinformació amb visualització.</p></div>
+      </div>
+    </section>
+
+    <section id="programa">
+      <h2>Programa (4 setmanes)</h2>
+      <div class="grid cols-2">
+        <div class="card"><h3>Setmana 1</h3><ul class="check"><li>Fonaments del llenguatge visual</li><li>Introducció a Canva i Flourish</li><li>Exemples d'informes i memòries</li></ul></div>
+        <div class="card"><h3>Setmana 2</h3><ul class="check"><li>Disseny i storytelling</li><li>Tipografia, color i narrativa visual</li><li>Prototip de memòria</li></ul></div>
+        <div class="card"><h3>Setmana 3</h3><ul class="check"><li>Visualització avançada amb Flourish</li><li>Gràfics i mapes interactius</li><li>Integració a Canva</li></ul></div>
+        <div class="card"><h3>Setmana 4</h3><ul class="check"><li>Automatització bàsica de dades</li><li>Publicació online i xarxes</li><li>Projecte final amb feedback</li></ul></div>
+      </div>
+    </section>
+
+    <section id="resultats">
+      <h2>Resultats del curs</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Memòria professional</h3><p>Plantilla i estil visual per a informes institucionals.</p></div>
+        <div class="card"><h3>Visualitzacions reutilitzables</h3><p>Gràfics i mapes integrables en informes i webs.</p></div>
+        <div class="card"><h3>Competències digitals</h3><p>Ús de Canva i Flourish + nocions bàsiques de dades.</p></div>
+      </div>
+    </section>
+
+    <section id="inscripcio">
+      <h2>Inscripció al pilot</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p><b>Preu especial pilot:</b> 400 € per participant</p>
+          <ul class="check">
+            <li>25 hores de formació</li>
+            <li>Mentoria i revisió personalitzada</li>
+            <li>Certificat Storydata Academy</li>
+          </ul>
+          <p><a class="cta" href="mailto:academy@storydata.cat">Apunta't ara</a></p>
+        </div>
+        <div class="card">
+          <h3>Contacte</h3>
+          <p>Si tens dubtes, escriu-nos a <a href="mailto:academy@storydata.cat">academy@storydata.cat</a>.</p>
+          <p>Opció d'adaptar el curs per a equips i administracions.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-section">
+        <h4>Segell d'Excel·lència</h4>
+        <p>StoryData, reconeguda amb el Segell Startup UPF Barcelona, aporta una metodologia provada que combina storytelling, disseny i tecnologia, adaptada específicament a les necessitats del sector públic.</p>
+        <div class="logo-container">
+          <img src="startup-upf-logo.png" alt="Startup UPF" class="startup-logo">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Suport Institucional</h4>
+        <p>Storydata Academy compta amb el suport de la Generalitat de Catalunya, a través del fons Next Generation del projecte RETECH per aminorar la bretxa de gènere en l'àmbit de l'emprenedoria femenina en el sector digital.</p>
+        <div class="logo-container">
+          <img src="eu-logo.png" alt="Finançat per la Unió Europea NextGenerationEU">
+          <img src="next-generation-cat-logo.png" alt="Next Generation Catalunya">
+          <img src="pla-recuperacio-logo.png" alt="Pla de Recuperació, Transformació i Resiliència">
+          <img src="generalitat-logo.png" alt="Generalitat de Catalunya - Departament d'Empresa i Treball">
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Storydata Academy. Tots els drets reservats.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
