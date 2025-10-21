@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pla de Salut 2026-2030 - Visualització de Pictogrames</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Secció de introducció -->
+  <section class="intro-section" id="intro">
+    <div class="background-image"></div>
+    
+    <div class="title-container">
+      <h1 class="main-title">Pla de salut<br>2026-2030</h1>
+      <p class="subtitle-text">ESTAT DE SITUACIÓ DE LES ESTRATÈGIES<br>DEL PLA DE SALUT DE CATALUNYA 2026-2030</p>
+    </div>
+    <div class="scroll-indicator">
+      <div>Continuar</div>
+      <div class="scroll-arrow">↓</div>
+    </div>
+ 
+  </section>
+
+  <!-- Secció de navegació -->
+        <div class="description-container">
+      <p class="description-text">El Pla de salut de Catalunya 2026-2030 és l'instrument i marc de referència per a totes les actuacions públiques en matèria de salut dins l'àmbit de la Generalitat. El seu objectiu és millorar la salut i la qualitat de vida de la població. El pla actua com la brúixola del sistema de salut establint els objectius necessaris per a la seva millora. Compta amb uns principis ètics que el caracteritzen: el respecte per les persones, la justícia social i equitat, la cura de les persones i l'entorn, i l'eficiència i sostenibilitat.</p>
+    </div>
+
+  <!-- Nova sección de indicadors -->
+  <section class="indicators-section">
+    <h4 class="indicators-title">Coneix com estem en aquests indicadors de salut</h4>
+    <p class="indicators-subtitle">Clica a la imatge per anar a l'indicador</p>
+    
+    <div class="indicators-grid">
+      <div class="indicator-button" onclick="scrollToSection('eix2')">
+        <img src="./img/Objectiu-1.gif" alt="Malestar emocional">
+        <p class="indicator-legend">Malestar emocional</p>
+      </div>
+      
+      <div class="indicator-button" onclick="scrollToSection('eix3')">
+        <img src="./img/Objectiu-2.gif" alt="Morbiditat">
+        <p class="indicator-legend">Morbiditat</p>
+      </div>
+      
+      <div class="indicator-button" onclick="scrollToSection('eix4')">
+        <img src="./img/Objectiu-3.gif" alt="Mortalitat">
+        <p class="indicator-legend">Mortalitat</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation-section" id="navigation">
+    <!-- Botó para volver arriba -->
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar a l'inici">↑</button>
+    
+    <div class="navigation-container">
+      <!-- Columna 1: Eixos estratègics -->
+      <div class="nav-column">
+        <div class="nav-column-header">
+          <h2>EIXOS ESTRATÈGICS DEL PLA DE SALUT</h2>
+        </div>
+        
+        <p class="nav-subtitle">Aquí podràs veure les accions traçadores en marxa i els indicadors implicats</p>
+        
+        <div class="nav-content">
+          <div class="estrategics-layout">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <button class="nav-link" onclick="toggleSubmenu('eix1-submenu')" data-section="eix1">
+                  <div class="nav-link-content">
+                    <span class="nav-link-text">1. Igualtat d'oportunitats en salut al llarg de la vida</span>
+                    <span class="nav-arrow">⌄</span>
+                  </div>
+                </button>
+                <div class="submenu" id="eix1-submenu">
+                  <div class="submenu-item" onclick="scrollToSection('eix1')">Veure detalls</div>
+                  <div class="submenu-item">Indicadors</div>
+                  <div class="submenu-item">Accions traçadores</div>
+                </div>
+              </li>
+              
+              <li class="nav-item">
+                <button class="nav-link" onclick="toggleSubmenu('eix2-submenu')" data-section="eix2">
+                  <div class="nav-link-content">
+                    <span class="nav-link-text">2. Entorns saludables</span>
+                    <span class="nav-arrow">⌄</span>
+                  </div>
+                </button>
+                <div class="submenu" id="eix2-submenu">
+                  <div class="submenu-item" onclick="scrollToSection('eix2')">Veure detalls</div>
+                  <div class="submenu-item">Indicadors</div>
+                  <div class="submenu-item">Accions traçadores</div>
+                </div>
+              </li>
+              
+              <li class="nav-item">
+                <button class="nav-link" onclick="toggleSubmenu('eix3-submenu')" data-section="eix3">
+                  <div class="nav-link-content">
+                    <span class="nav-link-text">3. Integració de l'atenció a la salut</span>
+                    <span class="nav-arrow">⌄</span>
+                  </div>
+                </button>
+                <div class="submenu" id="eix3-submenu">
+                  <div class="submenu-item" onclick="scrollToSection('eix3')">Veure detalls</div>
+                  <div class="submenu-item">Indicadors</div>
+                  <div class="submenu-item">Accions traçadores</div>
+                </div>
+              </li>
+              
+              <li class="nav-item">
+                <button class="nav-link" onclick="toggleSubmenu('eix4-submenu')" data-section="eix4">
+                  <div class="nav-link-content">
+                    <span class="nav-link-text">4. Palanques de canvi transversals</span>
+                    <span class="nav-arrow">⌄</span>
+                  </div>
+                </button>
+                <div class="submenu" id="eix4-submenu">
+                  <div class="submenu-item" onclick="scrollToSection('eix4')">Veure detalls</div>
+                  <div class="submenu-item">Indicadors</div>
+                  <div class="submenu-item">Accions traçadores</div>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="progress-section">
+              <div class="nav-indicator">GRAU D'ASSOLIMENT</div>
+              <div class="progress-container">
+                <svg class="progress-svg" width="70" height="12" id="progress-eix1"></svg>
+                <span class="progress-label">6</span>
+              </div>
+              <div class="progress-container">
+                <svg class="progress-svg" width="70" height="12" id="progress-eix2"></svg>
+                <span class="progress-label">6</span>
+              </div>
+              <div class="progress-container">
+                <svg class="progress-svg" width="70" height="12" id="progress-eix3"></svg>
+                <span class="progress-label">8</span>
+              </div>
+              <div class="progress-container">
+                <svg class="progress-svg" width="70" height="12" id="progress-eix4"></svg>
+                <span class="progress-label">8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2: Objectius globals -->
+      <div class="nav-column">
+        <div class="nav-column-header">
+          <h2>OBJECTIUS DEL PLA DE SALUT</h2>
+        </div>
+        
+        <p class="nav-subtitle">Aquí trobaràs un panell interactiu dels indicadors implicats en els objectius específics per eixos de desigualtat</p>
+        
+        <div class="nav-content">
+          <div class="nav-indicator objetius">ÀMBITS</div>
+          
+          <ul class="nav-list">
+            <li class="nav-item">
+              <button class="nav-link" onclick="toggleSubmenu('obj1-submenu')" data-section="objectiu1">
+                <div class="nav-link-content">
+                  <span class="nav-link-text">1. Objectius globals de l'estat de salut</span>
+                  <span class="nav-arrow">⌄</span>
+                </div>
+              </button>
+              <div class="submenu" id="obj1-submenu">
+                <div class="submenu-item" onclick="scrollToSection('objectiu1')">Reduir les desigualtats d'autopercepció de benestar emocional baix</div>
+                <div class="submenu-item">Recuperar l'esperança de vida en néixer prèvia a la pandèmia</div>
+                <div class="submenu-item">Augmentar un 5 % l'esperança de vida viscuda amb bona salut als 65 anys</div>
+              <div class="submenu-item">Reduir les desigualtats d'autopercepció de bona salut</div>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <button class="nav-link" onclick="toggleSubmenu('obj2-submenu')" data-section="objectiu2">
+                <div class="nav-link-content">
+                  <span class="nav-link-text">2. Reducció de risc</span>
+                  <span class="nav-arrow">⌄</span>
+                </div>
+              </button>
+              <div class="submenu" id="obj2-submenu">
+                <div class="submenu-item" onclick="scrollToSection('objectiu2')">Panell interactiu</div>
+                <div class="submenu-item">Indicadors específics</div>
+                <div class="submenu-item">Eixos de desigualtat</div>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <button class="nav-link" onclick="toggleSubmenu('obj3-submenu')" data-section="objectiu3">
+                <div class="nav-link-content">
+                  <span class="nav-link-text">3. Morbiditat</span>
+                  <span class="nav-arrow">⌄</span>
+                </div>
+              </button>
+              <div class="submenu" id="obj3-submenu">
+                <div class="submenu-item" onclick="scrollToSection('objectiu3')">Panell interactiu</div>
+                <div class="submenu-item">Indicadors específics</div>
+                <div class="submenu-item">Eixos de desigualtat</div>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <button class="nav-link" onclick="toggleSubmenu('obj4-submenu')" data-section="objectiu4">
+                <div class="nav-link-content">
+                  <span class="nav-link-text">4. Mortalitat</span>
+                  <span class="nav-arrow">⌄</span>
+                </div>
+              </button>
+              <div class="submenu" id="obj4-submenu">
+                <div class="submenu-item" onclick="scrollToSection('objectiu4')">Panell interactiu</div>
+                <div class="submenu-item">Indicadors específics</div>
+                <div class="submenu-item">Eixos de desigualtat</div>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <button class="nav-link" onclick="toggleSubmenu('obj5-submenu')" data-section="objectiu5">
+                <div class="nav-link-content">
+                  <span class="nav-link-text">5. Qualitat de serveis</span>
+                  <span class="nav-arrow">⌄</span>
+                </div>
+              </button>
+              <div class="submenu" id="obj5-submenu">
+                <div class="submenu-item" onclick="scrollToSection('objectiu5')">Panell interactiu</div>
+                <div class="submenu-item">Indicadors específics</div>
+                <div class="submenu-item">Eixos de desigualtat</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secciones de contenido -->
+  <!-- Eix 1 -->
+  <section class="content-section new-style" id="eix1">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-1.jpg" alt="Eix 1">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">1. Igualtat d'oportunitats en salut al llarg de la vida</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('eix1')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-eix1">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('eix1')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('eix1', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix1', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix1', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="flourish-container">
+            <div class="flourish-row-top">
+              <iframe src='https://flo.uri.sh/visualisation/25372385/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+              
+              <iframe src='https://flo.uri.sh/visualisation/25364187/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+              
+             <iframe src='https://flo.uri.sh/visualisation/25364367/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no'  sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>     </div>
+            
+            <div class="flourish-row-bottom">
+              <iframe src='https://flo.uri.sh/visualisation/25364238/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eix 2 -->
+  <section class="content-section new-style" id="eix2">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-2.jpg" alt="Eix 2">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">2. Entorns saludables</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('eix2')">‹</button>
+        <h5 class="carousel-title">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('eix2')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('eix2', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix2', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix2', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="simulation-section">
+            <h6>Dades generals</h6>
+            <div class="simulation-image">
+              <img src="./img/Salut-simulació dades.png" alt="Simulació de dades">
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">Veure evolució i comparar perfils</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eix 3 -->
+  <section class="content-section new-style" id="eix3">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-3.jpg" alt="Eix 3">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">3. Integració de l'atenció a la salut</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('eix3')">‹</button>
+        <h5 class="carousel-title">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('eix3')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('eix3', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix3', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix3', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 2</p>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eix 4 -->
+  <section class="content-section new-style" id="eix4">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-4.jpg" alt="Eix 4">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">4. Palanques de canvi transversals</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('eix4')">‹</button>
+        <h5 class="carousel-title">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('eix4')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('eix4', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix4', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('eix4', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 2</p>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectiu 1 - La visualització original -->
+  <section class="content-section new-style" id="objectiu1">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-5.jpg" alt="Objectiu 1">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">4. Reduir les desigualtats d'autopercepció de benestar emocional baix</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('objectiu1')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-objectiu1">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('objectiu1')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('objectiu1', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu1', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu1', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <!-- Visualització principal -->
+          <div class="main-content" id="mainContent">
+            <div class="container">
+              <h6>Filtra per veure el perfil de les persones que pateixen malestar emocional</h6>
+
+              <div class="tabs" id="year-tabs">
+                <!-- Les pestanyes es generaran dinàmicament -->
+              </div>
+
+              <div id="filters">
+                <div class="filter-group">
+                  <label for="Edat">Edat:</label>
+                  <select id="Edat"></select>
+                </div>
+
+                <div class="filter-group">
+                  <label for="Sexe">Sexe:</label>
+                  <select id="Sexe"></select>
+                </div>
+
+                <div class="filter-group">
+                  <label for="Classe_social">Classe Social:</label>
+                  <select id="Classe_social"></select>
+                </div>
+
+                <div class="filter-group">
+                  <label for="Estudis">Estudis:</label>
+                  <select id="Estudis"></select>
+                </div>
+              </div>
+
+              <div class="legend">
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: #54a2bb;"></div>
+                  <span>Home</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: #e9460b;"></div>
+                  <span>Dona</span>
+                </div>
+              </div>
+
+              <div class="stats" id="stats">
+                <div class="stats-item stats-yes">
+                  Sí: <span id="yes-count">0</span>%
+                </div>
+              </div>
+
+              <div style="text-align: center;">
+                <svg id="chart" width="1200" height="700"></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="flourish-container">
+            <div class="flourish-row-top">
+              <iframe src='https://flo.uri.sh/visualisation/25372385/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+              
+              <iframe src='https://flo.uri.sh/visualisation/25364187/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+              
+             <iframe src='https://flo.uri.sh/visualisation/25364367/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no'  sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>     </div>
+            
+            <div class="flourish-row-bottom">
+              <iframe src='https://flo.uri.sh/visualisation/25364238/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectiu 2 -->
+  <section class="content-section new-style" id="objectiu2">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-1.jpg" alt="Objectiu 2">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">2. Reducció de risc</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('objectiu2')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-objectiu2">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('objectiu2')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('objectiu2', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu2', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu2', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="simulation-section">
+            <div class="simulation-image">
+              <img src="./img/Salut-simulació dades.png" alt="Simulació de dades">
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectiu 3 -->
+  <section class="content-section new-style" id="objectiu3">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-2.jpg" alt="Objectiu 3">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">3. Morbiditat</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('objectiu3')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-objectiu3">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('objectiu3')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('objectiu3', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu3', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu3', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="simulation-section">
+            <div class="simulation-image">
+              <img src="./img/Salut-simulació dades.png" alt="Simulació de dades">
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectiu 4 -->
+  <section class="content-section new-style" id="objectiu4">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-3.jpg" alt="Objectiu 4">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">4. Mortalitat</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('objectiu4')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-objectiu4">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('objectiu4')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('objectiu4', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu4', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu4', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="simulation-section">
+            <div class="simulation-image">
+              <img src="./img/Salut-simulació dades.png" alt="Simulació de dades">
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectiu 5 -->
+  <section class="content-section new-style" id="objectiu5">
+    <button class="scroll-btn" onclick="scrollToSection('navigation')" title="Tornar al menú">↑</button>
+    
+    <div class="section-image">
+      <img src="./img/Persones_plaSalut-4.jpg" alt="Objectiu 5">
+    </div>
+    
+    <div class="info-pill">
+      <div class="breadcrumb">ÍNDEX: OBJECTIUS DEL PLA DE SALUT | OBJECTIUS GLOBALS DE L'ESTAT DE SALUT</div>
+      <h3 class="section-title">5. Qualitat de serveis</h3>
+    </div>
+    
+    <div class="indicator-label">INDICADOR IMPLICAT</div>
+    <h5 class="main-indicator-text">Prevalença de depressió moderada o greu en la població de 15 anys i més</h5>
+    
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <button class="carousel-arrow left" onclick="previousCarouselSlide('objectiu5')">‹</button>
+        <h5 class="carousel-title" id="carousel-title-objectiu5">Perfil del malestar emocional</h5>
+        <button class="carousel-arrow right" onclick="nextCarouselSlide('objectiu5')">›</button>
+      </div>
+      
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentCarouselSlide('objectiu5', 1)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu5', 2)"></span>
+        <span class="dot" onclick="currentCarouselSlide('objectiu5', 3)"></span>
+      </div>
+      
+      <div class="carousel-content">
+        <div class="slide active">
+          <p class="development-text">En desenvolupament - Secció 1</p>
+        </div>
+        <div class="slide">
+          <div class="simulation-section">
+            <div class="simulation-image">
+              <img src="./img/Salut-simulació dades.png" alt="Simulació de dades">
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <p class="development-text">En desenvolupament - Secció 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Variables globales para navegació
+    let currentSection = 'intro';
+    let isObjectiu1Initialized = false;
+
+    // Crear indicadores de progreso con D3
+    function createProgressIndicators() {
+      const progressData = [
+        { id: 'progress-eix1', value: 6, total: 10 },
+        { id: 'progress-eix2', value: 6, total: 10 },
+        { id: 'progress-eix3', value: 8, total: 10 },
+        { id: 'progress-eix4', value: 8, total: 10 }
+      ];
+
+      progressData.forEach(data => {
+        const svg = d3.select(`#${data.id}`);
+        if (svg.empty()) return;
+
+        const circleRadius = 4;
+        const circleSpacing = 6;
+        const totalWidth = data.total * (circleRadius * 2 + circleSpacing) - circleSpacing;
+
+        // Limpiar SVG existente
+        svg.selectAll("*").remove();
+
+        // Crear círculos
+        for (let i = 0; i < data.total; i++) {
+          const x = i * (circleRadius * 2 + circleSpacing) + circleRadius;
+          const isFilled = i < data.value;
+
+          if (isFilled) {
+            // Círculo relleno
+            svg.append("circle")
+              .attr("cx", x)
+              .attr("cy", 6)
+              .attr("r", circleRadius)
+              .attr("fill", "#6b6865")
+              .attr("class", "progress-circle filled");
+          } else {
+            // Círculo con línea (stroke)
+            svg.append("circle")
+              .attr("cx", x)
+              .attr("cy", 6)
+              .attr("r", circleRadius)
+              .attr("fill", "none")
+              .attr("stroke", "#969296")
+              .attr("stroke-width", 1)
+              .attr("class", "progress-circle empty");
+          }
+        }
+      });
+    }
+
+    // Actualizar colores de indicadores en hover
+    function updateProgressColors() {
+      document.querySelectorAll('.nav-item').forEach(item => {
+        const progressSvg = item.querySelector('.progress-svg');
+        
+        item.addEventListener('mouseenter', () => {
+          if (progressSvg) {
+            d3.select(progressSvg).selectAll('.progress-circle')
+              .attr('fill', function() {
+                return d3.select(this).classed('filled') ? '#e94e24' : 'none';
+              })
+              .attr('stroke', '#e94e24');
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          if (progressSvg) {
+            d3.select(progressSvg).selectAll('.progress-circle.filled')
+              .attr('fill', '#6b6865')
+              .attr('stroke', 'none');
+            
+            d3.select(progressSvg).selectAll('.progress-circle.empty')
+              .attr('fill', 'none')
+              .attr('stroke', '#969296');
+          }
+        });
+      });
+    }
+
+    // Función para alternar submenús
+    function toggleSubmenu(submenuId) {
+      const submenu = document.getElementById(submenuId);
+      const button = document.querySelector(`[onclick="toggleSubmenu('${submenuId}')"]`);
+      
+      if (submenu && button) {
+        // Cerrar otros submenús abiertos
+        document.querySelectorAll('.submenu.open').forEach(menu => {
+          if (menu.id !== submenuId) {
+            menu.classList.remove('open');
+            const otherButton = document.querySelector(`[onclick="toggleSubmenu('${menu.id}')"]`);
+            if (otherButton) {
+              otherButton.classList.remove('active');
+            }
+          }
+        });
+
+        // Alternar el submenú actual
+        submenu.classList.toggle('open');
+        button.classList.toggle('active');
+      }
+    }
+
+    // Función de scroll suave entre secciones
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        currentSection = sectionId;
+        
+        // Cerrar todos los submenús al navegar
+        document.querySelectorAll('.submenu.open').forEach(menu => {
+          menu.classList.remove('open');
+        });
+        document.querySelectorAll('.nav-link.active').forEach(button => {
+          button.classList.remove('active');
+        });
+        
+        // Si navegamos a objectiu1 y no está inicializado, inicializarlo
+        if (sectionId === 'objectiu1' && !isObjectiu1Initialized) {
+          setTimeout(() => {
+            if (typeof init === 'function') {
+              init();
+              isObjectiu1Initialized = true;
+            }
+          }, 500);
+        }
+        
+        // Mostrar/ocultar botón de volver arriba en navegación
+        updateBackToTopButton();
+      }
+    }
+
+    // Actualizar visibilidad del botón "volver arriba"
+    function updateBackToTopButton() {
+      const backBtn = document.querySelector('.scroll-btn');
+      if (backBtn) {
+        // Solo mostrar el botón cuando NO estemos en la sección intro
+        if (currentSection !== 'intro') {
+          backBtn.classList.add('visible');
+        } else {
+          backBtn.classList.remove('visible');
+        }
+      }
+    }
+
+    // Detectar scroll y actualizar sección actual
+    function detectCurrentSection() {
+      const sections = document.querySelectorAll('section');
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          currentSection = section.id;
+          updateBackToTopButton();
+        }
+      });
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', detectCurrentSection);
+    
+    // Cerrar submenús al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item')) {
+        document.querySelectorAll('.submenu.open').forEach(menu => {
+          menu.classList.remove('open');
+        });
+        document.querySelectorAll('.nav-link.active').forEach(button => {
+          button.classList.remove('active');
+        });
+      }
+    });
+    
+    // Inicialización automática cuando se carga la página
+    document.addEventListener('DOMContentLoaded', () => {
+      // Crear indicadores de progreso
+      setTimeout(() => {
+        createProgressIndicators();
+        updateProgressColors();
+      }, 100);
+      
+      // Si hay hash en la URL, navegar a esa sección
+      if (window.location.hash) {
+        const sectionId = window.location.hash.substring(1);
+        setTimeout(() => scrollToSection(sectionId), 500);
+      }
+      
+      // Inicializar detección de sección actual
+      detectCurrentSection();
+    });
+
+    // Funciones del carrusel
+    let currentSlides = {};
+    
+    // Títulos para cada sección del carrusel
+    const carouselTitles = {
+      'eix1': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'eix2': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'eix3': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'eix4': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'objectiu1': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'objectiu2': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'objectiu3': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'objectiu4': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils'],
+      'objectiu5': ['Perfil del malestar emocional', 'Dades generals', 'Veure evolució i comparar perfils']
+    };
+
+    function initializeCarousels() {
+      // Inicializar todos los carruseles
+      const carousels = ['eix1', 'eix2', 'eix3', 'eix4', 'objectiu1', 'objectiu2', 'objectiu3', 'objectiu4', 'objectiu5'];
+      carousels.forEach(id => {
+        currentSlides[id] = 1;
+      });
+    }
+
+    function updateCarouselTitle(sectionId, slideNumber) {
+      const titleElement = document.getElementById(`carousel-title-${sectionId}`);
+      if (titleElement && carouselTitles[sectionId]) {
+        titleElement.textContent = carouselTitles[sectionId][slideNumber - 1];
+      }
+    }
+
+    function showSlide(sectionId, slideNumber) {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+
+      const slides = section.querySelectorAll('.slide');
+      const dots = section.querySelectorAll('.dot');
+
+      // Ocultar todas las slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      // Desactivar todos los dots
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+
+      // Mostrar la slide actual
+      if (slides[slideNumber - 1]) {
+        slides[slideNumber - 1].classList.add('active');
+      }
+
+      // Activar el dot actual
+      if (dots[slideNumber - 1]) {
+        dots[slideNumber - 1].classList.add('active');
+      }
+
+      // Actualizar el título del carrusel
+      updateCarouselTitle(sectionId, slideNumber);
+
+      currentSlides[sectionId] = slideNumber;
+    }
+
+    function nextCarouselSlide(sectionId) {
+      let next = currentSlides[sectionId] + 1;
+      if (next > 3) next = 1;
+      showSlide(sectionId, next);
+    }
+
+    function previousCarouselSlide(sectionId) {
+      let prev = currentSlides[sectionId] - 1;
+      if (prev < 1) prev = 3;
+      showSlide(sectionId, prev);
+    }
+
+    function currentCarouselSlide(sectionId, slideNumber) {
+      showSlide(sectionId, slideNumber);
+    }
+
+    // Auto-scroll después de la animación de intro
+    setTimeout(() => {
+      const introSection = document.getElementById('intro');
+      if (introSection && currentSection === 'intro') {
+        // Añadir listener para cualquier interacción que inicie el scroll
+        document.addEventListener('click', () => {
+          if (currentSection === 'intro') {
+            scrollToSection('navigation');
+          }
+        }, { once: true });
+        
+        document.addEventListener('keydown', () => {
+          if (currentSection === 'intro') {
+            scrollToSection('navigation');
+          }
+        }, { once: true });
+      }
+    }, 6000);
+
+    // Inicializar carruseles al cargar la página
+    initializeCarousels();
+  </script>
+
+  <!-- Tu script original -->
+  <script src="script2ilus.js"></script>
+
+</body>
+</html>

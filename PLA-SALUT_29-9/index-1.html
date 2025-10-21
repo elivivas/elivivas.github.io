@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visualització de Pictogrames</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <link rel="stylesheet" href="styles-1.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Perfil del malestar emocional </h2>
+    <h5>Filtra per veure el perfil de les persones que pateixen malestar emocional </h5>
+
+  <div class="tabs" id="year-tabs">
+    <!-- Les pestanyes es generaran dinàmicament -->
+  </div>
+
+  <div id="filters">
+  <div class="filter-group">
+    <label>Edat:</label>
+    <div id="Edat-container" class="checkbox-container"></div>
+  </div>
+
+  <div class="filter-group">
+    <label>Sexe:</label>
+    <div id="Sexe-container" class="checkbox-container"></div>
+  </div>
+
+  <div class="filter-group">
+    <label>Classe Social:</label>
+    <div id="Classe_social-container" class="checkbox-container"></div>
+  </div>
+
+  <div class="filter-group">
+    <label>Estudis:</label>
+    <div id="Estudis-container" class="checkbox-container"></div>
+  </div>
+
+  <div class="filter-group">
+    <label>Territori:</label>
+    <div id="Territoris-container" class="checkbox-container"></div>
+  </div>
+</div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: #87c0cd;"></div>
+      <span>Home</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: #e14811;"></div>
+      <span>Dona</span>
+    </div>
+
+  </div>
+
+  <div style="text-align: center;">
+    <svg id="chart" width="1200" height="700"></svg>
+  </div>
+
+
+</div>
+
+<script src="script2ilus.js"></script>
+
+</body>
+</html>

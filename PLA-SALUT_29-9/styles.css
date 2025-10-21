@@ -1,0 +1,1288 @@
+/* Reset y configuració base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Secció de introducció */
+.intro-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 60px 0 40px;
+}
+
+/* Imagen de fondo amb animació fade-in */
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/ILUS-INTROSALUT.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeInBackground 2s ease-in-out 0.5s forwards;
+  z-index: 0;
+}
+
+/* Contenedor del titular - arriba */
+.title-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+/* Titular principal */
+.main-title {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 600;
+  font-size: 80pt;
+  color: #342947;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInTitle 1.5s ease-out 2.5s forwards;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Texto explicativo actualizado */
+.subtitle-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #342947;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInTitle 1.5s ease-out 3.5s forwards;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 1);
+  padding: 15px 10px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Contenedor del texto descriptivo - abajo */
+.description-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+/* Texto descriptivo */
+.description-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: #6b6865;
+  line-height: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInTitle 1.5s ease-out 4.5s forwards;
+  padding: 25px 35px;
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #342947;
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeInTitle 1s ease-out 6s forwards;
+  text-align: center;
+  z-index: 10;
+}
+
+.scroll-arrow {
+  font-size: 24px;
+  margin-top: 10px;
+  animation: bounce 2s infinite;
+}
+
+/* Sección de indicadors - minimalista */
+.indicators-section {
+  background: white;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.indicators-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: #342947;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.indicators-subtitle {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #6b6865;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.indicators-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.indicator-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator-button img {
+  width: 150px;
+  height: auto;
+  transition: opacity 0.3s ease;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.indicator-legend {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #969296;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+.indicators-grid:hover .indicator-button:not(:hover) img {
+  opacity: 0.5;
+}
+
+.indicator-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Secció de navegació */
+.navigation-section {
+  min-height: 100vh;
+  background: #f6f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 50px 0;
+  padding: 10px 10px;
+}
+
+.navigation-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.nav-column {
+  background: #f6f9fa;
+  border-radius: 4px;
+  padding: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pastillas de títols principals mantenen el seu color */
+.nav-column-header {
+  background: #e6eff1;
+  border-radius: 4px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-column h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #6b6865;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-subtitle {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #969296;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  padding: 0 25px;
+}
+
+/* Contingut sense pastilla ni vora */
+.nav-content {
+  padding: 0 25px 25px;
+  background: #f6f9fa;
+  border-radius: 0 0 4px 4px;
+  flex: 1;
+}
+
+/* Layout especial per estratègics amb columnes ajustades */
+.estrategics-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-indicator {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #969296;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-indicator.objetius {
+  text-align: right;
+  margin-bottom: 15px;
+  padding-right: 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #6b6865;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-link:hover {
+  background-color: #e6eff1;
+  color: #e94e24;
+}
+
+.nav-link.active {
+  background-color: #e6eff1;
+  color: #e94e24;
+}
+
+.nav-link-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-link-text {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.nav-link-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-arrow {
+  font-size: 18px;
+  font-weight: 600;
+  color: #969296;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+  font-family: system-ui;
+}
+
+.nav-item:hover .nav-arrow {
+  color: #e94e24;
+}
+
+.nav-link.active .nav-arrow {
+  color: #e94e24;
+  transform: rotate(180deg);
+}
+
+/* Efecte de transparència en hover */
+.navigation-container:hover .nav-column:not(:hover) {
+  opacity: 0.5;
+}
+
+/* Submenú desplegable */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 8px;
+}
+
+.submenu.open {
+  max-height: 200px;
+}
+
+.submenu-item {
+  padding: 8px 16px 8px 32px;
+  color: #969296;
+  font-size: 14px;
+  border-left: 2px solid #eceae3;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submenu-item:hover {
+  color: #e94e24;
+  border-left-color: #e94e24;
+}
+
+/* Contenedor per indicadors de progrés amb D3 */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.progress-svg {
+  display: block;
+}
+
+.progress-label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b6865;
+}
+
+.nav-item:hover .progress-label {
+  color: #e94e24;
+}
+
+/* Seccions de contingut */
+.content-section {
+  min-height: 100vh;
+  background: white;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Nuevo estilo minimalista para secciones */
+.content-section.new-style {
+  padding: 40px 20px 60px;
+  background: white;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 200px;
+  background-image: url('./img/ILUS-INTROSALUT.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* No mostrar imagen de fondo para nuevas secciones */
+.content-section.new-style::before {
+  display: none;
+}
+
+/* Imagen de sección minimalista */
+.section-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-image img {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Pastilla de información con colores corregidos */
+.info-pill {
+  background: #e6eff1;
+  padding: 15px 10px;
+  margin: 0 0 5px 0;
+  border-radius: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.breadcrumb {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #8cbdc1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #6b6865;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Etiqueta de indicador con espaciado natural */
+.indicator-label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #969296;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  text-align: center;
+  margin: 15px 0 8px 0;
+}
+
+/* Texto principal del indicador - Usando H5 sin conflictos */
+.main-indicator-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #e94e24;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contenedor del carrusel minimalista */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 0;
+  padding: 20px 0;
+  box-shadow: none;
+}
+
+/* Header del carrusel */
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.carousel-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.carousel-arrow {
+  background: #8cbdc1;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  box-shadow: none;
+}
+
+.carousel-arrow.left {
+  left: 0;
+}
+
+.carousel-arrow.right {
+  right: 0;
+}
+
+.carousel-arrow:hover {
+  background: #7ab0b4;
+  transform: scale(1.05);
+}
+
+/* Puntos de navegación minimalistas */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e9ecef;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.dot:hover {
+  background: #8cbdc1;
+}
+
+.dot.active {
+  background: #2c3e50;
+}
+
+/* Contenido del carrusel */
+.carousel-content {
+  position: relative;
+  min-height: 400px;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.development-text {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  font-style: italic;
+  padding: 100px 20px;
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid #eee;
+}
+
+/* Imagen de simulación sin efectos */
+.simulation-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.simulation-image img {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Sección de simulación */
+.simulation-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.simulation-section h6 {
+  color: #6c757d;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de iframes Flourish */
+.flourish-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.flourish-row-top {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.flourish-row-top iframe {
+  flex: 1;
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+.flourish-row-bottom {
+  width: 100%;
+}
+
+.flourish-row-bottom iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+/* Ajustes para el contenido de la visualización */
+.slide .main-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide .container {
+  max-width: 100%;
+  padding: 20px;
+  box-shadow: none;
+  background: transparent;
+}
+
+.slide h6 {
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* Botons de navegació */
+.scroll-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #8cbdc1;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.scroll-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-btn:hover {
+  background: #7ab0b4;
+  transform: translateY(-2px);
+}
+
+.back-to-top {
+  display: none;
+}
+
+.back-to-top.visible {
+  display: flex;
+}
+
+/* Estils originals per la visualització de dades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+h5 {
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 30px;
+  background: white;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  margin-right: 2px;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.tab.active {
+  background: white;
+  color: #2b6cb0;
+  font-weight: bold;
+  border-color: #2b6cb0;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
+  z-index: 10;
+  position: relative;
+}
+
+#filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.2);
+}
+
+.person {
+  cursor: pointer;
+}
+
+.person.transitioning {
+  transition: transform 5s cubic-bezier(0.23, 1, 0.32, 1), opacity 1s ease;
+}
+
+.person:hover {
+  transform: scale(1.1);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.stats {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+}
+
+.stats-item {
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.stats-yes {
+  color: #2b6cb0;
+}
+
+.stats-no {
+  color: #fd7e14;
+}
+
+#chart {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+/* Animacions */
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 0.9; }
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 40px 0 40px;
+  }
+  
+  .background-image {
+    width: 90%;
+    height: 45%;
+  }
+  
+  .main-title {
+    font-size: 48pt;
+    padding: 15px 25px;
+  }
+  
+  .subtitle-text {
+    font-size: 16px;
+    max-width: 90%;
+    padding: 12px 20px;
+  }
+  
+  .description-text {
+    font-size: 14px;
+    padding: 20px 25px;
+  }
+
+  /* Responsive indicadores */
+  .indicators-grid {
+    gap: 40px;
+  }
+  
+  .indicator-button img {
+    width: 50px;
+  }
+  
+  .indicators-title {
+    font-size: 18px;
+  }
+  
+  .indicators-subtitle {
+    font-size: 13px;
+  }
+
+  .navigation-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .nav-column {
+    padding: 20px;
+  }
+  
+  .nav-column h2 {
+    font-size: 16px;
+  }
+  
+  .nav-subtitle {
+    font-size: 13px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .progress-indicator {
+    gap: 2px;
+  }
+  
+  .progress-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .content-section::before {
+    width: 90%;
+    height: 120px;
+  }
+  
+  .content-section h4 {
+    margin: 150px auto 30px auto;
+    font-size: 24px;
+  }
+  
+  #objectiu1-section h4 {
+    margin: 20px auto 30px auto;
+    font-size: 24px;
+  }
+
+  .scroll-btn {
+    top: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  #filters {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  #chart {
+    width: 100%;
+    height: auto;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .section-image img {
+    width: 80%;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .main-indicator-text {
+    font-size: 14px;
+  }
+
+  .carousel-container {
+    padding: 15px 0;
+  }
+
+  .carousel-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carousel-arrow {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .carousel-title {
+    font-size: 18px;
+  }
+
+  .development-text {
+    padding: 60px 15px;
+    font-size: 16px;
+    border: 1px solid #eee;
+    background: transparent;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+  }
+
+  .info-pill {
+    padding: 12px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 30px 0 30px;
+  }
+  
+  .background-image {
+    width: 95%;
+    height: 40%;
+  }
+  
+  .main-title {
+    font-size: 36pt;
+    padding: 12px 20px;
+  }
+  
+  .subtitle-text {
+    font-size: 14px;
+    max-width: 95%;
+    padding: 10px 15px;
+  }
+  
+  .description-text {
+    font-size: 13px;
+    padding: 18px 20px;
+  }
+
+
+  
+  /* Responsive móvil indicadores */
+  .indicators-grid {
+    gap: 30px;
+  }
+  
+  .indicator-button img {
+    width: 40px;
+  }
+  
+  .indicators-title {
+    font-size: 16px;
+  }
+  
+  .indicators-subtitle {
+    font-size: 12px;
+  }
+  
+  .indicator-legend {
+    font-size: 11px;
+  }
+
+  .nav-column {
+    padding: 15px;
+  }
+  
+  .nav-column h2 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  .nav-subtitle {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .nav-arrow {
+    font-size: 12px;
+  }
+  
+  .submenu-item {
+    font-size: 12px;
+    padding: 6px 12px 6px 24px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  .tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+    padding: 8px 12px;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  h5 {
+    font-size: 1em;
+  }
+
+  .section-image img {
+    width: 95%;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .main-indicator-text {
+    font-size: 12px;
+  }
+
+  .carousel-container {
+    padding: 10px 0;
+  }
+
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .carousel-title {
+    font-size: 16px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .development-text {
+    padding: 40px 10px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    background: transparent;
+  }
+
+  .breadcrumb {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  .info-pill {
+    padding: 10px 8px;
+  }
+}
