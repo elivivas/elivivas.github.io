@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StorIA — BSC AI Factory</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0a0a0f;
+    --cream: #f5f0e8;
+    --coral: #ff4d2e;
+    --yellow: #f5c842;
+    --blue: #1a3fff;
+    --mint: #00e5a0;
+    --mid: #1c1c28;
+    --muted: #6b6b80;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    font-family: 'Inter', -apple-system, Arial, sans-serif;
+    background: var(--ink);
+    overflow: hidden;
+    cursor: default;
+  }
+
+  /* ── SLIDES CONTAINER ── */
+  #deck {
+    width: 100%; height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(2rem, 6vw, 6rem) clamp(2rem, 8vw, 9rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(30px);
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  .slide.out {
+    opacity: 0;
+    transform: translateY(-30px);
+    pointer-events: none;
+  }
+
+  /* ── BACKGROUNDS ── */
+  .bg-dark   { background: var(--ink); }
+  .bg-mid    { background: var(--mid); }
+  .bg-coral  { background: var(--coral); }
+  .bg-yellow { background: var(--yellow); }
+  .bg-blue   { background: var(--blue); }
+  .bg-cream  { background: var(--cream); }
+
+  /* ── NOISE TEXTURE overlay ── */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #s11::before { display: none; }
+
+  .slide > * { position: relative; z-index: 1; }
+
+  /* ── TYPOGRAPHY ── */
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+  }
+  .label-dark { color: var(--cream); }
+  .label-light { color: var(--ink); }
+
+  .display {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-size: clamp(3.5rem, 9vw, 9rem);
+  }
+  .display-lg {
+    font-size: clamp(2.5rem, 6.5vw, 7rem);
+  }
+  .display-md {
+    font-size: clamp(2rem, 5vw, 5.5rem);
+  }
+
+  .body-text {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 300;
+    line-height: 1.55;
+    max-width: 60ch;
+  }
+  .body-text strong { font-weight: 700; }
+
+  .color-coral { color: var(--coral); }
+  .color-yellow { color: var(--yellow); }
+  .color-mint { color: var(--mint); }
+  .color-blue { color: var(--blue); }
+  .color-cream { color: var(--cream); }
+  .color-ink { color: var(--ink); }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    gap: clamp(2rem, 5vw, 5rem);
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .stat-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* ── PILL / TAG ── */
+  .pill {
+    display: inline-block;
+    padding: 0.4em 1em;
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  .pill-coral { background: var(--coral); color: #fff; }
+  .pill-yellow { background: var(--yellow); color: var(--ink); }
+  .pill-mint { background: var(--mint); color: var(--ink); }
+  .pill-outline { border: 1.5px solid rgba(245,240,232,0.3); color: var(--cream); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 3rem;
+    height: 3px;
+    background: currentColor;
+    margin: 1.5rem 0;
+    border: none;
+  }
+
+  /* ── LIST ── */
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .check-list li {
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    font-weight: 300;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    line-height: 1.4;
+  }
+  .check-list li::before {
+    content: '→';
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 0.05em;
+  }
+
+  /* ── TEAM GRID ── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 900px;
+  }
+  .team-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1.4rem 1.4rem 1.2rem;
+  }
+  .team-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .team-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .team-role {
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 0.6rem;
+  }
+  .team-desc {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.6);
+    line-height: 1.5;
+  }
+
+  /* ── ACCENT LINES ── */
+  .accent-line {
+    position: absolute;
+    background: var(--coral);
+    opacity: 0.12;
+  }
+  .accent-line-v {
+    width: 1px;
+    height: 100%;
+    top: 0;
+  }
+  .accent-line-h {
+    height: 1px;
+    width: 100%;
+    left: 0;
+  }
+
+  /* ── CORNER LABEL ── */
+  .corner-tag {
+    position: absolute;
+    bottom: 2.5rem;
+    right: clamp(2rem, 5vw, 5rem);
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.35;
+    color: inherit;
+    z-index: 10;
+  }
+  .corner-tag.light { color: var(--ink); }
+
+  /* ── BIG QUOTE ── */
+  .big-quote {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4.5vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+  }
+
+  /* ── EMOJI BIG ── */
+  .emoji-big {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  /* ── RAG DIAGRAM ── */
+  .rag-flow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .rag-box {
+    padding: 0.8em 1.2em;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .rag-arrow {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    color: var(--cream);
+  }
+
+  /* ── NAVIGATION ── */
+  #nav {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    z-index: 100;
+  }
+  .nav-btn {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(245,240,232,0.25);
+    background: rgba(10,10,15,0.6);
+    backdrop-filter: blur(10px);
+    color: var(--cream);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .nav-btn:hover {
+    border-color: var(--coral);
+    background: var(--coral);
+  }
+  #slide-counter {
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: rgba(245,240,232,0.4);
+    min-width: 4rem;
+    text-align: center;
+  }
+
+  /* ── PROGRESS BAR ── */
+  #progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--coral);
+    transition: width 0.4s ease;
+    z-index: 100;
+  }
+
+  /* ── LOGO / BRAND ── */
+  .brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  /* RESPONSIVE adjustments */
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  @media (max-width: 600px) {
+    .team-grid { grid-template-columns: 1fr; }
+    .stat-row { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div id="deck">
+
+  <!-- ─── SLIDE 1: TITLE ─── -->
+  <div class="slide bg-dark active" id="s1">
+    <div class="accent-line accent-line-v" style="right:18%;"></div>
+    <div class="label label-dark">BSC AI Factory — Call 2 · Barcelona</div>
+    <h1 class="display display-xl color-cream">Stor<span class="color-coral">IA</span></h1>
+    <hr class="divider color-coral">
+    <p class="body-text color-cream" style="opacity:0.7;max-width:45ch;font-size:clamp(1.1rem,2.2vw,1.6rem);">
+      Journalism-first AI.<br>Transparency by default.
+    </p>
+    <div class="stat-row" style="margin-top:3rem;">
+      <div class="stat">
+        <span class="stat-num color-coral">Storydata</span>
+        <span class="stat-label color-cream">Company</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num color-cream">Communication</span>
+        <span class="stat-label color-cream">& Media Sector</span>
+      </div>
+    </div>
+    <div class="corner-tag">storydata.cat</div>
+  </div>
+
+  <!-- ─── SLIDE 2: THE PROBLEM ─── -->
+  <div class="slide bg-mid" id="s2">
+    <span class="emoji-big">🗞️💥</span>
+    <div class="label label-dark">The Problem</div>
+    <h2 class="display display-lg color-cream">
+      Newsrooms<br>under<br><span class="color-coral">pressure</span>
+    </h2>
+    <ul class="check-list color-cream" style="margin-top:1.5rem;opacity:0.85;">
+      <li>Media revenues collapsing — no sustainable model</li>
+      <li>Journalists fired, verification cut, quality suffers</li>
+      <li>Social media bots + AI → disinformation spiral</li>
+      <li>Many outlets now funded by governments, losing <strong>independence</strong></li>
+    </ul>
+    <div class="corner-tag">01 / Problem</div>
+  </div>
+
+  <!-- ─── SLIDE 3: AI AMPLIFIES IT ─── -->
+  <div class="slide bg-coral" id="s3">
+    <div class="label label-light" style="opacity:0.7;">The AI Problem</div>
+    <h2 class="display display-lg color-cream">
+      AI is the<br>new search<br>engine
+    </h2>
+    <hr class="divider" style="background:rgba(255,255,255,0.4);">
+    <p class="body-text color-cream" style="opacity:0.9;margin-top:0.5rem;">
+      ChatGPT, Claude, Perplexity — trained on <strong>opaque data mixing true and false</strong> — are replacing Google for millions of citizens.
+    </p>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="stat-num color-cream">74%</span>
+        <span class="stat-label color-cream">of media leaders fear<br>traffic loss to AI</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num color-cream">+50%</span>
+        <span class="stat-label color-cream">Wikipedia bot traffic<br>feeding AI models</span>
+      </div>
+    </div>
+    <p class="body-text" style="margin-top:1.5rem;font-style:italic;opacity:0.8;color:#fff;font-size:clamp(0.85rem,1.5vw,1rem);">
+      Reuters Institute, 2025
+    </p>
+    <div class="corner-tag light" style="color:rgba(255,255,255,0.5);">02 / AI Crisis</div>
+  </div>
+
+  <!-- ─── SLIDE 4: THE DEMOCRACY RISK ─── -->
+  <div class="slide bg-dark" id="s4">
+    <div class="accent-line accent-line-v" style="left:10%;"></div>
+    <div class="label label-dark">The Stakes</div>
+    <p class="big-quote color-cream">
+      Opaque AI fed with disinformation is a <span class="color-yellow">threat to democracy</span>
+    </p>
+    <hr class="divider color-yellow" style="margin-top:2rem;">
+    <p class="body-text color-cream" style="opacity:0.65;margin-top:0;">
+      Gartner (2018): by 2022, fake information would surpass real news in Western countries. AI amplifies this exponentially — with frequent hallucinations and no source traceability.
+    </p>
+    <div class="corner-tag">03 / Stakes</div>
+  </div>
+
+  <!-- ─── SLIDE 5: OUR SOLUTION ─── -->
+  <div class="slide bg-blue" id="s5">
+    <div class="pill pill-yellow">Our Solution</div>
+    <h2 class="display display-lg color-cream">
+      Meet<br><span class="color-yellow">StorIA</span>
+    </h2>
+    <p class="body-text color-cream" style="margin-top:1.2rem;opacity:0.9;">
+      An <strong>AI agent embedded inside data-driven journalistic stories</strong>. Readers interrogate verified sources, datasets and methodology in real time. Journalists accelerate production without sacrificing accuracy.
+    </p>
+    <div class="rag-flow">
+      <div class="rag-box" style="background:rgba(255,255,255,0.12);color:#fff;">📰<br>Data Story</div>
+      <span class="rag-arrow">→</span>
+      <div class="rag-box" style="background:rgba(255,255,255,0.12);color:#fff;">🗄️<br>Curated<br>Datasets</div>
+      <span class="rag-arrow">→</span>
+      <div class="rag-box" style="background:var(--yellow);color:var(--ink);">🤖<br>RAG Agent<br>(StorIA)</div>
+      <span class="rag-arrow">→</span>
+      <div class="rag-box" style="background:rgba(255,255,255,0.12);color:#fff;">✅<br>Verified<br>Answer</div>
+    </div>
+    <div class="corner-tag" style="color:rgba(255,255,255,0.4);">04 / Solution</div>
+  </div>
+
+  <!-- ─── SLIDE 6: HOW IT WORKS ─── -->
+  <div class="slide bg-cream" id="s6">
+    <div class="label label-light">How it works</div>
+    <h2 class="display display-md color-ink">
+      Journalism-first AI.<br><span class="color-coral">Not AI journalism.</span>
+    </h2>
+    <ul class="check-list color-ink" style="margin-top:1.5rem;">
+      <li><strong>For journalists:</strong> query verified datasets, accelerate fact-checking</li>
+      <li><strong>For readers:</strong> ask questions about sources & methodology, live</li>
+      <li><strong>RAG architecture</strong> grounded in curated sources → hallucination-resistant by design</li>
+      <li><strong>AirOps + LLM</strong> (Claude/Anthropic) pipeline with full public methodology</li>
+      <li><strong>Explainable algorithms</strong> — no black boxes</li>
+    </ul>
+    <div class="corner-tag light" style="color:rgba(10,10,15,0.35);">05 / How it works</div>
+  </div>
+
+  <!-- ─── SLIDE 7: VALIDATION ─── -->
+  <div class="slide bg-dark" id="s7">
+    <span class="emoji-big">🏛️</span>
+    <div class="label label-dark">Live Validation</div>
+    <h2 class="display display-md color-cream">
+      Vict<span class="color-mint">orIA</span><br>is live
+    </h2>
+    <p class="body-text color-cream" style="margin-top:1rem;opacity:0.85;">
+      Pilot for <strong>CSIC — Residència d'Estudiants</strong>. Publicly accessible. Validated by the institution. Cross-referencing data surfaced <strong>historically invisible women</strong> — proving StorIA's potential beyond journalism into knowledge discovery.
+    </p>
+    <div style="margin-top:1.5rem;">
+      <span class="pill pill-mint">mujeresid.residenciadeestudiantes.com</span>
+    </div>
+    <div class="corner-tag">06 / Validation</div>
+  </div>
+
+  <!-- ─── SLIDE 8: TEAM ─── -->
+  <div class="slide bg-mid" id="s8">
+    <div class="label label-dark">The Team</div>
+    <h2 class="display" style="font-size:clamp(2rem,4vw,3.5rem);color:var(--cream);margin-bottom:1rem;">
+      Few but <span class="color-coral">loud</span> 📣
+    </h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <span class="team-emoji">👩‍💻</span>
+        <div class="team-name">Eli Vivas</div>
+        <div class="team-role">CEO · 100% dedicated</div>
+        <div class="team-desc">Journalist UPF + Linguistics UAB. Co-founder of Verificat. BBVA-Civio Innovadata Prize. Prof. UPF, Blanquerna, CEU.</div>
+      </div>
+      <div class="team-card">
+        <span class="team-emoji">👩‍🎨</span>
+        <div class="team-name">Cristina Claverol</div>
+        <div class="team-role">Lead Visualization Designer</div>
+        <div class="team-desc">30 years infographics at El Periódico. SND & Malofiej Awards. Dashboards for Generalitat & Diputació.</div>
+      </div>
+      <div class="team-card">
+        <span class="team-emoji">📊</span>
+        <div class="team-name">Carlos Albaladejo</div>
+        <div class="team-role">Data Journalist & Developer</div>
+        <div class="team-desc">Built VictorIA. Python, D3.js, SQL. EU project LIBECCIO. Automated workflows for ACN.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;max-width:900px;">
+      <div class="team-card" style="flex:1;min-width:200px;display:flex;align-items:center;gap:0.8rem;padding:0.9rem 1.1rem;">
+        <span style="font-size:1.4rem">📣</span>
+        <div>
+          <div class="team-name" style="font-size:0.88rem">Nerea Aparicio</div>
+          <div class="team-role" style="font-size:0.6rem">Communications & Social Media</div>
+          <div class="team-desc" style="font-size:0.72rem">BA Journalism. Digital News Report, Reuters Institute / Oxford University.</div>
+        </div>
+      </div>
+      <div class="team-card" style="flex:1;min-width:200px;display:flex;align-items:center;gap:0.8rem;padding:0.9rem 1.1rem;">
+        <span style="font-size:1.4rem">📣</span>
+        <div>
+          <div class="team-name" style="font-size:0.88rem">Núria Molins</div>
+          <div class="team-role" style="font-size:0.6rem">Communications & Research</div>
+          <div class="team-desc" style="font-size:0.72rem">BA Journalism + Economics. Digital News Report, Reuters Institute / Oxford University.</div>
+        </div>
+      </div>
+    </div>
+    <div class="corner-tag">07 / Team</div>
+  </div>
+
+  <!-- ─── SLIDE 9: VICTÓRIA LIVE (iframe fullscreen) ─── -->
+  <div class="slide" id="s11" style="padding:0;background:#fff;justify-content:flex-start;align-items:stretch;">
+    <!-- thin top bar -->
+    <div style="background:#1a1a2a;padding:6px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0;z-index:2;">
+      <span style="display:flex;gap:5px">
+        <span style="width:9px;height:9px;border-radius:50%;background:#FF5F57;display:block"></span>
+        <span style="width:9px;height:9px;border-radius:50%;background:#FEBC2E;display:block"></span>
+        <span style="width:9px;height:9px;border-radius:50%;background:#28C840;display:block"></span>
+      </span>
+      <span style="flex:1;background:rgba(255,255,255,0.08);border-radius:4px;padding:3px 10px;font-size:0.65rem;font-family:'Inter',sans-serif;color:rgba(245,240,232,0.5);">mujeresid.residenciadeestudiantes.com</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;background:rgba(0,229,160,0.15);border:1px solid var(--mint);border-radius:100px;padding:2px 10px;font-size:0.6rem;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--mint)">
+        <span style="width:5px;height:5px;background:var(--mint);border-radius:50%;animation:blink 1.4s infinite;display:inline-block"></span>
+        Live · VictorIA × CSIC
+      </span>
+    </div>
+    <iframe
+      src="https://mujeresid.residenciadeestudiantes.com/"
+      title="VictorIA × CSIC"
+      loading="lazy"
+      scrolling="yes"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      style="flex:1;width:100%;border:none;display:block;background:#fff;">
+    </iframe>
+    <div class="corner-tag" style="color:rgba(10,10,15,0.3);">08 / Live Pilot</div>
+  </div>
+
+  <!-- ─── SLIDE 9: TRACTION ─── -->
+  <div class="slide bg-yellow" id="s11">
+    <div class="label label-light">Traction</div>
+    <h2 class="display display-md color-ink">
+      Numbers<br>that speak
+    </h2>
+    <div class="stat-row" style="margin-top:1.5rem;">
+      <div class="stat">
+        <span class="stat-num color-ink">€150K</span>
+        <span class="stat-label color-ink">Next Gen EU Grant<br>(women-led tech)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num color-ink">900%</span>
+        <span class="stat-label color-ink">Academy growth<br>1→9+ courses</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num color-ink">€220K</span>
+        <span class="stat-label color-ink">2026 revenue<br>projected</span>
+      </div>
+    </div>
+    <p class="body-text color-ink" style="margin-top:1.5rem;opacity:0.75;font-size:clamp(0.85rem,1.5vw,1rem);">
+      Clients: Generalitat de Catalunya (Health, Justice) · Diputació de Barcelona · Forbes · ACN · Reuters Institute/Oxford · EU LIBECCIO Interreg-Euromed
+    </p>
+    <div class="corner-tag light" style="color:rgba(10,10,15,0.35);">10 / Traction</div>
+  </div>
+
+  <!-- ─── SLIDE 10: BSC FIT ─── -->
+  <div class="slide bg-dark" id="s12">
+    <div class="accent-line accent-line-v" style="right:25%;opacity:0.08;"></div>
+    <div class="pill pill-coral">Why BSC AI Factory</div>
+    <h2 class="display display-md color-cream">
+      ALIA + HPC<br>= <span class="color-mint">Sovereign AI</span><br>for journalism
+    </h2>
+    <ul class="check-list color-cream" style="margin-top:1.5rem;opacity:0.85;">
+      <li><strong>Fine-tune ALIA</strong> (Salamandra 40B) for verified data journalism via RAG</li>
+      <li>Replace proprietary API dependency with <strong>open, auditable, EU-sovereign</strong> agent</li>
+      <li>HPC access for training · Data Space for dataset management</li>
+      <li>Only team combining <strong>data journalism + AI + visualization</strong> in the ecosystem</li>
+      <li>On-site 3+ days/week at <strong>Pier 07, Barcelona</strong></li>
+    </ul>
+    <div class="corner-tag">11 / BSC Fit</div>
+  </div>
+
+  <!-- ─── SLIDE 11: CLOSE ─── -->
+  <div class="slide bg-coral" id="s13">
+    <div class="label label-light" style="opacity:0.7;">StorIA · Storydata</div>
+    <h1 class="display display-xl color-cream">
+      Let's build<br>the future of<br>verified<br>journalism
+    </h1>
+    <hr class="divider" style="background:rgba(255,255,255,0.4);margin-top:2rem;">
+    <p class="body-text color-cream" style="margin-top:0.5rem;opacity:0.85;font-style:italic;font-size:clamp(1.1rem,2.2vw,1.5rem);">
+      "Data is forgotten. Stories are not."
+    </p>
+    <div style="margin-top:2rem;">
+      <span class="pill" style="background:rgba(255,255,255,0.2);color:#fff;border:1.5px solid rgba(255,255,255,0.4);">storydata.cat</span>
+    </div>
+    <div class="corner-tag light" style="color:rgba(255,255,255,0.45);">12 / Gràcies · Thank you</div>
+  </div>
+
+</div><!-- /deck -->
+
+<!-- Navigation -->
+<div id="nav">
+  <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">←</button>
+  <span id="slide-counter">1 / 12</span>
+  <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">→</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('slide-counter');
+  const progress = document.getElementById('progress');
+  let current = 0;
+
+  function showSlide(idx) {
+    slides[current].classList.remove('active');
+    slides[current].classList.add('out');
+    setTimeout(() => slides[current].classList.remove('out'), 500);
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    counter.textContent = `${current + 1} / ${slides.length}`;
+    progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+  }
+
+  function changeSlide(dir) { showSlide(current + dir); }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') changeSlide(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+  });
+
+  // Touch swipe
+  let touchX = 0;
+  document.addEventListener('touchstart', e => touchX = e.touches[0].clientX);
+  document.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) changeSlide(diff > 0 ? 1 : -1);
+  });
+
+  // Init progress
+  progress.style.width = `${(1 / slides.length) * 100}%`;
+</script>
+</body>
+</html>
