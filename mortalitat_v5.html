@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mortalitat Catalunya 2023</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:     #ffffff;
+  --surf:   #faf6f8;
+  --border: #e4d6de;
+  --t1:     #2e2028;
+  --t2:     #7e6872;
+}
+body {
+  background: var(--bg); color: var(--t1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 16px 20px 20px;
+}
+header { text-align: center; max-width: 760px; margin-bottom: 5px; }
+h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 20px; font-weight: 600;
+  letter-spacing: -0.015em; line-height: 1.3; margin-bottom: 4px;
+}
+header p { font-size: 11.5px; color: var(--t2); line-height: 1.6; }
+#chart { display: block; overflow: visible; margin-top: 5px; }
+#controls {
+  display: flex; gap: 9px; justify-content: center;
+  margin-top: 14px; flex-wrap: wrap;
+}
+button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px; font-weight: 500;
+  padding: 7px 20px; border-radius: 999px;
+  cursor: pointer; transition: all 0.18s ease;
+  background: transparent; color: var(--t1); border: 1px solid var(--border);
+}
+button:disabled { opacity: .35; cursor: not-allowed; }
+button:hover:not(:disabled) { background: var(--surf); }
+#btn-detail { background: #5a4c50; border-color: #5a4c50; color: #f5edf0; }
+#btn-detail:hover:not(:disabled) { background: #4a3d42; }
+#btn-taxa   { background: #b28b98; border-color: #b28b98; color: #f5edf0; }
+#btn-taxa:hover:not(:disabled)   { background: #9f7885; }
+#btn-detail, #btn-simplify, #btn-taxa, #btn-notaxa { display: none; }
+#legend {
+  display: flex; flex-wrap: wrap; gap: 5px 18px;
+  justify-content: center; margin-top: 6px; max-width: 820px;
+}
+.leg { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--t2); }
+.leg-sw { width: 11px; height: 11px; border-radius: 2px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.06); }
+#tip {
+  position: fixed; z-index: 999; pointer-events: none; opacity: 0; transition: opacity .12s;
+  background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px;
+  font-size: 12.5px; line-height: 1.5; min-width: 175px;
+  box-shadow: 0 4px 18px rgba(46,32,40,0.10);
+}
+.tip-dot  { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+.tip-name { font-weight: 500; vertical-align: middle; font-size: 12px; color: #2e2028; }
+.tip-num  { font-family: 'IBM Plex Serif', serif; font-size: 22px; font-weight: 600; display: block; margin: 3px 0 1px; }
+.tip-sub  { font-size: 10.5px; color: var(--t2); }
+.tip-meta { font-size: 10.5px; color: var(--t2); margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Primeres causes de mortalitat per grups d'edat i sexe</h1>
+  <p>Catalunya 2023 · Primera causa per grup d'edat i sexe · Font: Departament de Salut, IDESCAT</p>
+</header>
+<div id="legend"></div>
+<svg id="chart"></svg>
+<div id="controls">
+  <button id="btn-detail">Desglossar per edat ›</button>
+  <button id="btn-simplify">‹ Simplificar</button>
+  <button id="btn-taxa">Mostrar taxa ›</button>
+  <button id="btn-notaxa">‹ Sense taxa</button>
+</div>
+<div id="tip"></div>
+
+<script>
+/* ── Colour utilities ── */
+function lum(h){
+  const r=parseInt(h.slice(1,3),16)/255,g=parseInt(h.slice(3,5),16)/255,b=parseInt(h.slice(5,7),16)/255;
+  return 0.299*r+0.587*g+0.114*b;
+}
+function txtIn(h){ return lum(h)>0.55?'#2e2028':'#f5edf0'; }
+function onWhite(h){
+  const f=lum(h)>0.70?0.44:lum(h)>0.52?0.65:1;
+  return `rgb(${Math.round(parseInt(h.slice(1,3),16)*f)},${Math.round(parseInt(h.slice(3,5),16)*f)},${Math.round(parseInt(h.slice(5,7),16)*f)})`;
+}
+function barBorder(h){ return lum(h)>0.70?'rgba(90,76,80,0.22)':'rgba(90,76,80,0.10)'; }
+function fmtTaxa(v){ return v>=1000?Math.round(v).toLocaleString('de'):v>=100?''+Math.round(v):v.toFixed(1).replace('.',','); }
+
+/* ── Data ── */
+const DATA=[
+  {t:"TUMORS",                          n:9, c:"#5a4c50"},
+  {t:"CAUSES EXTERNES",                 n:6, c:"#e9b870"},
+  {t:"TRASTORN MENTAL",                 n:4, c:"#8c6574"},
+  {t:"AFECCIONS PERINATALS-CONGÈNITES", n:3, c:"#b28b98"},
+  {t:"SISTEMA CIRCULATORI",             n:2, c:"#edd9e9"},
+];
+const TOTAL=24;
+
+const DATA24=[
+  {grup:"95 anys i més",sexe:"Dones",t:"TRASTORN MENTAL",                  causa:"Demències",                    c:"#8c6574",taxa:3408.9},
+  {grup:"95 anys i més",sexe:"Homes",t:"TRASTORN MENTAL",                  causa:"Demències",                    c:"#8c6574",taxa:3092.6},
+  {grup:"85-94 anys",   sexe:"Dones",t:"TRASTORN MENTAL",                  causa:"Demències",                    c:"#8c6574",taxa: 899.2},
+  {grup:"85-94 anys",   sexe:"Homes",t:"TRASTORN MENTAL",                  causa:"Demències",                    c:"#8c6574",taxa: 818.5},
+  {grup:"75-84 anys",   sexe:"Dones",t:"SISTEMA CIRCULATORI",              causa:"Malalties cerebrovasculars",   c:"#edd9e9",taxa: 127.5},
+  {grup:"75-84 anys",   sexe:"Homes",t:"TUMORS",                           causa:"Tumor maligne s. respiratori", c:"#5a4c50",taxa: 350.1},
+  {grup:"65-74 anys",   sexe:"Dones",t:"TUMORS",                           causa:"Tumor maligne de pulmó",       c:"#5a4c50",taxa:  64.5},
+  {grup:"65-74 anys",   sexe:"Homes",t:"TUMORS",                           causa:"Tumor maligne s. respiratori", c:"#5a4c50",taxa: 234.0},
+  {grup:"55-64 anys",   sexe:"Dones",t:"TUMORS",                           causa:"Tumor maligne s. respiratori", c:"#5a4c50",taxa:  45.2},
+  {grup:"55-64 anys",   sexe:"Homes",t:"TUMORS",                           causa:"Tumor maligne s. respiratori", c:"#5a4c50",taxa:  83.7},
+  {grup:"45-54 anys",   sexe:"Dones",t:"TUMORS",                           causa:"Tumor maligne de mama",        c:"#5a4c50",taxa:  15.6},
+  {grup:"45-54 anys",   sexe:"Homes",t:"SISTEMA CIRCULATORI",              causa:"Malalties isquèmiques del cor",c:"#edd9e9",taxa:  19.1},
+  {grup:"35-44 anys",   sexe:"Dones",t:"TUMORS",                           causa:"Tumor maligne de mama",        c:"#5a4c50",taxa:   6.9},
+  {grup:"35-44 anys",   sexe:"Homes",t:"CAUSES EXTERNES",                  causa:"Suicidis",                     c:"#e9b870",taxa:  10.8},
+  {grup:"25-34 anys",   sexe:"Dones",t:"CAUSES EXTERNES",                  causa:"Suicidis",                     c:"#e9b870",taxa:   3.4},
+  {grup:"25-34 anys",   sexe:"Homes",t:"CAUSES EXTERNES",                  causa:"Suicidis",                     c:"#e9b870",taxa:   9.7},
+  {grup:"15-24 anys",   sexe:"Dones",t:"CAUSES EXTERNES",                  causa:"Suicidis",                     c:"#e9b870",taxa:   2.1},
+  {grup:"15-24 anys",   sexe:"Homes",t:"CAUSES EXTERNES",                  causa:"Accidents de trànsit",         c:"#e9b870",taxa:   7.2},
+  {grup:"5-14 anys",    sexe:"Dones",t:"AFECCIONS PERINATALS-CONGÈNITES",  causa:"Malalties congènites",         c:"#b28b98",taxa:   1.5},
+  {grup:"5-14 anys",    sexe:"Homes",t:"TUMORS",                           causa:"Altres tumors malignes",       c:"#5a4c50",taxa:   1.0},
+  {grup:"1-4 anys",     sexe:"Dones",t:"CAUSES EXTERNES",                  causa:"Ofegaments accidentals",       c:"#e9b870",taxa:   2.5},
+  {grup:"1-4 anys",     sexe:"Homes",t:"TUMORS",                           causa:"Altres tumors malignes",       c:"#5a4c50",taxa:   3.2},
+  {grup:"1 any",        sexe:"Dones",t:"AFECCIONS PERINATALS-CONGÈNITES",  causa:"Perinatals",                   c:"#b28b98",taxa:  99.9},
+  {grup:"1 any",        sexe:"Homes",t:"AFECCIONS PERINATALS-CONGÈNITES",  causa:"Perinatals",                   c:"#b28b98",taxa: 146.3},
+];
+
+/* ── Layout ── */
+// BAR_H computed from 24 rows × BAR_UNIT + 11 group gaps
+const BAR_UNIT=20, GROUP_GAP=2;
+const BAR_H=24*BAR_UNIT+(12-1)*GROUP_GAP; // 480+22=502
+const W=900, H=BAR_H+78;                  // 580
+const DCX=420;
+const BAR_W=190;
+const BX=DCX-BAR_W/2;                    // 325
+const BY=(H-BAR_H)/2;                    // 39
+const TAXA_MAX_W=360;
+const TAXA_OFFSET=BX+BAR_W;              // 515
+const xT=d3.scaleLinear().domain([0,3500]).range([0,TAXA_MAX_W]);
+
+/* ── 5-bar positions ── */
+{ let y=BY; DATA.forEach(d=>{ d.bH=d.n/TOTAL*BAR_H; d.bY=y; y+=d.bH; }); }
+
+/* ── 24-bar positions + parent-centre for collapse animation ── */
+const TM={"TUMORS":0,"CAUSES EXTERNES":1,"TRASTORN MENTAL":2,
+          "AFECCIONS PERINATALS-CONGÈNITES":3,"SISTEMA CIRCULATORI":4};
+{ let y=BY, prev=null;
+  DATA24.forEach(d=>{
+    if(prev&&prev!==d.grup) y+=GROUP_GAP;
+    d.fy=y; y+=BAR_UNIT; prev=d.grup;
+    const par=DATA[TM[d.t]]; d.pcy=par.bY+par.bH/2;
+  }); }
+const GRUPS=[...new Set(DATA24.map(d=>d.grup))];
+
+/* ── SVG ── */
+const svg=d3.select("#chart").attr("width",W).attr("height",H);
+const tip=d3.select("#tip");
+
+/* ── 5-bar rects ── */
+const r5=svg.selectAll(".r5").data(DATA).join("rect").attr("class","r5")
+  .attr("x",BX).attr("width",BAR_W)
+  .attr("y",d=>d.bY+d.bH/2)   // collapsed to centre
+  .attr("height",0)
+  .attr("fill",d=>d.c)
+  .attr("stroke","#fff").attr("stroke-width",1.5)
+  .attr("opacity",0)
+  .style("cursor","pointer");
+
+/* ── 5-bar labels ── */
+const bL5=svg.append("g").style("pointer-events","none").attr("opacity",0);
+DATA.forEach(d=>{
+  const midY=d.bY+d.bH/2, fg=txtIn(d.c);
+  if(d.bH>=55){
+    bL5.append("text").attr("x",BX+BAR_W/2).attr("y",midY-7)
+      .attr("dominant-baseline","middle").attr("text-anchor","middle")
+      .attr("font-family","'IBM Plex Serif',serif")
+      .attr("font-size",d.bH>=120?"34px":"22px").attr("fill",fg).text(d.n);
+    bL5.append("text").attr("x",BX+BAR_W/2).attr("y",midY+12)
+      .attr("dominant-baseline","middle").attr("text-anchor","middle")
+      .attr("font-size","10px").attr("fill",fg).attr("opacity","0.7")
+      .text(((d.n/TOTAL)*100).toFixed(1)+"%");
+  } else if(d.bH>=28){
+    bL5.append("text").attr("x",BX+BAR_W/2).attr("y",midY)
+      .attr("dominant-baseline","middle").attr("text-anchor","middle")
+      .attr("font-family","'IBM Plex Serif',serif").attr("font-size","17px")
+      .attr("fill",fg).text(d.n);
+  }
+  const words=d.t.split(" ");
+  const lines=words.length<=2?[d.t]:[words.slice(0,Math.ceil(words.length/2)).join(" "),words.slice(Math.ceil(words.length/2)).join(" ")];
+  const lh=13,totH=lines.length*lh;
+  const rg=bL5.append("g").attr("transform",`translate(${BX+BAR_W+14},${midY})`);
+  lines.forEach((line,li)=>rg.append("text").attr("y",-totH/2+li*lh+lh/2)
+    .attr("dominant-baseline","middle").attr("font-size","11px").attr("font-weight",li===0?"600":"400")
+    .attr("fill",onWhite(d.c)).text(line));
+  bL5.append("text").attr("x",BX+BAR_W+14).attr("y",midY+totH/2+6)
+    .attr("dominant-baseline","hanging").attr("font-size","10px").attr("fill","#b4a0aa")
+    .text(`${d.n} de ${TOTAL}`);
+});
+
+/* ── 24-bar rects ── */
+const r24=svg.selectAll(".r24").data(DATA24).join("rect").attr("class","r24")
+  .attr("x",BX).attr("width",BAR_W)
+  .attr("y",d=>d.pcy).attr("height",0)
+  .attr("fill",d=>d.c).attr("stroke","#fff").attr("stroke-width",0.8)
+  .attr("opacity",0).style("pointer-events","none");
+
+/* ── Taxa extension rects ── */
+const rT=svg.selectAll(".rt").data(DATA24).join("rect").attr("class","rt")
+  .attr("x",TAXA_OFFSET).attr("width",0)
+  .attr("y",d=>d.fy).attr("height",BAR_UNIT)
+  .attr("fill",d=>d.c).attr("stroke","none")
+  .attr("opacity",0).style("pointer-events","none");
+
+/* ── Meta labels (age groups + D/H) ── */
+const labM=svg.append("g").style("pointer-events","none").attr("opacity",0);
+GRUPS.forEach((g,gi)=>{
+  if(gi===0)return;
+  const ly=DATA24.find(d=>d.grup===g).fy-GROUP_GAP/2-0.5;
+  labM.append("line").attr("x1",10).attr("x2",BX+BAR_W).attr("y1",ly).attr("y2",ly)
+    .attr("stroke","#e4d6de").attr("stroke-width","0.6");
+});
+GRUPS.forEach(g=>{
+  const bars=DATA24.filter(d=>d.grup===g);
+  const midY=(bars[0].fy+bars[bars.length-1].fy+BAR_UNIT)/2;
+  labM.append("text").attr("x",BX-22).attr("y",midY)
+    .attr("dominant-baseline","middle").attr("text-anchor","end")
+    .attr("font-size","11px").attr("font-weight","500").attr("fill","#7e6872").text(g);
+});
+DATA24.forEach(d=>{
+  labM.append("text").attr("x",BX-5).attr("y",d.fy+BAR_UNIT/2)
+    .attr("dominant-baseline","middle").attr("text-anchor","end")
+    .attr("font-size","9px").attr("font-weight","700")
+    .attr("fill",d.sexe==="Dones"?"#c4a0b0":"#8c6574")
+    .text(d.sexe==="Dones"?"D":"H");
+});
+
+/* ── Cause name labels ── */
+const labC=svg.append("g").style("pointer-events","none").attr("opacity",0);
+DATA24.forEach(d=>{
+  labC.append("text").attr("x",BX+6).attr("y",d.fy+BAR_UNIT/2)
+    .attr("dominant-baseline","middle")
+    .attr("font-size","12px").attr("font-weight","500")
+    .attr("fill",txtIn(d.c)).text(d.causa);
+});
+
+/* ── Taxa axis labels ── */
+const labT=svg.append("g").style("pointer-events","none").attr("opacity",0);
+labT.append("line").attr("x1",TAXA_OFFSET).attr("x2",TAXA_OFFSET)
+  .attr("y1",BY-4).attr("y2",BY+BAR_H+4).attr("stroke","#c4b0ba").attr("stroke-width","0.9");
+[500,1000,2000,3000].forEach(v=>{
+  const x=TAXA_OFFSET+xT(v);
+  labT.append("line").attr("x1",x).attr("x2",x).attr("y1",BY).attr("y2",BY+BAR_H)
+    .attr("stroke","#e4d6de").attr("stroke-width","0.7").attr("stroke-dasharray","3,2");
+  labT.append("text").attr("x",x).attr("y",BY+BAR_H+14)
+    .attr("text-anchor","middle").attr("font-size","9px").attr("fill","#b4a0aa")
+    .text(d3.format(",d")(v));
+});
+labT.append("text").attr("x",TAXA_OFFSET+TAXA_MAX_W/2).attr("y",BY+BAR_H+30)
+  .attr("text-anchor","middle").attr("font-size","9.5px").attr("fill","#b4a0aa")
+  .text("Taxa per 100.000 habitants");
+DATA24.forEach(d=>{
+  labT.append("text").attr("x",TAXA_OFFSET+Math.max(xT(d.taxa),1)+5).attr("y",d.fy+BAR_UNIT/2)
+    .attr("dominant-baseline","middle").attr("font-size","9px")
+    .attr("fill",onWhite(d.c)).text(fmtTaxa(d.taxa));
+});
+
+/* ── Tooltip ── */
+function showTip5(e,d){
+  tip.style("opacity",1).html(`<div><span class="tip-dot" style="background:${d.c}"></span><span class="tip-name">${d.t}</span></div>
+    <span class="tip-num" style="color:${onWhite(d.c)}">${d.n}</span>
+    <div class="tip-sub">${((d.n/TOTAL)*100).toFixed(1)}% · ${d.n} de ${TOTAL} causes</div>`);
+  mT(e);
+}
+function showTip24(e,d){
+  tip.style("opacity",1).html(`<div><span class="tip-dot" style="background:${d.c}"></span><span class="tip-name">${d.t}</span></div>
+    <div class="tip-meta">${d.grup} · ${d.sexe}</div>
+    <span class="tip-num" style="color:${onWhite(d.c)};font-size:16px">${d.causa}</span>`);
+  mT(e);
+}
+function showTipTaxa(e,d){
+  tip.style("opacity",1).html(`<div><span class="tip-dot" style="background:${d.c}"></span><span class="tip-name">${d.t}</span></div>
+    <div class="tip-meta">${d.grup} · ${d.sexe} · ${d.causa}</div>
+    <span class="tip-num" style="color:${onWhite(d.c)}">${fmtTaxa(d.taxa)}</span>
+    <div class="tip-sub">taxa per 100.000 habitants</div>`);
+  mT(e);
+}
+function mT(e){
+  tip.style("left",Math.min(e.clientX+16,window.innerWidth-230)+"px")
+     .style("top", Math.min(e.clientY-10,window.innerHeight-140)+"px");
+}
+function hT(){ tip.style("opacity",0); }
+
+/* ── Hover helpers ── */
+function ah5(){
+  r5.on("mouseover",function(e,d){ d3.select(this).attr("opacity",.78); showTip5(e,d); })
+    .on("mousemove",mT).on("mouseout",function(){ d3.select(this).attr("opacity",1); hT(); });
+}
+function ah24(){
+  r24.on("mouseover",function(e,d){ d3.select(this).attr("opacity",.78); showTip24(e,d); })
+     .on("mousemove",mT).on("mouseout",function(){ d3.select(this).attr("opacity",1); hT(); });
+}
+function ahTx(){
+  rT.on("mouseover",function(e,d){ d3.select(this).attr("opacity",.42); showTipTaxa(e,d); })
+    .on("mousemove",mT).on("mouseout",function(){ d3.select(this).attr("opacity",.62); hT(); });
+  r24.on("mouseover",function(e,d){ d3.select(this).attr("opacity",.78); showTip24(e,d); })
+     .on("mousemove",mT).on("mouseout",function(){ d3.select(this).attr("opacity",1); hT(); });
+}
+function clrAll(){
+  [r5,r24,rT].forEach(s=>s.on("mouseover",null).on("mousemove",null).on("mouseout",null));
+  hT();
+}
+
+/* ── Timing constants ── */
+const S_ENT=90, D_ENT=700;  // entrance stagger + duration
+const S26=26,   D820=820;   // 24-bar expand stagger + duration
+const S20=20,   D680=680;   // 24-bar collapse stagger + duration
+const wait24=()=>(DATA24.length-1)*S26+D820+70;
+const wait24r=()=>(DATA24.length-1)*S20+D680+70;
+
+/* ── Entrance animation: bars expand from vertical centre ── */
+r5.each(function(d,i){
+  d3.select(this).transition().delay(i*S_ENT).duration(D_ENT).ease(d3.easeSinInOut)
+    .attr("y",d.bY).attr("height",d.bH).attr("opacity",1)
+    .on("end",()=>{
+      if(i===DATA.length-1){
+        bL5.transition().duration(320).ease(d3.easeSinInOut).attr("opacity",1);
+        ah5();
+        btnDetail.style.display="inline-block";
+        state="bars5";
+      }
+    });
+});
+
+/* ── State machine ── */
+let state="loading", busy=false;
+const btnDetail   = document.getElementById("btn-detail");
+const btnSimplify = document.getElementById("btn-simplify");
+const btnTaxa     = document.getElementById("btn-taxa");
+const btnNotaxa   = document.getElementById("btn-notaxa");
+
+/* bars5 → bars24 */
+btnDetail.addEventListener("click",()=>{
+  if(busy||state!=="bars5")return;
+  busy=true; clrAll();
+  btnDetail.disabled=true;
+  bL5.transition().duration(280).ease(d3.easeSinInOut).attr("opacity",0);
+  r5 .transition().duration(280).ease(d3.easeSinInOut).attr("opacity",0)
+     .on("end",(_,i)=>{ if(i===0) r5.style("pointer-events","none"); });
+  setTimeout(()=>{
+    r24.attr("y",d=>d.pcy).attr("height",0).attr("opacity",0).style("pointer-events","none");
+    rT .attr("width",0).attr("opacity",0).style("pointer-events","none");
+    r24.each(function(d,i){
+      d3.select(this).transition().delay(i*S26).duration(D820).ease(d3.easeSinInOut)
+        .attr("y",d.fy).attr("height",BAR_UNIT).attr("opacity",1);
+    });
+    setTimeout(()=>{
+      r24.style("pointer-events","all");
+      labM.transition().duration(380).ease(d3.easeSinInOut).attr("opacity",1);
+      labC.transition().duration(380).ease(d3.easeSinInOut).attr("opacity",1);
+      ah24(); state="bars24"; busy=false;
+      btnDetail.style.display="none";
+      btnSimplify.style.display="inline-block";
+      btnTaxa.style.display="inline-block";
+    },wait24());
+  },300);
+});
+
+/* bars24 → bars5 */
+btnSimplify.addEventListener("click",()=>{
+  if(busy||state!=="bars24")return;
+  busy=true; clrAll();
+  btnSimplify.disabled=true; btnTaxa.disabled=true;
+  labM.transition().duration(280).ease(d3.easeSinInOut).attr("opacity",0);
+  labC.transition().duration(280).ease(d3.easeSinInOut).attr("opacity",0);
+  r24.style("pointer-events","none");
+  rT .attr("width",0).attr("opacity",0).style("pointer-events","none");
+  setTimeout(()=>{
+    r24.each(function(d,i){
+      d3.select(this).transition().delay((DATA24.length-1-i)*S20).duration(D680).ease(d3.easeSinInOut)
+        .attr("y",d.pcy).attr("height",0).attr("opacity",0);
+    });
+    setTimeout(()=>{
+      r5.style("pointer-events","all");
+      r5 .transition().duration(300).ease(d3.easeSinInOut).attr("opacity",1);
+      bL5.transition().duration(300).ease(d3.easeSinInOut).attr("opacity",1);
+      ah5(); state="bars5"; busy=false;
+      btnSimplify.style.display="none"; btnSimplify.disabled=false;
+      btnTaxa.style.display="none";     btnTaxa.disabled=false;
+      btnDetail.style.display="inline-block";
+    },wait24r());
+  },220);
+});
+
+/* bars24 → taxa */
+btnTaxa.addEventListener("click",()=>{
+  if(busy||state!=="bars24")return;
+  busy=true; clrAll();
+  btnTaxa.disabled=true; btnSimplify.disabled=true;
+  rT.attr("width",0).attr("opacity",0).style("pointer-events","none");
+  rT.each(function(d,i){
+    d3.select(this).transition().delay(i*S26).duration(D820).ease(d3.easeSinInOut)
+      .attr("width",Math.max(xT(d.taxa),1)).attr("opacity",0.62);
+  });
+  setTimeout(()=>{
+    rT.style("pointer-events","all");
+    labT.transition().duration(380).ease(d3.easeSinInOut).attr("opacity",1);
+    ahTx(); state="taxa"; busy=false;
+    btnTaxa.style.display="none"; btnSimplify.style.display="none";
+    btnNotaxa.style.display="inline-block";
+  },wait24());
+});
+
+/* taxa → bars24 */
+btnNotaxa.addEventListener("click",()=>{
+  if(busy||state!=="taxa")return;
+  busy=true; clrAll();
+  btnNotaxa.disabled=true;
+  labT.transition().duration(280).ease(d3.easeSinInOut).attr("opacity",0);
+  rT.style("pointer-events","none");
+  rT.each(function(d,i){
+    d3.select(this).transition().delay((DATA24.length-1-i)*S20).duration(D680).ease(d3.easeSinInOut)
+      .attr("width",0).attr("opacity",0);
+  });
+  setTimeout(()=>{
+    ah24(); state="bars24"; busy=false;
+    btnNotaxa.style.display="none"; btnNotaxa.disabled=false;
+    btnTaxa.style.display="inline-block";     btnTaxa.disabled=false;
+    btnSimplify.style.display="inline-block"; btnSimplify.disabled=false;
+  },wait24r());
+});
+
+/* ── Legend ── */
+d3.select("#legend").selectAll(".leg").data(DATA).join("div").attr("class","leg")
+  .each(function(d){
+    d3.select(this).append("div").attr("class","leg-sw").style("background",d.c);
+    d3.select(this).append("span").text(d.t);
+  });
+</script>
+</body>
+</html>
