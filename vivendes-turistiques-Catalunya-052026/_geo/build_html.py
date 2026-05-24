@@ -44,17 +44,21 @@ TOP=r'''<!DOCTYPE html><html lang="ca"><head><meta charset="utf-8"/>
  .pli{font-size:11.5px;margin:2px 0 2px 14px;text-indent:0;color:#444}
  a.gm{color:#1a73e8;text-decoration:none;font-size:11px;white-space:nowrap}
  .muniline{margin-top:6px;font-size:11.5px;color:#444;border-top:1px dashed #e2e2e2;padding-top:6px}
+ .leaflet-control-layers{font-size:12px;border-radius:9px!important;box-shadow:0 2px 10px rgba(0,0,0,.16)!important;padding:4px 4px}
+ .leaflet-control-layers label{margin:2px 4px;font-weight:600;color:#444}
  @media (max-width:680px){
-   #panel{top:0;left:0;right:0;width:auto;border-radius:0 0 12px 12px;max-height:46vh;padding:10px 14px}
+   .leaflet-top.leaflet-right{margin-top:52px}
+   #panel{top:0;left:0;right:0;width:auto;border-radius:0 0 12px 12px;max-height:82vh;padding:10px 14px}
    #toggle{display:inline-block}
    body.collapsed #pbody{display:none}
-   #foot{left:0;right:0;bottom:0;width:auto;border-radius:12px 12px 0 0;max-height:34vh;overflow:auto}
+   #foot{left:0;right:0;bottom:0;width:auto;border-radius:12px 12px 0 0;max-height:42vh;overflow:auto}
+   body:not(.collapsed) #foot{display:none}
    input[type=text]{font-size:16px}
  }
 </style></head><body>
 <div id="map"></div>
 <div id="panel" class="card">
- <div class="htitle"><h1>Pisos turístics de Catalunya</h1><button id="toggle">Filtres ▾</button></div>
+ <div class="htitle"><h1>Pisos turístics de Catalunya</h1><button id="toggle">Amaga els filtres ▴</button></div>
  <div id="pbody">
   <p class="sub">Habitatges d'ús turístic (HUT) del Registre de Turisme de Catalunya.</p>
   <label class="fld">Cerca per adreça o carrer</label>
@@ -74,11 +78,13 @@ TOP=r'''<!DOCTYPE html><html lang="ca"><head><meta charset="utf-8"/>
   <div class="row"><span class="sw" style="background:var(--purple)"></span><span class="small">Finca mixta (empresa + particular)</span></div>
   <div class="row"><label style="flex:1;cursor:pointer"><input type="checkbox" id="cExact"> Només amb coordenada exacta</label></div>
   <div class="leg">
-    <div style="font-weight:600;margin-bottom:3px">% habitatges turístics (secció censal, INE)</div>
+    <div style="font-weight:600;margin-bottom:3px">% pisos turístics sobre el total d'habitatge (secció censal, INE)</div>
     <div class="lr"><span class="bx" style="background:#2e7d32"></span> per sota la mitjana</div>
     <div class="lr"><span class="bx" style="background:#ef8e3b"></span> per sobre la mitjana</div>
     <div class="lr"><span class="bx" style="background:#c0392b"></span> molt per sobre (&gt;2×)</div>
-    <div class="lr"><span class="chip t" style="margin:0">zona tensionada</span></div>
+   </div>
+   <div class="leg" style="margin-top:14px;padding-top:12px;border-top:1px solid #eee">
+    <div class="lr"><span class="chip t" style="margin:0">zona tensionada</span> <span class="pl">mercat de lloguer tensat</span></div>
   </div>
  </div>
 </div>
@@ -93,12 +99,18 @@ const LOCS=P.locs, PROVS=P.provs, HASTENS=P.hasTens;
 const COL={0:'#2b6cb0',1:'#d1495b',2:'#7d3c98'};
 const map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([41.75,1.78],8);
 const HOME={c:[41.75,1.78],z:8};
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+const baseClar=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
  {maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap, &copy; CARTO'}).addTo(map);
+const baseSat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+ {maxZoom:19,attribution:'Imatges &copy; Esri, Maxar, Earthstar Geographics'});
+L.control.layers({'Mapa clar':baseClar,'Satèl·lit':baseSat},null,{position:'topright',collapsed:false}).addTo(map);
+map.on('baselayerchange',e=>{satMode=(e.name==='Satèl·lit');draw(false);});
 const canvas=L.canvas({padding:.5});
 let layer=L.layerGroup().addTo(map);
 const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const norm=s=>(s||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+const dec=v=>(''+v).replace('.',',');
+let satMode=false;
 let addrQ='', addrToks=[], muniF='', empQ='', showP=true, showE=true, onlyExact=false;
 // mitjana del % INE per al codi de color
 const ineVals=LOCS.map(L=>L[13]).filter(v=>v!=='' && v!==null && v!==undefined);
@@ -113,7 +125,7 @@ function visible(L){
  const hasP=L[5]>0, hasE=L[4]>0;
  if(!((hasP&&showP)||(hasE&&showE))) return false;
  if(muniF && norm(L[9])!==muniF) return false;
- if(addrToks.length){ const a=norm(L[10]); if(!addrToks.every(t=>a.includes(t))) return false; }
+ if(addrToks.length){ const a=norm(L[10]+' '+L[9]); if(!addrToks.every(t=>a.includes(t))) return false; }
  if(empQ){ const names=L[11].filter(m=>m[0]===1).map(m=>m[1]).join(' ').toLowerCase();
    if(!names.includes(empQ)) return false; }
  return true;
@@ -145,7 +157,7 @@ function muniLine(L){
  if(L[13]!=='' && L[13]!==null && L[13]!==undefined){
    const lvl=(L[14]==='s')?'secció censal':'mitjana del municipi';
    const c=ineColor(L[13]);
-   parts.push('<span class="chip" style="background:'+c+';color:#fff;margin:0">'+L[13]+'% hab. turístics</span> <span class="pl">('+lvl+', INE)</span>');
+   parts.push('<span class="chip" style="background:'+c+';color:#fff;margin:0">'+dec(L[13])+'% pisos turístics</span> <span class="pl">('+lvl+', INE)</span>');
  }
  if(HASTENS && L[12]) parts.push('<span class="chip t" style="margin:0">zona tensionada</span>');
  return parts.length?'<div class="muniline">'+parts.join('<br>')+'</div>':'';
@@ -167,7 +179,7 @@ function popup(L){
    head='<b>Finca: '+resum+'</b>'+(L[6]?' &middot; '+L[6]+' places':'')+'<br><span class="pl">'+adr+'<br>'+muni+' &middot; '+prov+'</span><br>'+gmlink(L[10]);
  } else {
    head='<b>'+L[2]+' HUT a '+muni+'</b> <span class="pl">'+prov+'</span>'+
-     '<div class="muniline" style="border:0;padding-top:4px"><span class="pl">ⓘ No disposem de la coordenada exacta d\'aquests pisos, així que el punt es mostra al <b>centre del municipi</b>. L\'adreça de cada pis és correcta i la pots obrir a Google Maps a sota.</span></div>';
+     '<div class="muniline" style="border:0;padding-top:4px"><span class="pl">ⓘ No disposem de les coordenades, i la mostrem al <b>centre del municipi</b>, però l\'adreça de cada pis és correcta i la pots obrir a Google Maps.</span></div>';
  }
  let h=head;
  h+='<div style="margin-top:6px">'+
@@ -191,9 +203,11 @@ function popup(L){
 }
 function mkCircle(Lc){
  const c=Lc[2]>1?Lc[3]:(Lc[11][0][0]?1:0);
+ const filled=!Lc[7];
  const cm=L.circleMarker([Lc[0],Lc[1]],{renderer:canvas,radius:radius(Lc[2]),
-   color:COL[c], weight:Lc[7]?1:0.6, fill:!Lc[7], fillColor:COL[c],
-   fillOpacity:Lc[7]?0:fillOp(), opacity:Lc[7]?.9:.85});
+   color: filled?(satMode?'rgba(15,15,15,.6)':COL[c]):COL[c],
+   weight: filled?(satMode?0.7:0.6):(satMode?1.4:1), fill:filled, fillColor:COL[c],
+   fillOpacity:filled?(satMode?0.95:fillOp()):0, opacity:filled?(satMode?.95:.85):(satMode?1:.9)});
  cm.bindPopup(()=>popup(Lc),{maxWidth:320});
  const tip=Lc[2]>1?(Lc[7]===1?(Lc[2]+' HUT a '+esc(Lc[9])+' (al centre del municipi)'):('Finca: '+Lc[2]+' HUT'+(Lc[6]?' · '+Lc[6]+' places':''))):esc(Lc[11][0][1]);
  cm.bindTooltip(tip,{direction:'top'});
@@ -214,13 +228,18 @@ function draw(fit){
 let cP=0,cE=0; for(const L of LOCS){cP+=L[5];cE+=L[4];}
 const munis=[...new Set(LOCS.map(L=>L[9]))].sort((a,b)=>a.localeCompare(b,'ca'));
 document.getElementById('munis').innerHTML=munis.map(m=>'<option value="'+m.replace(/"/g,'&quot;')+'">').join('');
+const LOGO='<img src="data:image/png;base64,__LOGO_DATA__" alt="Storydata" style="height:30px;display:block"/>';
 document.getElementById('foot').innerHTML=
  'Cercle gran = finca amb diversos HUT · cercle buit = sense coordenada exacta (situat al centre del municipi; l\'adreça sí que la tenim).<br>'+
- '<b>Font:</b> Registre de Turisme de Catalunya (Dept. Empresa i Treball, Generalitat), 5 maig 2026 · Geolocalització Barcelona: Open Data BCN (1T 2026) · Geocodificació: ICGC · % habitatges turístics: INE (nov. 2025) · Zones tensionades: Resolució TER/800/2024.<br>'+
- '<b>Avís:</b> pot contenir errors. Reporta\'ls a <a href="mailto:team@storydata.cat?subject=Error%20mapa%20pisos%20turistics">team@storydata.cat</a>.';
+ '<b>Font:</b> <a href="https://analisi.transparenciacatalunya.cat/Turisme/Establiments-d-allotjament-tur-stic-inscrits-al-Re/t2h3-cgys/about_data" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Registre de Turisme de Catalunya</a> (Dept. Empresa i Treball, Generalitat), 5 maig 2026 · Geolocalització Barcelona: <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/habitatges-us-turistic" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Open Data BCN</a> (1T 2026) · Geocodificació: <a href="https://www.icgc.cat/es" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">ICGC</a> · % pisos turístics: <a href="https://ine.es/experimental/viv_turistica/experimental_viv_turistica.htm" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">INE</a> (nov. 2025) · Zones tensionades: <a href="https://habitatge.gencat.cat/ca/ambits/preus-ingressos-i-zones/limit-preu-lloguer/llistat-municipis-zmrt/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Resolució TER/800/2024</a>.<br>'+
+ '<b>Avís:</b> pot contenir errors. Reporta\'ls a <a href="mailto:team@storydata.cat?subject=Error%20mapa%20pisos%20turistics">team@storydata.cat</a>.'+
+ '<div style="display:flex;align-items:center;gap:10px;margin-top:11px;padding-top:10px;border-top:1px solid #eee">'+
+   '<a href="http://www.storydata.es" target="_blank" rel="noopener" style="line-height:0">'+LOGO+'</a>'+
+   '<a href="http://www.storydata.es" target="_blank" rel="noopener" style="color:#1a73e8;font-weight:600">www.storydata.es</a>'+
+ '</div>';
 const munisNorm=new Set(munis.map(norm));
 let ta=null,tm=null,te=null;
-document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{addrQ=e.target.value.trim();addrToks=norm(e.target.value).split(/\s+/).filter(Boolean);draw(addrToks.length>0);},280);};
+document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{addrQ=e.target.value.trim();addrToks=norm(e.target.value).replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean);draw(addrToks.length>0);},280);};
 document.getElementById('qm').oninput=e=>{clearTimeout(tm);tm=setTimeout(()=>{const v=norm(e.target.value);
   if(v===''){muniF='';draw();map.setView(HOME.c,HOME.z);} else if(munisNorm.has(v)){muniF=v;draw(true);}},280);};
 document.getElementById('qe').oninput=e=>{clearTimeout(te);te=setTimeout(()=>{empQ=e.target.value.trim().toLowerCase();draw(!!empQ);},280);};
@@ -229,10 +248,20 @@ document.getElementById('cP').onchange=e=>{showP=e.target.checked;draw();};
 document.getElementById('cE').onchange=e=>{showE=e.target.checked;draw();};
 document.getElementById('cExact').onchange=e=>{onlyExact=e.target.checked;draw();};
 document.getElementById('toggle').onclick=()=>{document.body.classList.toggle('collapsed');
-  document.getElementById('toggle').textContent=document.body.classList.contains('collapsed')?'Filtres ▸':'Filtres ▾';};
-if(window.innerWidth<=680) document.body.classList.add('collapsed'),document.getElementById('toggle').textContent='Filtres ▸';
+  document.getElementById('toggle').textContent=document.body.classList.contains('collapsed')?'Mostra els filtres ▾':'Amaga els filtres ▴';};
+if(window.innerWidth<=680) document.body.classList.add('collapsed'),document.getElementById('toggle').textContent='Mostra els filtres ▾';
+function layoutPanel(){
+ const foot=document.getElementById('foot'), panel=document.getElementById('panel');
+ if(window.innerWidth>680){ const h=window.innerHeight-foot.offsetHeight-36;
+   panel.style.maxHeight=Math.max(160,h)+'px'; }
+ else panel.style.maxHeight='';
+}
+window.addEventListener('resize',layoutPanel); layoutPanel();
 let rt=null; map.on('zoomend',()=>{clearTimeout(rt);rt=setTimeout(()=>draw(false),60);});
 draw();
 </script></body></html>'''
+_lf=os.path.join(D,'logo_b64.txt')
+if os.path.exists(_lf):
+    BOT=BOT.replace('__LOGO_DATA__',open(_lf,encoding='utf-8').read().strip())
 open(MAP_OUT,'w',encoding='utf-8').write(TOP+payload+BOT)
 print('MAP MB:',round(os.path.getsize(MAP_OUT)/1e6,2))
