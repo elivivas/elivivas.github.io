@@ -21,7 +21,8 @@ TOP=r'''<!DOCTYPE html><html lang="ca"><head><meta charset="utf-8"/>
  .fld{display:block;font-size:11px;color:#555;font-weight:600;margin:9px 0 3px}
  .clr{font-size:11px;color:#1a73e8;cursor:pointer;float:right;font-weight:400}
  input[type=text]{width:100%;box-sizing:border-box;padding:8px 9px;border:1px solid #d0d0d0;border-radius:8px;font-size:13px}
- .row{display:flex;align-items:center;gap:8px;margin:6px 0;cursor:pointer}
+ .row{display:flex;align-items:center;gap:8px;margin:6px 0;cursor:pointer;font-size:12.5px}
+ .row input[type=checkbox]{margin:0 2px 0 0}
  .sw{width:13px;height:13px;border-radius:50%;flex:0 0 auto}
  .hr{border:none;border-top:1px solid #eee;margin:11px 0}
  .small{font-size:11px;color:#888}
@@ -71,7 +72,7 @@ TOP=r'''<!DOCTYPE html><html lang="ca"><head><meta charset="utf-8"/>
   <div class="row" style="margin-top:11px"><span class="sw" style="background:var(--blue)"></span><label style="flex:1;cursor:pointer"><input type="checkbox" id="cP" checked> Particular</label></div>
   <div class="row"><span class="sw" style="background:var(--red)"></span><label style="flex:1;cursor:pointer"><input type="checkbox" id="cE" checked> Empresa</label></div>
   <div class="row"><span class="sw" style="background:var(--purple)"></span><span class="small">Finca mixta (empresa + particular)</span></div>
-  <div class="row"><label style="flex:1;cursor:pointer"><input type="checkbox" id="cExact"> Només precisió exacta (portal)</label></div>
+  <div class="row"><label style="flex:1;cursor:pointer"><input type="checkbox" id="cExact"> Només amb coordenada exacta</label></div>
   <div class="leg">
     <div style="font-weight:600;margin-bottom:3px">% habitatges turístics (secció censal, INE)</div>
     <div class="lr"><span class="bx" style="background:#2e7d32"></span> per sota la mitjana</div>
@@ -98,7 +99,7 @@ const canvas=L.canvas({padding:.5});
 let layer=L.layerGroup().addTo(map);
 const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const norm=s=>(s||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
-let addrQ='', muniF='', empQ='', showP=true, showE=true, onlyExact=false;
+let addrQ='', addrToks=[], muniF='', empQ='', showP=true, showE=true, onlyExact=false;
 // mitjana del % INE per al codi de color
 const ineVals=LOCS.map(L=>L[13]).filter(v=>v!=='' && v!==null && v!==undefined);
 const ineMean=ineVals.reduce((a,b)=>a+b,0)/(ineVals.length||1);
@@ -112,7 +113,7 @@ function visible(L){
  const hasP=L[5]>0, hasE=L[4]>0;
  if(!((hasP&&showP)||(hasE&&showE))) return false;
  if(muniF && norm(L[9])!==muniF) return false;
- if(addrQ && !L[10].toLowerCase().includes(addrQ)) return false;
+ if(addrToks.length){ const a=norm(L[10]); if(!addrToks.every(t=>a.includes(t))) return false; }
  if(empQ){ const names=L[11].filter(m=>m[0]===1).map(m=>m[1]).join(' ').toLowerCase();
    if(!names.includes(empQ)) return false; }
  return true;
@@ -166,7 +167,7 @@ function popup(L){
    head='<b>Finca: '+resum+'</b>'+(L[6]?' &middot; '+L[6]+' places':'')+'<br><span class="pl">'+adr+'<br>'+muni+' &middot; '+prov+'</span><br>'+gmlink(L[10]);
  } else {
    head='<b>'+L[2]+' HUT a '+muni+'</b> <span class="pl">'+prov+'</span>'+
-     '<div class="muniline" style="border:0;padding-top:4px"><span class="pl">⚠ El geocodificador no situa aquestes adreces amb precisió; el punt és al centre del municipi però <b>l\'adreça real de cada pis</b> es mostra a sota.</span></div>';
+     '<div class="muniline" style="border:0;padding-top:4px"><span class="pl">ⓘ No disposem de la coordenada exacta d\'aquests pisos, així que el punt es mostra al <b>centre del municipi</b>. L\'adreça de cada pis és correcta i la pots obrir a Google Maps a sota.</span></div>';
  }
  let h=head;
  h+='<div style="margin-top:6px">'+
@@ -194,7 +195,7 @@ function mkCircle(Lc){
    color:COL[c], weight:Lc[7]?1:0.6, fill:!Lc[7], fillColor:COL[c],
    fillOpacity:Lc[7]?0:fillOp(), opacity:Lc[7]?.9:.85});
  cm.bindPopup(()=>popup(Lc),{maxWidth:320});
- const tip=Lc[2]>1?(Lc[7]===1?(Lc[2]+' HUT a '+esc(Lc[9])+' (aprox.)'):('Finca: '+Lc[2]+' HUT'+(Lc[6]?' · '+Lc[6]+' places':''))):esc(Lc[11][0][1]);
+ const tip=Lc[2]>1?(Lc[7]===1?(Lc[2]+' HUT a '+esc(Lc[9])+' (al centre del municipi)'):('Finca: '+Lc[2]+' HUT'+(Lc[6]?' · '+Lc[6]+' places':''))):esc(Lc[11][0][1]);
  cm.bindTooltip(tip,{direction:'top'});
  return cm;
 }
@@ -214,12 +215,12 @@ let cP=0,cE=0; for(const L of LOCS){cP+=L[5];cE+=L[4];}
 const munis=[...new Set(LOCS.map(L=>L[9]))].sort((a,b)=>a.localeCompare(b,'ca'));
 document.getElementById('munis').innerHTML=munis.map(m=>'<option value="'+m.replace(/"/g,'&quot;')+'">').join('');
 document.getElementById('foot').innerHTML=
- 'Cercle gran = finca amb diversos HUT · cercle buit = ubicació aproximada (centre del municipi).<br>'+
+ 'Cercle gran = finca amb diversos HUT · cercle buit = sense coordenada exacta (situat al centre del municipi; l\'adreça sí que la tenim).<br>'+
  '<b>Font:</b> Registre de Turisme de Catalunya (Dept. Empresa i Treball, Generalitat), 5 maig 2026 · Geolocalització Barcelona: Open Data BCN (1T 2026) · Geocodificació: ICGC · % habitatges turístics: INE (nov. 2025) · Zones tensionades: Resolució TER/800/2024.<br>'+
  '<b>Avís:</b> pot contenir errors. Reporta\'ls a <a href="mailto:team@storydata.cat?subject=Error%20mapa%20pisos%20turistics">team@storydata.cat</a>.';
 const munisNorm=new Set(munis.map(norm));
 let ta=null,tm=null,te=null;
-document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{addrQ=e.target.value.trim().toLowerCase();draw(!!addrQ);},280);};
+document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{addrQ=e.target.value.trim();addrToks=norm(e.target.value).split(/\s+/).filter(Boolean);draw(addrToks.length>0);},280);};
 document.getElementById('qm').oninput=e=>{clearTimeout(tm);tm=setTimeout(()=>{const v=norm(e.target.value);
   if(v===''){muniF='';draw();map.setView(HOME.c,HOME.z);} else if(munisNorm.has(v)){muniF=v;draw(true);}},280);};
 document.getElementById('qe').oninput=e=>{clearTimeout(te);te=setTimeout(()=>{empQ=e.target.value.trim().toLowerCase();draw(!!empQ);},280);};
