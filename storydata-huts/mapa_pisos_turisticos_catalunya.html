@@ -3,7 +3,7 @@
 <title>Mapa dels pisos turístics de Catalunya</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
- :root{--blue:#457b9d;--red:#e63946;--purple:#7d3c98}
+ :root{--blue:#005f73;--red:#9b2226;--purple:#7d3c98}
  html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1c1c1c}
  #map{position:absolute;inset:0}
  .card{position:absolute;z-index:1000;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.16)}
@@ -105,7 +105,7 @@
 const P=JSON.parse(document.getElementById('data').textContent);
 const LOCS=P.locs, PROVS=P.provs, HASTENS=P.hasTens, MUNIINFO=P.muniInfo||{};
 // 0 lat,1 lon,2 n,3 col,4 ne,5 npar,6 places,7 prec,8 prov,9 muni,10 adreca,11 members[[e,t,pl,pp,lic,ad]],12 tens,13 ine,14 ine_lvl
-const COL={0:'#457b9d',1:'#e63946',2:'#7d3c98'};
+const COL={0:'#005f73',1:'#9b2226',2:'#7d3c98'};
 const map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([41.75,1.78],8);
 const HOME={c:[41.75,1.78],z:8};
 const baseClar=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -192,18 +192,18 @@ function popup(L){
  }
  let h=head;
  h+='<div style="margin-top:6px">'+
-   (nEmpF?'<span class="badge" style="background:#e63946">'+nEmpF+' '+(nEmpF===1?'pis empresa':'pisos empresa')+'</span> ':'')+
-   (nParF?'<span class="badge" style="background:#457b9d">'+nParF+' '+(nParF===1?'pis particular':'pisos particular')+'</span>':'')+'</div>';
+   (nEmpF?'<span class="badge" style="background:#9b2226">'+nEmpF+' '+(nEmpF===1?'pis empresa':'pisos empresa')+'</span> ':'')+
+   (nParF?'<span class="badge" style="background:#005f73">'+nParF+' '+(nParF===1?'pis particular':'pisos particular')+'</span>':'')+'</div>';
  h+='<ul class="own">';
  for(const o of comps.slice(0,18)){
    const ps=o.pisos.slice(0,12).map(p=>'<div class="pli">'+pisLine(p,!exact,L[10])+'</div>').join('')+
             (o.pisos.length>12?'<div class="pl">… i '+(o.pisos.length-12)+' pisos més</div>':'');
-   h+='<li><span style="color:#e63946">●</span> <b>'+esc(o.t)+'</b> <span class="pl">(empresa)</span> — '+o.n+' pis'+(o.n>1?'os':'')+
+   h+='<li><span style="color:#9b2226">●</span> <b>'+esc(o.t)+'</b> <span class="pl">(empresa)</span> — '+o.n+' pis'+(o.n>1?'os':'')+
      (o.pl?' <span class="pl">('+o.pl+' places)</span>':'')+ps+'</li>';
  }
  if(nParF){
    const pls=parts.slice(0,12);
-   h+='<li><span style="color:#457b9d">●</span> <b>Particular</b> <span class="pl">(titulars no identificats individualment)</span>'+
+   h+='<li><span style="color:#005f73">●</span> <b>Particular</b> <span class="pl">(titulars no identificats individualment)</span>'+
       pls.map(o=>'<div class="pli">'+pisLine(o.pisos[0],!exact,L[10])+'</div>').join('')+
       (parts.length>12?'<div class="pl">… i '+(parts.length-12)+' pisos particulars més</div>':'')+'</li>';
  }
