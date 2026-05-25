@@ -3,7 +3,7 @@
 <title>Mapa dels pisos turístics de Catalunya</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
- :root{--blue:#2b6cb0;--red:#d1495b;--purple:#7d3c98}
+ :root{--blue:#457b9d;--red:#e63946;--purple:#7d3c98}
  html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1c1c1c}
  #map{position:absolute;inset:0}
  .card{position:absolute;z-index:1000;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.16)}
@@ -18,6 +18,7 @@
  .htitle{display:flex;align-items:center;gap:8px}
  #panel h1{font-size:15px;margin:0;font-weight:700;flex:1}
  #toggle{display:none;border:1px solid #ddd;background:#fafafa;border-radius:7px;font-size:12px;padding:3px 9px;cursor:pointer}
+ #advToggle{display:none;width:100%;margin-top:11px;border:1px solid #d8d8d8;background:#fafafa;border-radius:8px;font-size:12.5px;padding:8px;cursor:pointer;color:#555;font-family:inherit}
  .sub{color:#777;margin:2px 0 11px;font-size:11px;line-height:1.35}
  .fld{display:block;font-size:11px;color:#555;font-weight:600;margin:9px 0 3px}
  .clr{font-size:11px;color:#1a73e8;cursor:pointer;float:right;font-weight:400}
@@ -39,7 +40,7 @@
  .pl{color:#666}
  .badge{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10.5px;font-weight:600;color:#fff}
  .chip{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10.5px;font-weight:600;background:#eee;color:#444;margin:2px 4px 0 0}
- .chip.t{background:#f4a259;color:#fff}
+ .chip.t{background:#e0147e;color:#fff}
  ul.own{margin:7px 0 0;padding-left:4px;list-style:none}
  ul.own li{margin:7px 0;padding-left:14px;text-indent:-14px}
  .pli{font-size:11.5px;margin:2px 0 2px 14px;text-indent:0;color:#444}
@@ -55,6 +56,10 @@
    #foot{left:0;right:0;bottom:0;width:auto;border-radius:12px 12px 0 0;max-height:42vh;overflow:auto}
    body:not(.collapsed) #foot{display:none}
    input[type=text]{font-size:16px}
+   #panel input[type=text]::placeholder{font-size:13px;opacity:.7}
+   #advToggle{display:block}
+   #advanced{display:none}
+   body.adv #advanced{display:block}
  }
 </style></head><body>
 <div id="map"></div>
@@ -67,26 +72,29 @@
   <label class="fld">Municipi <span class="clr" id="clrM">esborra</span></label>
   <input id="qm" type="text" list="munis" placeholder="Tria un municipi (centra el mapa)…" autocomplete="off"/>
   <datalist id="munis"></datalist>
-  <label class="fld">Empresa titular</label>
-  <input id="qe" type="text" placeholder="Nom d'empresa…" autocomplete="off"/>
   <div class="statbox">
     <div class="ctx" id="ctx">Tot Catalunya</div>
     <div class="big" id="big"></div>
     <div class="brk"><span style="color:var(--red)">●</span> <span id="bE"></span> empresa &nbsp; <span style="color:var(--blue)">●</span> <span id="bP"></span> particular</div>
     <div id="muniInfo" style="display:none;margin-top:8px;padding-top:7px;border-top:1px solid #e6e8eb;font-size:11.5px;line-height:1.55"></div>
   </div>
+  <button id="advToggle" type="button">Més opcions ▾</button>
+  <div id="advanced">
+  <label class="fld">Empresa titular</label>
+  <input id="qe" type="text" placeholder="Nom d'empresa…" autocomplete="off"/>
   <div class="row" style="margin-top:11px"><span class="sw" style="background:var(--blue)"></span><label style="flex:1;cursor:pointer"><input type="checkbox" id="cP" checked> Particular</label></div>
   <div class="row"><span class="sw" style="background:var(--red)"></span><label style="flex:1;cursor:pointer"><input type="checkbox" id="cE" checked> Empresa</label></div>
   <div class="row"><span class="sw" style="background:var(--purple)"></span><span class="small">Finca mixta (empresa + particular)</span></div>
   <div class="row"><label style="flex:1;cursor:pointer"><input type="checkbox" id="cExact"> Només amb coordenada exacta</label></div>
   <div class="leg">
     <div style="font-weight:600;margin-bottom:3px">% pisos turístics sobre el total d'habitatge (secció censal, INE)</div>
-    <div class="lr"><span class="bx" style="background:#2e7d32"></span> per sota la mitjana</div>
-    <div class="lr"><span class="bx" style="background:#ef8e3b"></span> per sobre la mitjana</div>
-    <div class="lr"><span class="bx" style="background:#c0392b"></span> molt per sobre (&gt;2×)</div>
+    <div class="lr"><span class="bx" style="background:#2a9d8f"></span> per sota la mitjana</div>
+    <div class="lr"><span class="bx" style="background:#e9c46a"></span> per sobre la mitjana</div>
+    <div class="lr"><span class="bx" style="background:#e76f51"></span> molt per sobre (&gt;2×)</div>
    </div>
    <div class="leg" style="margin-top:14px;padding-top:12px;border-top:1px solid #eee">
     <div class="lr"><span class="chip t" style="margin:0">zona tensionada</span> <span class="pl">mercat de lloguer tensat</span></div>
+  </div>
   </div>
  </div>
 </div>
@@ -97,7 +105,7 @@
 const P=JSON.parse(document.getElementById('data').textContent);
 const LOCS=P.locs, PROVS=P.provs, HASTENS=P.hasTens, MUNIINFO=P.muniInfo||{};
 // 0 lat,1 lon,2 n,3 col,4 ne,5 npar,6 places,7 prec,8 prov,9 muni,10 adreca,11 members[[e,t,pl,pp,lic,ad]],12 tens,13 ine,14 ine_lvl
-const COL={0:'#2b6cb0',1:'#d1495b',2:'#7d3c98'};
+const COL={0:'#457b9d',1:'#e63946',2:'#7d3c98'};
 const map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([41.75,1.78],8);
 const HOME={c:[41.75,1.78],z:8};
 const baseClar=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -117,7 +125,7 @@ let addrQ='', addrToks=[], muniF='', empQ='', showP=true, showE=true, onlyExact=
 const ineVals=LOCS.map(L=>L[13]).filter(v=>v!=='' && v!==null && v!==undefined);
 const ineMean=ineVals.reduce((a,b)=>a+b,0)/(ineVals.length||1);
 function ineColor(v){ if(v==='' || v===null || v===undefined) return null;
-  if(v<ineMean) return '#2e7d32'; if(v<ineMean*2) return '#ef8e3b'; return '#c0392b'; }
+  if(v<ineMean) return '#2a9d8f'; if(v<ineMean*2) return '#e9c46a'; return '#e76f51'; }
 const gmap=a=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a);
 const gmlink=a=>a?'<a href="'+gmap(a)+'" target="_blank" rel="noopener" class="gm">📍 Google Maps</a>':'';
 
@@ -184,18 +192,18 @@ function popup(L){
  }
  let h=head;
  h+='<div style="margin-top:6px">'+
-   (nEmpF?'<span class="badge" style="background:#d1495b">'+nEmpF+' '+(nEmpF===1?'pis empresa':'pisos empresa')+'</span> ':'')+
-   (nParF?'<span class="badge" style="background:#2b6cb0">'+nParF+' '+(nParF===1?'pis particular':'pisos particular')+'</span>':'')+'</div>';
+   (nEmpF?'<span class="badge" style="background:#e63946">'+nEmpF+' '+(nEmpF===1?'pis empresa':'pisos empresa')+'</span> ':'')+
+   (nParF?'<span class="badge" style="background:#457b9d">'+nParF+' '+(nParF===1?'pis particular':'pisos particular')+'</span>':'')+'</div>';
  h+='<ul class="own">';
  for(const o of comps.slice(0,18)){
    const ps=o.pisos.slice(0,12).map(p=>'<div class="pli">'+pisLine(p,!exact,L[10])+'</div>').join('')+
             (o.pisos.length>12?'<div class="pl">… i '+(o.pisos.length-12)+' pisos més</div>':'');
-   h+='<li><span style="color:#d1495b">●</span> <b>'+esc(o.t)+'</b> <span class="pl">(empresa)</span> — '+o.n+' pis'+(o.n>1?'os':'')+
+   h+='<li><span style="color:#e63946">●</span> <b>'+esc(o.t)+'</b> <span class="pl">(empresa)</span> — '+o.n+' pis'+(o.n>1?'os':'')+
      (o.pl?' <span class="pl">('+o.pl+' places)</span>':'')+ps+'</li>';
  }
  if(nParF){
    const pls=parts.slice(0,12);
-   h+='<li><span style="color:#2b6cb0">●</span> <b>Particular</b> <span class="pl">(titulars no identificats individualment)</span>'+
+   h+='<li><span style="color:#457b9d">●</span> <b>Particular</b> <span class="pl">(titulars no identificats individualment)</span>'+
       pls.map(o=>'<div class="pli">'+pisLine(o.pisos[0],!exact,L[10])+'</div>').join('')+
       (parts.length>12?'<div class="pl">… i '+(parts.length-12)+' pisos particulars més</div>':'')+'</li>';
  }
@@ -260,6 +268,8 @@ const footBtn=document.createElement('button'); footBtn.id='footBtn'; footBtn.ty
 document.body.appendChild(footBtn);
 footClose.onclick=()=>{footEl.classList.add('hidden'); footBtn.style.display='block'; layoutPanel();};
 footBtn.onclick=()=>{footEl.classList.remove('hidden'); footBtn.style.display='none'; layoutPanel();};
+// amagat d'entrada: nomes es mostra el boto per obrir-ho
+footEl.classList.add('hidden'); footBtn.style.display='block';
 const munisNorm=new Set(munis.map(norm));
 let ta=null,tm=null,te=null;
 document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{addrQ=e.target.value.trim();addrToks=norm(e.target.value).replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean);draw(addrToks.length>0);},280);};
@@ -272,6 +282,9 @@ document.getElementById('cE').onchange=e=>{showE=e.target.checked;draw();};
 document.getElementById('cExact').onchange=e=>{onlyExact=e.target.checked;draw();};
 document.getElementById('toggle').onclick=()=>{document.body.classList.toggle('collapsed');
   document.getElementById('toggle').textContent=document.body.classList.contains('collapsed')?'Mostra els filtres ▾':'Amaga els filtres ▴';};
+const advToggle=document.getElementById('advToggle');
+advToggle.onclick=()=>{document.body.classList.toggle('adv');
+  advToggle.textContent=document.body.classList.contains('adv')?'Menys opcions ▴':'Més opcions ▾';layoutPanel();};
 if(window.innerWidth<=680) document.body.classList.add('collapsed'),document.getElementById('toggle').textContent='Mostra els filtres ▾';
 function layoutPanel(){
  const foot=document.getElementById('foot'), panel=document.getElementById('panel');
