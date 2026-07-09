@@ -67,7 +67,7 @@
  <div class="htitle"><h1>Pisos turístics de Catalunya</h1><button id="toggle">Amaga els filtres ▴</button></div>
  <div id="pbody">
   <p class="sub">Habitatges d'ús turístic (HUT) del Registre de Turisme de Catalunya.</p>
-  <label class="fld">Cerca per adreça o carrer</label>
+  <label class="fld">Cerca per adreça o carrer <span class="clr" id="clrA">esborra</span></label>
   <input id="qa" type="text" placeholder="Ex.: Carrer Marina 245…" autocomplete="off"/>
   <label class="fld">Municipi <span class="clr" id="clrM">esborra</span></label>
   <input id="qm" type="text" list="munis" placeholder="Tria un municipi (centra el mapa)…" autocomplete="off"/>
@@ -273,7 +273,7 @@ document.getElementById('qa').oninput=e=>{clearTimeout(ta);ta=setTimeout(()=>{ad
 document.getElementById('qm').oninput=e=>{clearTimeout(tm);tm=setTimeout(()=>{const v=norm(e.target.value);
   if(v===''){muniF='';draw();map.setView(HOME.c,HOME.z);} else if(munisNorm.has(v)){muniF=v;draw(true);}},280);};
 document.getElementById('qe').oninput=e=>{clearTimeout(te);te=setTimeout(()=>{empQ=e.target.value.trim().toLowerCase();draw(!!empQ);},280);};
-document.getElementById('clrM').onclick=()=>{document.getElementById('qm').value='';muniF='';draw();map.setView(HOME.c,HOME.z);};
+document.getElementById('clrM').onclick=()=>{document.getElementById('qm').value='';muniF='';draw();map.setView(HOME.c,HOME.z);}; document.getElementById('clrA').onclick=()=>{document.getElementById('qa').value='';addrQ='';addrToks=[];draw();};
 document.getElementById('cP').onchange=e=>{showP=e.target.checked;draw();};
 document.getElementById('cE').onchange=e=>{showE=e.target.checked;draw();};
 document.getElementById('cExact').onchange=e=>{onlyExact=e.target.checked;draw();};
