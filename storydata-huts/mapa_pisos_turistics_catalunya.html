@@ -101,7 +101,7 @@ const LOCS=P.locs, PROVS=P.provs, HASTENS=P.hasTens, MUNIINFO=P.muniInfo||{};
 // 0 lat,1 lon,2 n,3 col,4 ne,5 npar,6 places,7 prec,8 prov,9 muni,10 adreca,11 members[[e,t,pl,pp,lic,ad]],12 tens,13 ine,14 ine_lvl
 const COL={0:'#005f73',1:'#9b2226',2:'#7d3c98'};
 const SATCOL={0:'#2f9ec7',1:'#d9706b',2:'#b889cf'};
-const map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([41.75,1.78],8);
+const map=L.map('map',{preferCanvas:true,zoomControl:true,minZoom:7,maxBounds:[[39.9,-1.2],[43.4,4.6]],maxBoundsViscosity:1.0}).setView([41.75,1.78],8);
 const HOME={c:[41.75,1.78],z:8};
 const baseClar=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
  {maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap, &copy; CARTO'}).addTo(map);
