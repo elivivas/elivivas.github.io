@@ -1,0 +1,110 @@
+[
+  {
+    "Tipo": "Autónomos con personal",
+    "Año": 2021,
+    "España": 54662,
+    "Europa": 5475,
+    "África": 1244,
+    "América": 4565,
+    "Asia.Oceanía": 364
+  },
+  {
+    "Tipo": "Autónomos con personal",
+    "Año": 2022,
+    "España": 54523,
+    "Europa": 5724,
+    "África": 1344,
+    "América": 4922,
+    "Asia.Oceanía": 404
+  },
+  {
+    "Tipo": "Autónomos con personal",
+    "Año": 2023,
+    "España": 54228,
+    "Europa": 5910,
+    "África": 1604,
+    "América": 5665,
+    "Asia.Oceanía": 444
+  },
+  {
+    "Tipo": "Autónomos sin personal",
+    "Año": 2021,
+    "España": 264067,
+    "Europa": 26729,
+    "África": 4233,
+    "América": 19292,
+    "Asia.Oceanía": 1196
+  },
+  {
+    "Tipo": "Autónomos sin personal",
+    "Año": 2022,
+    "España": 264107,
+    "Europa": 27640,
+    "África": 4839,
+    "América": 21587,
+    "Asia.Oceanía": 1449
+  },
+  {
+    "Tipo": "Autónomos sin personal",
+    "Año": 2023,
+    "España": 259621,
+    "Europa": 28579,
+    "África": 5477,
+    "América": 23444,
+    "Asia.Oceanía": 1679
+  },
+  {
+    "Tipo": "Contrato fijo o indefinido",
+    "Año": 2021,
+    "España": 413165,
+    "Europa": 35444,
+    "África": 16879,
+    "América": 39143,
+    "Asia.Oceanía": 3028
+  },
+  {
+    "Tipo": "Contrato fijo o indefinido",
+    "Año": 2022,
+    "España": 510164,
+    "Europa": 45017,
+    "África": 27460,
+    "América": 58871,
+    "Asia.Oceanía": 4468
+  },
+  {
+    "Tipo": "Contrato fijo o indefinido",
+    "Año": 2023,
+    "España": 634948,
+    "Europa": 58891,
+    "África": 52424,
+    "América": 94430,
+    "Asia.Oceanía": 8431
+  },
+  {
+    "Tipo": "Contrato temporal",
+    "Año": 2021,
+    "España": 242917,
+    "Europa": 23123,
+    "África": 25079,
+    "América": 39991,
+    "Asia.Oceanía": 3767
+  },
+  {
+    "Tipo": "Contrato temporal",
+    "Año": 2022,
+    "España": 171052,
+    "Europa": 15746,
+    "África": 22864,
+    "América": 32522,
+    "Asia.Oceanía": 3315
+  },
+  {
+    "Tipo": "Contrato temporal",
+    "Año": 2023,
+    "España": 68929,
+    "Europa": 5065,
+    "África": 6214,
+    "América": 10629,
+    "Asia.Oceanía": 644
+  }
+]

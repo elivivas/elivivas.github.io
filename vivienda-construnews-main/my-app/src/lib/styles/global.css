@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-orange-corp: #ed6f2a;
+  --color-black-text: #1D1D1F;
+  --color-gray-dark: #666666;
+  --color-gray-light: #F5F5F7;
+  --color-dark-blue:#003443;
+  --color-white: #ffffff;
+
+  --font-main: 'Unna', serif;
+  --font-secondary: 'IBM Plex Sans', sans-serif;
+
+  --spacing-mobile: 0.8rem;
+  --spacing-desktop: 2.5rem;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100svh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  color: var(--color-black-text);
+  font-family: var(--font-secondary); 
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-family: var(--font-main);
+  color: var(--color-black-text);
+  font-size: 1.3rem; 
+  margin: .8rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-main);
+  font-weight: 700; 
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3.125rem;
+  color: var(--color-black-text);
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--color-gray-dark);
+}
+
+h3 {
+  font-size: 1.375rem;
+  color: var(--color-gray-dark);
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--color-gray-dark);
+}
+
+.fuente {
+  font-size: 0.8rem;
+  color: var(--color-gray-dark);
+  font-family: var(--font-secondary);
+  text-align: right;
+}
+
+.bg-soft {
+  background-color: var(--color-gray-light);
+}
+
+a {
+  color: var(--color-orange-corp);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+  
+main {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para todos los botones */
+button {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button:hover:not(:disabled) {
+  background: #fff;
+  border-color: var(--color-orange-corp);
+  color: var(--color-orange-corp);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+button:active {
+  border-color: var(--color-orange-corp);
+  color: var(--color-orange-corp);
+  font-weight: 700;
+}
+button.is-active {
+  border-color: var(--color-orange-corp);
+  color: var(--color-orange-corp);
+  font-weight: 700;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.img-casa {
+  width: 200px;
+  height: 200px;
+}
+
+.versalitas {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}
+
+/*Estilos notas + fuente graficos*/
+
+.chart {
+  margin:2.5rem 0;
+}
+
+.title-txt {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-black-text);
+  margin-top:0.5rem;
+  margin-bottom: 0rem !important;
+  overflow: hidden;
+  font-family: var(--font-secondary);
+  line-height: 1.6rem;
+}
+
+.subtitle {
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+  margin-top:.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.container-notes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+.notes {
+  font-family: var(--font-secondary);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--color-gray-dark)
+}
+.notes a {
+  font-weight: 300;
+  color: var(--color-gray-dark);
+  text-decoration: underline;
+}
+
+.min-logo-graphics {
+  width: 20px;
+  height: 20px;
+
+}
+
+.tick-label { 
+    font-size: 0.8rem; 
+    fill: #999; 
+  }
+
+/*TOOLTIPS :)*/
+.map-tooltip {
+    position: absolute;
+    background-color: var(--color-white, #ffffff);
+    z-index: 1000;
+    pointer-events: none;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 260px;
+    font-family: var(--font-secondary, "IBM Plex Sans", sans-serif);
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--color-black-text, #1d1d1f);
+    display: grid;
+    gap: 0.38rem;
+    max-width: min(300px, calc(100vw - 28px));
+  }
+
+  .tooltip-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-black-text, #1d1d1f);
+    margin: 0 0 0.25rem 0;
+  }
+
+  .tooltip-subtitle {
+    font-size: 0.75rem;
+    color: var(--color-gray-dark, #666);
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tooltip-line {
+    margin: 0 0 0.2rem 0;
+  }
+
+  .dynamic-label {
+    font-size: 14px;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /*Estilos beeswarm*/
+
+  .legend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .second-legend {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:0 1rem;
+  }
+
+  .legend-row {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .4rem .8rem;
+    flex-basis: 100%;
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .legend-filter {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .legend-filter.is-inactive {
+    opacity: 0.2;
+  }
+
+  
+  .size-items {
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem 0.8rem;
+    
+    align-items: center;
+  }
+
+  .quote {
+    position: relative;
+    margin: 3rem auto;
+    max-width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: serif;
+    color: #003443; /* Tu azul oscuro */
+  }
+
+  .quote::before {
+    content: "“";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: #BDCACD;
+    opacity: 0.5;
+    font-family: serif;
+  }
+
+  .quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-mobile);
+  }
+
+  h1 {
+    font-size: 2.125rem; 
+    margin-top: 1em;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem; 
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .chart-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*Tooltips*/
+
+  .map-tooltip {
+      padding: 0.75rem;
+      min-width: 200px;
+      max-width: min(240px, calc(100vw - 20px));
+      font-size: 0.7rem;
+      gap: 0.3rem;
+    }
+
+    .tooltip-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .tooltip-subtitle {
+      font-size: 0.66rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.35px;
+    }
+
+    .tooltip-line {
+      margin-bottom: 0.1rem;
+    }
+
+    /*Header graphics*/
+
+    .subtitle {
+      font-size: 1rem;
+      margin: .5rem 0;
+    }
+
+    .tick-label { 
+      font-size: 0.8rem;
+    }
+
+    .second-legend {
+      margin-bottom: 1rem;
+  }
+}

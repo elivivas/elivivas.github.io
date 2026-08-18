@@ -1,0 +1,260 @@
+[
+  {
+    "Material": "Áridos",
+    "2005": 82.36,
+    "2024": 123.23,
+    "Cambio": 49.62
+  },
+  {
+    "Material": "Cemento",
+    "2005": 88.45,
+    "2024": 143.11,
+    "Cambio": 61.8
+  },
+  {
+    "Material": "Cal",
+    "2005": 75.93,
+    "2024": 137.71,
+    "Cambio": 81.36
+  },
+  {
+    "Material": "Hormigón",
+    "2005": 86.77,
+    "2024": 138.75,
+    "Cambio": 59.91
+  },
+  {
+    "Material": "Mortero",
+    "2005": 83.86,
+    "2024": 132.95,
+    "Cambio": 58.54
+  },
+  {
+    "Material": "Cerámica",
+    "2005": 92.26,
+    "2024": 121.45,
+    "Cambio": 31.64
+  },
+  {
+    "Material": "Prefabricados",
+    "2005": 82.18,
+    "2024": 126.66,
+    "Cambio": 54.13
+  },
+  {
+    "Material": "Yeso",
+    "2005": 75.93,
+    "2024": 137.71,
+    "Cambio": 81.36
+  },
+  {
+    "Material": "Derivados del yeso",
+    "2005": 96.89,
+    "2024": 131.14,
+    "Cambio": 35.35
+  },
+  {
+    "Material": "Acero",
+    "2005": 58.03,
+    "2024": 104.53,
+    "Cambio": 80.13
+  },
+  {
+    "Material": "Madera",
+    "2005": 75.21,
+    "2024": 119.33,
+    "Cambio": 58.66
+  },
+  {
+    "Material": "Sintéticos",
+    "2005": 71.7,
+    "2024": 109.62,
+    "Cambio": 52.89
+  },
+  {
+    "Material": "Asfálticos",
+    "2005": 62.98,
+    "2024": 124.93,
+    "Cambio": 98.36
+  },
+  {
+    "Material": "Caucho",
+    "2005": 75.56,
+    "2024": 111.09,
+    "Cambio": 47.02
+  },
+  {
+    "Material": "Vidrio plano",
+    "2005": 65.28,
+    "2024": 105.5,
+    "Cambio": 61.61
+  },
+  {
+    "Material": "Vidrio hueco",
+    "2005": 71.9,
+    "2024": 137.88,
+    "Cambio": 91.77
+  },
+  {
+    "Material": "Carpintería de madera",
+    "2005": 75.21,
+    "2024": 119.33,
+    "Cambio": 58.66
+  },
+  {
+    "Material": "Carpinterías metálicas",
+    "2005": 74.29,
+    "2024": 121.61,
+    "Cambio": 63.7
+  },
+  {
+    "Material": "Herrajes",
+    "2005": 71.94,
+    "2024": 122.68,
+    "Cambio": 70.53
+  },
+  {
+    "Material": "Válvulas y grifería",
+    "2005": 69.01,
+    "2024": 112.86,
+    "Cambio": 63.54
+  },
+  {
+    "Material": "Radiadores y calderas",
+    "2005": 68.93,
+    "2024": 136.67,
+    "Cambio": 98.27
+  },
+  {
+    "Material": "Climatización y ventilación",
+    "2005": 83.16,
+    "2024": 111.65,
+    "Cambio": 34.26
+  },
+  {
+    "Material": "Electrodomésticos eléctricos",
+    "2005": 92.02,
+    "2024": 104.15,
+    "Cambio": 13.18
+  },
+  {
+    "Material": "Electrodomésticos no eléctricos",
+    "2005": 82.78,
+    "2024": 113.44,
+    "Cambio": 37.04
+  },
+  {
+    "Material": "Aparellaje eléctrico",
+    "2005": 85.26,
+    "2024": 112.74,
+    "Cambio": 32.23
+  },
+  {
+    "Material": "Cables eléctricos",
+    "2005": 44.57,
+    "2024": 110.82,
+    "Cambio": 148.64
+  },
+  {
+    "Material": "Fibra de vidrio",
+    "2005": 62.98,
+    "2024": 124.93,
+    "Cambio": 98.36
+  },
+  {
+    "Material": "Fibra óptica",
+    "2005": 44.57,
+    "2024": 110.82,
+    "Cambio": 148.64
+  },
+  {
+    "Material": "Aparatos de alumbrado",
+    "2005": 75.23,
+    "2024": 112.45,
+    "Cambio": 49.47
+  },
+  {
+    "Material": "Extintores mangueras",
+    "2005": 88.1,
+    "2024": 110.85,
+    "Cambio": 25.82
+  },
+  {
+    "Material": "Detectores y alarmas",
+    "2005": 96.65,
+    "2024": 112.4,
+    "Cambio": 16.3
+  },
+  {
+    "Material": "Porteros, antenas megafonía",
+    "2005": 126.51,
+    "2024": 103.72,
+    "Cambio": -18.01
+  },
+  {
+    "Material": "Ascensores",
+    "2005": 83.75,
+    "2024": 115.67,
+    "Cambio": 38.11
+  },
+  {
+    "Material": "Electrónica",
+    "2005": 117.16,
+    "2024": 105.18,
+    "Cambio": -10.23
+  },
+  {
+    "Material": "Explosivos",
+    "2005": 73,
+    "2024": 112.97,
+    "Cambio": 54.75
+  },
+  {
+    "Material": "Pinturas, barnices y masillas",
+    "2005": 75.3,
+    "2024": 116.04,
+    "Cambio": 54.1
+  },
+  {
+    "Material": "Baldosas de cerámica",
+    "2005": 92.26,
+    "2024": 121.45,
+    "Cambio": 31.64
+  },
+  {
+    "Material": "Piedra ornamental",
+    "2005": 86.97,
+    "2024": 115.6,
+    "Cambio": 32.92
+  },
+  {
+    "Material": "Mobiliario de cocina y baño",
+    "2005": 78.59,
+    "2024": 112.29,
+    "Cambio": 42.88
+  },
+  {
+    "Material": "Tubos de cobre",
+    "2005": 35.7,
+    "2024": 106.17,
+    "Cambio": 197.39
+  },
+  {
+    "Material": "Tubos de plástico",
+    "2005": 71.7,
+    "2024": 109.62,
+    "Cambio": 52.89
+  },
+  {
+    "Material": "Tubos de microcemento",
+    "2005": 82.18,
+    "2024": 126.66,
+    "Cambio": 54.13
+  },
+  {
+    "Material": "Sanitarios de cerámica",
+    "2005": 72.32,
+    "2024": 132.09,
+    "Cambio": 82.65
+  }
+]

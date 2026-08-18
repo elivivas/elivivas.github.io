@@ -1,0 +1,128 @@
+[
+  {
+    "Año": 2008,
+    "Española": 1848.5,
+    "Europa": 202.9,
+    "América Latina": 268.2,
+    "Resto": 117
+  },
+  {
+    "Año": 2009,
+    "Española": 1481.6,
+    "Europa": 134.7,
+    "América Latina": 181.9,
+    "Resto": 67.9
+  },
+  {
+    "Año": 2010,
+    "Española": 1318.6,
+    "Europa": 131.9,
+    "América Latina": 138.9,
+    "Resto": 46.7
+  },
+  {
+    "Año": 2011,
+    "Española": 1137.4,
+    "Europa": 111,
+    "América Latina": 100.7,
+    "Resto": 38.9
+  },
+  {
+    "Año": 2012,
+    "Española": 967.8,
+    "Europa": 94.2,
+    "América Latina": 51.8,
+    "Resto": 28.1
+  },
+  {
+    "Año": 2013,
+    "Española": 868.6,
+    "Europa": 82,
+    "América Latina": 37.3,
+    "Resto": 25.7
+  },
+  {
+    "Año": 2014,
+    "Española": 848.3,
+    "Europa": 77.9,
+    "América Latina": 32.5,
+    "Resto": 21.7
+  },
+  {
+    "Año": 2015,
+    "Española": 910.4,
+    "Europa": 80.7,
+    "América Latina": 35.2,
+    "Resto": 28.7
+  },
+  {
+    "Año": 2016,
+    "Española": 880.1,
+    "Europa": 86.2,
+    "América Latina": 42.5,
+    "Resto": 34.7
+  },
+  {
+    "Año": 2017,
+    "Española": 929.7,
+    "Europa": 88.2,
+    "América Latina": 47,
+    "Resto": 30.2
+  },
+  {
+    "Año": 2018,
+    "Española": 994.8,
+    "Europa": 105.7,
+    "América Latina": 53.7,
+    "Resto": 33.1
+  },
+  {
+    "Año": 2019,
+    "Española": 1024.6,
+    "Europa": 103.8,
+    "América Latina": 65.1,
+    "Resto": 44
+  },
+  {
+    "Año": 2020,
+    "Española": 985.8,
+    "Europa": 99.8,
+    "América Latina": 63.9,
+    "Resto": 39.6
+  },
+  {
+    "Año": 2021,
+    "Española": 999.6,
+    "Europa": 104.9,
+    "América Latina": 91.7,
+    "Resto": 55.1
+  },
+  {
+    "Año": 2022,
+    "Española": 1006.8,
+    "Europa": 124,
+    "América Latina": 101.5,
+    "Resto": 62.8
+  },
+  {
+    "Año": 2023,
+    "Española": 989.6,
+    "Europa": 118.9,
+    "América Latina": 138.5,
+    "Resto": 75.9
+  },
+  {
+    "Año": 2024,
+    "Española": 1024.5,
+    "Europa": 116.4,
+    "América Latina": 164.5,
+    "Resto": 70.4
+  },
+  {
+    "Año": 2025,
+    "Española": 1047.4,
+    "Europa": 118.7,
+    "América Latina": 182,
+    "Resto": 85.8
+  }
+]
